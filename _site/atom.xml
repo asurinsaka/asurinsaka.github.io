@@ -4,7 +4,7 @@
  <title>Asurin</title>
  <link href="http://localhost:4000//atom.xml" rel="self"/>
  <link href="http://localhost:4000//"/>
- <updated>2016-06-29T18:46:18-04:00</updated>
+ <updated>2016-06-30T15:50:30-04:00</updated>
  <id>http://localhost:4000/</id>
  <author>
    <name>Mark Otto</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Example content</title>
-   <link href="http://localhost:4000//2016/06/29/example-content/"/>
-   <updated>2016-06-29T18:46:18-04:00</updated>
-   <id>http://localhost:4000//2016/06/29/example-content</id>
+   <link href="http://localhost:4000//2016/06/30/example-content/"/>
+   <updated>2016-06-30T15:50:30-04:00</updated>
+   <id>http://localhost:4000//2016/06/30/example-content</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
   Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
 &lt;/div&gt;
@@ -52,15 +52,12 @@
 
 &lt;p&gt;Cum sociis natoque penatibus et magnis dis &lt;code class=&quot;highlighter-rouge&quot;&gt;code element&lt;/code&gt; montes, nascetur ridiculus mus.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Example can be run directly in your JavaScript console
-&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Example can be run directly in your JavaScript console&lt;/span&gt;
 
-&lt;span class=&quot;c1&quot;&gt;// Create a function that takes two arguments and returns the sum of those arguments
-&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Create a function that takes two arguments and returns the sum of those arguments&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;return a + b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
-&lt;span class=&quot;c1&quot;&gt;// Call the function
-&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Call the function&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// &amp;gt; 8&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -142,6 +139,36 @@
 &lt;hr /&gt;
 
 &lt;p&gt;Want to see something else added? &lt;a href=&quot;https://github.com/poole/poole/issues/new&quot;&gt;Open an issue.&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>More History for Linux Bash</title>
+   <link href="http://localhost:4000//linux/2016/06/30/more-history-for-linux-bash/"/>
+   <updated>2016-06-30T00:00:00-04:00</updated>
+   <id>http://localhost:4000//linux/2016/06/30/more-history-for-linux-bash</id>
+   <content type="html">&lt;p&gt;If you open Multiple sections of Linux terminal, only one copy of history will
+be saved in your .bash_history file. This would be really annoying because you
+will forget and loose important command that you have used.&lt;/p&gt;
+
+&lt;p&gt;Here is how to save all your histories.&lt;/p&gt;
+
+&lt;p&gt;Put the following commands in your ~/.bashrc file or your ~/.bash_profile file.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# append instand of overwrite across sections&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;shopt&lt;/span&gt; -s histappend
+
+&lt;span class=&quot;c&quot;&gt;# write and read history file every time you hit return&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;PROMPT_COMMAND&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;history -n;history -a&#39;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# increase your history entries and file size&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;HISTSIZE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;100000
+&lt;span class=&quot;nv&quot;&gt;HISTFILESIZE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;100000
+
+&lt;span class=&quot;c&quot;&gt;# add date and time information for each entry&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;HISTTIMEFORMAT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;%m/%d/%y %T &quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now you will have the history recorded from all the sessions you have opened.&lt;/p&gt;
 </content>
  </entry>
  
