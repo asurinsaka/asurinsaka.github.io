@@ -4,7 +4,7 @@
  <title>Asurin</title>
  <link href="http://localhost:4000//atom.xml" rel="self"/>
  <link href="http://localhost:4000//"/>
- <updated>2016-07-01T12:46:53-04:00</updated>
+ <updated>2016-07-01T12:56:10-04:00</updated>
  <id>http://localhost:4000/</id>
  <author>
    <name>Mark Otto</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Example content</title>
    <link href="http://localhost:4000//2016/07/01/example-content/"/>
-   <updated>2016-07-01T12:46:53-04:00</updated>
+   <updated>2016-07-01T12:56:10-04:00</updated>
    <id>http://localhost:4000//2016/07/01/example-content</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
   Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
@@ -42,9 +42,9 @@
   &lt;li&gt;Superscript &lt;sup&gt;text&lt;/sup&gt; uses &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;sup&amp;gt;&lt;/code&gt; and subscript &lt;sub&gt;text&lt;/sub&gt; uses &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;sub&amp;gt;&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Most of these elements are styled by browsers with few modifications on our part.&lt;/p&gt;
-
-&lt;h2 id=&quot;heading&quot;&gt;Heading&lt;/h2&gt;
+&lt;p&gt;Most of these elements are styled by browsers with few modifications on our part.
+&lt;!--break--&gt;
+## Heading&lt;/p&gt;
 
 &lt;p&gt;Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.&lt;/p&gt;
 
@@ -174,7 +174,8 @@ on my desktop, and do not have to open the webpage manually again.&lt;/p&gt;
 feeds and weather information, etc on your desktop. There are many Rainmeter
 themes online and you can easily customize those themes.&lt;/p&gt;
 
-&lt;h3 id=&quot;web-parser-of-rainmeter&quot;&gt;Web Parser of Rainmeter&lt;/h3&gt;
+&lt;!--break--&gt;
+&lt;p&gt;### Web Parser of Rainmeter&lt;/p&gt;
 
 &lt;p&gt;The most important part of this skin is the &lt;a href=&quot;https://docs.rainmeter.net/tips/webparser-lookahead-assertions-in-regexp/&quot;&gt;web parser&lt;/a&gt;.
  Which parses the html
@@ -563,7 +564,8 @@ will forget and loose important command that you have used.&lt;/p&gt;
    <link href="http://localhost:4000//2016/06/29/how-i-build-this-website/"/>
    <updated>2016-06-29T00:00:00-04:00</updated>
    <id>http://localhost:4000//2016/06/29/how-i-build-this-website</id>
-   <content type="html">&lt;p&gt;This website is based on Lanyon and changed the color scheme to &lt;a href=&quot;https://github.com/voronianski/oceanic-next-color-scheme&quot;&gt;Oceanic Next Color Scheme&lt;/a&gt;. The color scheme was found from &lt;a href=&quot;http://komodoide.com/packages/schemes/&quot;&gt;Komodoide&lt;/a&gt;. The IDE I used for editing is &lt;a href=&quot;https://atom.io&quot;&gt;Atom&lt;/a&gt;.&lt;/p&gt;
+   <content type="html">&lt;p&gt;This website is based on Lanyon and changed the color scheme to &lt;a href=&quot;https://github.com/voronianski/oceanic-next-color-scheme&quot;&gt;Oceanic Next Color Scheme&lt;/a&gt;. The color scheme was found from &lt;a href=&quot;http://komodoide.com/packages/schemes/&quot;&gt;Komodoide&lt;/a&gt;. The IDE I used for editing is &lt;a href=&quot;https://atom.io&quot;&gt;Atom&lt;/a&gt;. I also added the read more link by the method published
+&lt;a href=&quot;https://gist.github.com/mikeygee/2626538&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-following-are-from-the-original-template&quot;&gt;The Following are from the original template&lt;/h2&gt;
 
@@ -581,6 +583,8 @@ will forget and loose important command that you have used.&lt;/p&gt;
   &lt;li&gt;Related posts (time-based, because Jekyll) below each post&lt;/li&gt;
   &lt;li&gt;Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;!--break--&gt;
 
 &lt;h3 id=&quot;lanyon-features&quot;&gt;Lanyon features&lt;/h3&gt;
 

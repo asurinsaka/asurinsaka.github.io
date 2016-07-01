@@ -33,6 +33,7 @@ The web page
 feeds and weather information, etc on your desktop. There are many Rainmeter
 themes online and you can easily customize those themes.
 
+<!--break-->
 ### Web Parser of Rainmeter
 
 The most important part of this skin is the [web parser](https://docs.rainmeter.net/tips/webparser-lookahead-assertions-in-regexp/).

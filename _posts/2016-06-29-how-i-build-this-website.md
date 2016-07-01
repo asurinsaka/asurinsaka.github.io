@@ -3,7 +3,8 @@ layout: post
 title: How I Build this Website
 ---
 
-This website is based on Lanyon and changed the color scheme to [Oceanic Next Color Scheme](https://github.com/voronianski/oceanic-next-color-scheme). The color scheme was found from [Komodoide](http://komodoide.com/packages/schemes/). The IDE I used for editing is [Atom](https://atom.io).
+This website is based on Lanyon and changed the color scheme to [Oceanic Next Color Scheme](https://github.com/voronianski/oceanic-next-color-scheme). The color scheme was found from [Komodoide](http://komodoide.com/packages/schemes/). The IDE I used for editing is [Atom](https://atom.io). I also added the read more link by the method published
+[here](https://gist.github.com/mikeygee/2626538).
 
 ## The Following are from the original template
 
@@ -19,6 +20,8 @@ Poole is the Jekyll Butler, serving as an upstanding and effective foundation fo
 * Support for a wide gamut of HTML elements
 * Related posts (time-based, because Jekyll) below each post
 * Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)
+
+<!--break-->
 
 ### Lanyon features
 
