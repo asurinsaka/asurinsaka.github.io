@@ -4,7 +4,7 @@
  <title>Asurin</title>
  <link href="http://localhost:4000//atom.xml" rel="self"/>
  <link href="http://localhost:4000//"/>
- <updated>2016-08-01T15:34:50-04:00</updated>
+ <updated>2016-08-01T15:47:27-04:00</updated>
  <id>http://localhost:4000/</id>
  <author>
    <name>Mark Otto</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Example content</title>
    <link href="http://localhost:4000//2016/08/01/example-content/"/>
-   <updated>2016-08-01T15:34:50-04:00</updated>
+   <updated>2016-08-01T15:47:27-04:00</updated>
    <id>http://localhost:4000//2016/08/01/example-content</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
   Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
@@ -151,9 +151,25 @@
 is a free software used to process raw hdf satellite data from Suomi National
  Polar orbiting Partnership(SNPP), Aqua, and Terra missions.&lt;/p&gt;
 
+&lt;h2 id=&quot;ipopp-installation-procedures&quot;&gt;IPOPP Installation Procedures&lt;/h2&gt;
+&lt;p&gt;To install ipopp, you can follow the following steps:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Create user ipopp.&lt;/li&gt;
+  &lt;li&gt;Download ipopp from nasa.&lt;/li&gt;
+  &lt;li&gt;You need to register an account with nasa&lt;/li&gt;
+  &lt;li&gt;Download downloader_ipopp_2.5.sh&lt;/li&gt;
+  &lt;li&gt;Run it on your linux machine, make sure you have enough space.&lt;/li&gt;
+  &lt;li&gt;Uncompress DRL-IPOPP_2.5.tar.gz to ~/IPOPP of ipopp user.&lt;/li&gt;
+  &lt;li&gt;Run system_test.sh in ~/IPOPP, make sure all tests are passed except the
+ database test. IPOPP 2.5 includes standalone mariadb and do not required
+ pre-installed database.&lt;/li&gt;
+  &lt;li&gt;Run install_ipopp.sh&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;p&gt;To learn how ipopp works, I started with understanding ipopp installations. Here
-is a picture of the ipopp installation procedures started from the script
-install_ipopp.sh&lt;/p&gt;
+is a picture of the ipopp installation procedures started after you fire the
+script install_ipopp.sh&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/iamges/ipopp_installation.pdf&quot;&gt;&lt;img src=&quot;/iamges/ipopp_installation.png&quot; alt=&quot;IPOPP Install&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 </content>

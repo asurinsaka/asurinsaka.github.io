@@ -150,9 +150,25 @@
 is a free software used to process raw hdf satellite data from Suomi National
  Polar orbiting Partnership(SNPP), Aqua, and Terra missions.</p>
 
+<h2 id="ipopp-installation-procedures">IPOPP Installation Procedures</h2>
+<p>To install ipopp, you can follow the following steps:</p>
+
+<ol>
+  <li>Create user ipopp.</li>
+  <li>Download ipopp from nasa.</li>
+  <li>You need to register an account with nasa</li>
+  <li>Download downloader_ipopp_2.5.sh</li>
+  <li>Run it on your linux machine, make sure you have enough space.</li>
+  <li>Uncompress DRL-IPOPP_2.5.tar.gz to ~/IPOPP of ipopp user.</li>
+  <li>Run system_test.sh in ~/IPOPP, make sure all tests are passed except the
+ database test. IPOPP 2.5 includes standalone mariadb and do not required
+ pre-installed database.</li>
+  <li>Run install_ipopp.sh</li>
+</ol>
+
 <p>To learn how ipopp works, I started with understanding ipopp installations. Here
-is a picture of the ipopp installation procedures started from the script
-install_ipopp.sh</p>
+is a picture of the ipopp installation procedures started after you fire the
+script install_ipopp.sh</p>
 
 <p><a href="/iamges/ipopp_installation.pdf"><img src="/iamges/ipopp_installation.png" alt="IPOPP Install" /></a></p>
 
