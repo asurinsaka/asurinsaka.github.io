@@ -4,7 +4,7 @@
  <title>Asurin</title>
  <link href="http://localhost:4000//atom.xml" rel="self"/>
  <link href="http://localhost:4000//"/>
- <updated>2016-08-01T15:47:27-04:00</updated>
+ <updated>2016-08-01T15:54:53-04:00</updated>
  <id>http://localhost:4000/</id>
  <author>
    <name>Mark Otto</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Example content</title>
    <link href="http://localhost:4000//2016/08/01/example-content/"/>
-   <updated>2016-08-01T15:47:27-04:00</updated>
+   <updated>2016-08-01T15:54:53-04:00</updated>
    <id>http://localhost:4000//2016/08/01/example-content</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
   Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
@@ -149,9 +149,11 @@
    <id>http://localhost:4000//2016/08/01/IPOPP-Installation</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;https://directreadout.sci.gsfc.nasa.gov/?id=dspContent&amp;amp;cid=68&quot;&gt;IPOPP (the International Polar Orbiter Processing Package)&lt;/a&gt;
 is a free software used to process raw hdf satellite data from Suomi National
- Polar orbiting Partnership(SNPP), Aqua, and Terra missions.&lt;/p&gt;
+ Polar orbiting Partnership(SNPP), Aqua, and Terra missions. It generate tiff
+ and png files contains sst, chlor_a, crefl_rgb files form those raw data.&lt;/p&gt;
 
-&lt;h2 id=&quot;ipopp-installation-procedures&quot;&gt;IPOPP Installation Procedures&lt;/h2&gt;
+&lt;h2 id=&quot;how-to-install-ipopp&quot;&gt;How to install IPOPP&lt;/h2&gt;
+&lt;!--break--&gt;
 &lt;p&gt;To install ipopp, you can follow the following steps:&lt;/p&gt;
 
 &lt;ol&gt;
@@ -166,6 +168,8 @@ is a free software used to process raw hdf satellite data from Suomi National
  pre-installed database.&lt;/li&gt;
   &lt;li&gt;Run install_ipopp.sh&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h2 id=&quot;detailed-procedures-of-ipopp-installation&quot;&gt;Detailed Procedures of IPOPP Installation&lt;/h2&gt;
 
 &lt;p&gt;To learn how ipopp works, I started with understanding ipopp installations. Here
 is a picture of the ipopp installation procedures started after you fire the
@@ -194,7 +198,7 @@ on my desktop, and do not have to open the webpage manually again.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/iamges/sat_product_desktop.PNG&quot; alt=&quot;IPOPP Products&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;the-information-page&quot;&gt;The information page&lt;/h2&gt;
-
+&lt;!--break--&gt;
 &lt;p&gt;The web page
  shows the products(You need to click Today’s Files in the page to show today’s
  products). Every day I need to monitor how many files are listed in this
@@ -207,8 +211,7 @@ on my desktop, and do not have to open the webpage manually again.&lt;/p&gt;
 feeds and weather information, etc on your desktop. There are many Rainmeter
 themes online and you can easily customize those themes.&lt;/p&gt;
 
-&lt;!--break--&gt;
-&lt;p&gt;### Web Parser of Rainmeter&lt;/p&gt;
+&lt;h3 id=&quot;web-parser-of-rainmeter&quot;&gt;Web Parser of Rainmeter&lt;/h3&gt;
 
 &lt;p&gt;The most important part of this skin is the &lt;a href=&quot;https://docs.rainmeter.net/tips/webparser-lookahead-assertions-in-regexp/&quot;&gt;web parser&lt;/a&gt;.
  Which parses the html

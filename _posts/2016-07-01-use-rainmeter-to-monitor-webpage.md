@@ -20,7 +20,7 @@ on my desktop, and do not have to open the webpage manually again.
 ![IPOPP Products](/iamges/sat_product_desktop.PNG)
 
 ## The information page
-
+<!--break-->
 The web page
  shows the products(You need to click Today's Files in the page to show today's
  products). Every day I need to monitor how many files are listed in this
@@ -33,7 +33,7 @@ The web page
 feeds and weather information, etc on your desktop. There are many Rainmeter
 themes online and you can easily customize those themes.
 
-<!--break-->
+
 ### Web Parser of Rainmeter
 
 The most important part of this skin is the [web parser](https://docs.rainmeter.net/tips/webparser-lookahead-assertions-in-regexp/).
