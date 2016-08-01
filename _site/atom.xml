@@ -4,7 +4,7 @@
  <title>Asurin</title>
  <link href="http://localhost:4000//atom.xml" rel="self"/>
  <link href="http://localhost:4000//"/>
- <updated>2016-08-01T15:54:53-04:00</updated>
+ <updated>2016-08-01T16:07:05-04:00</updated>
  <id>http://localhost:4000/</id>
  <author>
    <name>Mark Otto</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Example content</title>
    <link href="http://localhost:4000//2016/08/01/example-content/"/>
-   <updated>2016-08-01T15:54:53-04:00</updated>
+   <updated>2016-08-01T16:07:05-04:00</updated>
    <id>http://localhost:4000//2016/08/01/example-content</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
   Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
@@ -169,7 +169,7 @@ is a free software used to process raw hdf satellite data from Suomi National
   &lt;li&gt;Run install_ipopp.sh&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;detailed-procedures-of-ipopp-installation&quot;&gt;Detailed Procedures of IPOPP Installation&lt;/h2&gt;
+&lt;h2 id=&quot;detailed-analysis-of-ipopp-installation&quot;&gt;Detailed Analysis of IPOPP Installation&lt;/h2&gt;
 
 &lt;p&gt;To learn how ipopp works, I started with understanding ipopp installations. Here
 is a picture of the ipopp installation procedures started after you fire the

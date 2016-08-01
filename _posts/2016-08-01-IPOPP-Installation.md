@@ -25,7 +25,7 @@ To install ipopp, you can follow the following steps:
     pre-installed database.
 5. Run install_ipopp.sh
 
-##  Detailed Procedures of IPOPP Installation
+##  Detailed Analysis of IPOPP Installation
 
 To learn how ipopp works, I started with understanding ipopp installations. Here
 is a picture of the ipopp installation procedures started after you fire the
