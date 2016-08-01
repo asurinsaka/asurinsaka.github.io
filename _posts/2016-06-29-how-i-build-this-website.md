@@ -8,7 +8,7 @@ This website is based on Lanyon and changed the color scheme to [Oceanic Next Co
 
 ## The Following are from the original template
 
-Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+[Lanyon](http://lanyon.getpoole.com/2014/01/01/example-content/) is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
 
 ### Built on Poole
 

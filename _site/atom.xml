@@ -4,7 +4,7 @@
  <title>Asurin</title>
  <link href="http://localhost:4000//atom.xml" rel="self"/>
  <link href="http://localhost:4000//"/>
- <updated>2016-07-01T12:56:10-04:00</updated>
+ <updated>2016-08-01T15:34:50-04:00</updated>
  <id>http://localhost:4000/</id>
  <author>
    <name>Mark Otto</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Example content</title>
-   <link href="http://localhost:4000//2016/07/01/example-content/"/>
-   <updated>2016-07-01T12:56:10-04:00</updated>
-   <id>http://localhost:4000//2016/07/01/example-content</id>
+   <link href="http://localhost:4000//2016/08/01/example-content/"/>
+   <updated>2016-08-01T15:34:50-04:00</updated>
+   <id>http://localhost:4000//2016/08/01/example-content</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
   Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
 &lt;/div&gt;
@@ -139,6 +139,23 @@
 &lt;hr /&gt;
 
 &lt;p&gt;Want to see something else added? &lt;a href=&quot;https://github.com/poole/poole/issues/new&quot;&gt;Open an issue.&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>IPOPP 2.5 installation</title>
+   <link href="http://localhost:4000//2016/08/01/IPOPP-Installation/"/>
+   <updated>2016-08-01T00:00:00-04:00</updated>
+   <id>http://localhost:4000//2016/08/01/IPOPP-Installation</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://directreadout.sci.gsfc.nasa.gov/?id=dspContent&amp;amp;cid=68&quot;&gt;IPOPP (the International Polar Orbiter Processing Package)&lt;/a&gt;
+is a free software used to process raw hdf satellite data from Suomi National
+ Polar orbiting Partnership(SNPP), Aqua, and Terra missions.&lt;/p&gt;
+
+&lt;p&gt;To learn how ipopp works, I started with understanding ipopp installations. Here
+is a picture of the ipopp installation procedures started from the script
+install_ipopp.sh&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/iamges/ipopp_installation.pdf&quot;&gt;&lt;img src=&quot;/iamges/ipopp_installation.png&quot; alt=&quot;IPOPP Install&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -569,7 +586,7 @@ will forget and loose important command that you have used.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-following-are-from-the-original-template&quot;&gt;The Following are from the original template&lt;/h2&gt;
 
-&lt;p&gt;Lanyon is an unassuming &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; theme that places content first by tucking away navigation in a hidden drawer. It’s based on &lt;a href=&quot;http://getpoole.com&quot;&gt;Poole&lt;/a&gt;, the Jekyll butler.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://lanyon.getpoole.com/2014/01/01/example-content/&quot;&gt;Lanyon&lt;/a&gt; is an unassuming &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; theme that places content first by tucking away navigation in a hidden drawer. It’s based on &lt;a href=&quot;http://getpoole.com&quot;&gt;Poole&lt;/a&gt;, the Jekyll butler.&lt;/p&gt;
 
 &lt;h3 id=&quot;built-on-poole&quot;&gt;Built on Poole&lt;/h3&gt;
 
