@@ -139,6 +139,26 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/2016/08/05/Some-IDL-examples/">
+        Some IDL examples
+      </a>
+    </h1>
+
+    <span class="post-date">05 Aug 2016</span>
+
+    <p><a href="http://www.harrisgeospatial.com/ProductsandSolutions/GeospatialProducts/IDL.aspx">IDL</a>
+is an old software from harris geospacial for visualizing data. Here are some
+examples of IDL.</p>
+
+<p><img src="/images/idl1.PNG" alt="" />
+
+    
+    <a href="/2016/08/05/Some-IDL-examples/">read more</a>
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/2016/08/05/IPOPP-modis-flowchart/">
         IMaRS IPOPP modis Data Flowchart
       </a>
@@ -201,41 +221,6 @@ on my desktop, and do not have to open the webpage manually again.</p>
 
     
     <a href="/rainmeter/2016/07/01/use-rainmeter-to-monitor-webpage/">read more</a>
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/linux/2016/06/30/more-history-for-linux-bash/">
-        More History for Linux Bash
-      </a>
-    </h1>
-
-    <span class="post-date">30 Jun 2016</span>
-
-    <p>If you open Multiple sections of Linux terminal, only one copy of history will
-be saved in your .bash_history file. This would be really annoying because you
-will forget and loose important command that you have used.</p>
-
-<p>Here is how to save all your histories.</p>
-
-<p>Put the following commands in your ~/.bashrc file or your ~/.bash_profile file.</p>
-
-<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># append instand of overwrite across sections</span>
-<span class="nb">shopt</span> -s histappend
-
-<span class="c"># write and read history file every time you hit return</span>
-<span class="nv">PROMPT_COMMAND</span><span class="o">=</span><span class="s1">'history -n;history -a'</span>
-
-<span class="c"># increase your history entries and file size</span>
-<span class="nv">HISTSIZE</span><span class="o">=</span>100000
-<span class="nv">HISTFILESIZE</span><span class="o">=</span>100000
-
-<span class="c"># add date and time information for each entry</span>
-<span class="nv">HISTTIMEFORMAT</span><span class="o">=</span><span class="s2">"%m/%d/%y %T "</span></code></pre></figure>
-
-<p>Now you will have the history recorded from all the sessions you have opened.</p>
-
     
   </div>
   

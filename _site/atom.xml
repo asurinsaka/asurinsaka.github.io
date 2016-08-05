@@ -4,7 +4,7 @@
  <title>Asurin</title>
  <link href="http://localhost:4000//atom.xml" rel="self"/>
  <link href="http://localhost:4000//"/>
- <updated>2016-08-05T12:36:38-04:00</updated>
+ <updated>2016-08-05T13:56:12-04:00</updated>
  <id>http://localhost:4000/</id>
  <author>
    <name>Mark Otto</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Example content</title>
    <link href="http://localhost:4000//2016/08/05/example-content/"/>
-   <updated>2016-08-05T12:36:38-04:00</updated>
+   <updated>2016-08-05T13:56:12-04:00</updated>
    <id>http://localhost:4000//2016/08/05/example-content</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
   Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
@@ -139,6 +139,29 @@
 &lt;hr /&gt;
 
 &lt;p&gt;Want to see something else added? &lt;a href=&quot;https://github.com/poole/poole/issues/new&quot;&gt;Open an issue.&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Some IDL examples</title>
+   <link href="http://localhost:4000//2016/08/05/Some-IDL-examples/"/>
+   <updated>2016-08-05T00:00:00-04:00</updated>
+   <id>http://localhost:4000//2016/08/05/Some-IDL-examples</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.harrisgeospatial.com/ProductsandSolutions/GeospatialProducts/IDL.aspx&quot;&gt;IDL&lt;/a&gt;
+is an old software from harris geospacial for visualizing data. Here are some
+examples of IDL.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/idl1.PNG&quot; alt=&quot;&quot; /&gt;
+&lt;!--break--&gt;
+&lt;img src=&quot;/images/idl2.PNG&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/idl3.PNG&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/idl4.PNG&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/idl5.PNG&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/idl6.PNG&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/idl7.PNG&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/idl8.PNG&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/idl9.PNG&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/idl10.PNG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </content>
  </entry>
  
