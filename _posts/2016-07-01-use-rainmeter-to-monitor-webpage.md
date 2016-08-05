@@ -17,7 +17,7 @@ everyday. With the help of [Rainmeter](https://www.rainmeter.net/),
 I can put the information of the webpate
 on my desktop, and do not have to open the webpage manually again.
 
-![IPOPP Products](/iamges/sat_product_desktop.PNG)
+![IPOPP Products](/images/sat_product_desktop.PNG)
 
 ## The information page
 <!--break-->
@@ -26,7 +26,7 @@ The web page
  products). Every day I need to monitor how many files are listed in this
  webpage.
 
-![Products Webpage](/iamges/sat_product_webpage.PNG)
+![Products Webpage](/images/sat_product_webpage.PNG)
 
 ## Rainmeter
 [Rainmeter](https://www.rainmeter.net/) is a tool to put customized skins, RSS

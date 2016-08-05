@@ -4,7 +4,7 @@
  <title>Asurin</title>
  <link href="http://localhost:4000//atom.xml" rel="self"/>
  <link href="http://localhost:4000//"/>
- <updated>2016-08-01T16:07:05-04:00</updated>
+ <updated>2016-08-05T12:29:07-04:00</updated>
  <id>http://localhost:4000/</id>
  <author>
    <name>Mark Otto</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Example content</title>
-   <link href="http://localhost:4000//2016/08/01/example-content/"/>
-   <updated>2016-08-01T16:07:05-04:00</updated>
-   <id>http://localhost:4000//2016/08/01/example-content</id>
+   <link href="http://localhost:4000//2016/08/05/example-content/"/>
+   <updated>2016-08-05T12:29:07-04:00</updated>
+   <id>http://localhost:4000//2016/08/05/example-content</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
   Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
 &lt;/div&gt;
@@ -143,6 +143,18 @@
  </entry>
  
  <entry>
+   <title>IMaRS IPOPP modis Data Flowchart</title>
+   <link href="http://localhost:4000//2016/08/05/IPOPP-modis-flowchart/"/>
+   <updated>2016-08-05T00:00:00-04:00</updated>
+   <id>http://localhost:4000//2016/08/05/IPOPP-modis-flowchart</id>
+   <content type="html">&lt;p&gt;This is a flowchart of IMaRS modis data. The chart includes products names and
+marker names for different stations.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/ipopp_markers.pdf&quot;&gt;&lt;img src=&quot;/images/ipopp_markers.png&quot; alt=&quot;IPOPP flowchart&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>IPOPP 2.5 installation</title>
    <link href="http://localhost:4000//2016/08/01/IPOPP-Installation/"/>
    <updated>2016-08-01T00:00:00-04:00</updated>
@@ -175,7 +187,7 @@ is a free software used to process raw hdf satellite data from Suomi National
 is a picture of the ipopp installation procedures started after you fire the
 script install_ipopp.sh&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;/iamges/ipopp_installation.pdf&quot;&gt;&lt;img src=&quot;/iamges/ipopp_installation.png&quot; alt=&quot;IPOPP Install&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/images/ipopp_installation.pdf&quot;&gt;&lt;img src=&quot;/images/ipopp_installation.png&quot; alt=&quot;IPOPP Install&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -195,7 +207,7 @@ everyday. With the help of &lt;a href=&quot;https://www.rainmeter.net/&quot;&gt;
 I can put the information of the webpate
 on my desktop, and do not have to open the webpage manually again.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/iamges/sat_product_desktop.PNG&quot; alt=&quot;IPOPP Products&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/sat_product_desktop.PNG&quot; alt=&quot;IPOPP Products&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;the-information-page&quot;&gt;The information page&lt;/h2&gt;
 &lt;!--break--&gt;
@@ -204,7 +216,7 @@ on my desktop, and do not have to open the webpage manually again.&lt;/p&gt;
  products). Every day I need to monitor how many files are listed in this
  webpage.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/iamges/sat_product_webpage.PNG&quot; alt=&quot;Products Webpage&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/sat_product_webpage.PNG&quot; alt=&quot;Products Webpage&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;rainmeter&quot;&gt;Rainmeter&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.rainmeter.net/&quot;&gt;Rainmeter&lt;/a&gt; is a tool to put customized skins, RSS

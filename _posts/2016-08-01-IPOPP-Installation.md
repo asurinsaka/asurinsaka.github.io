@@ -31,4 +31,4 @@ To learn how ipopp works, I started with understanding ipopp installations. Here
 is a picture of the ipopp installation procedures started after you fire the
 script install_ipopp.sh
 
-[![IPOPP Install](/iamges/ipopp_installation.png)](/iamges/ipopp_installation.pdf)
+[![IPOPP Install](/images/ipopp_installation.png)](/images/ipopp_installation.pdf)
