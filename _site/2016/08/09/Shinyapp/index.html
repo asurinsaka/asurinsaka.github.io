@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Shinyapp &middot; Asurin
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="theme-base-08">
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Asurin <br /> System Engineer <br /> Web Developer <br /></p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">About Me</a>
+        
+      
+    
+      
+    
+      
+        
+      
+    
+
+
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2016. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Asurin</a>
+            <small>System Engineer, Data Scientist, Web Developer</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">Shinyapp</h1>
+  <span class="post-date">09 Aug 2016</span>
+  <p>One research in our lab is regarding the algae.</p>
+
+<p>First they collected water samples from 58 locations around Florida Key[Figure 1].
+After collection, the samples are run through HPLC to get
+information about the species of chlorophylls. From those information, we would
+be able to know where different kind of algae lives.</p>
+
+<p><img src="/images/shinyapp-stations.PNG" alt="Figure 1. Stations" /></p>
+
+<p>To help people analysis those HPLC data. A leaflet map build with shiny server
+are used. The HPLC data for different stations are shown in a pie chart, which
+is built by plotly.</p>
+
+<p><img src="/images/shinyapp-pie.PNG" alt="Figure 1. Stations" /></p>
+
+<p>The source code are shown below and you can download them from
+<a href="https://github.com/asurinsaka/shiny_leaflet_plotly">github</a></p>
+
+<h2 id="uir">ui.R</h2>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">library</span><span class="p">(</span><span class="n">shiny</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">plotly</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">leaflet</span><span class="p">)</span><span class="w">
+
+</span><span class="n">shinyUI</span><span class="p">(</span><span class="w"> </span><span class="n">bootstrapPage</span><span class="p">(</span><span class="w">
+  </span><span class="n">tags</span><span class="o">$</span><span class="n">style</span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"text/css"</span><span class="p">,</span><span class="w"> </span><span class="s2">"html, body {width:100%;height:100%}"</span><span class="p">),</span><span class="w">
+  </span><span class="n">leafletOutput</span><span class="p">(</span><span class="s2">"map"</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"100%"</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"100%"</span><span class="p">),</span><span class="w">
+  </span><span class="n">absolutePanel</span><span class="p">(</span><span class="n">top</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w">
+
+                </span><span class="n">plotlyOutput</span><span class="p">(</span><span class="s2">"trendPlot"</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">400</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">300</span><span class="p">)</span><span class="w">
+  </span><span class="p">),</span><span class="w">
+  </span><span class="c1"># this is for testing the observe
+</span><span class="w">  </span><span class="n">verbatimTextOutput</span><span class="p">(</span><span class="s2">"Click_text"</span><span class="p">)</span><span class="w">
+</span><span class="p">))</span></code></pre></figure>
+
+<h2 id="serverr">server.R</h2>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">library</span><span class="p">(</span><span class="n">shiny</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">plotly</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">leaflet</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## begin server file
+</span><span class="w">
+</span><span class="c1"># read data file
+</span><span class="n">stationdata</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s2">"./Muller-Karger_05-17_report.csv"</span><span class="p">,</span><span class="n">head</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s2">","</span><span class="p">)</span><span class="w">
+</span><span class="nf">attributes</span><span class="p">(</span><span class="n">stationdata</span><span class="p">)</span><span class="w">
+
+
+
+
+</span><span class="n">shinyServer</span><span class="p">(</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">input</span><span class="p">,</span><span class="w"> </span><span class="n">output</span><span class="p">){</span><span class="w">
+
+  </span><span class="c1"># station map
+</span><span class="w">  </span><span class="n">output</span><span class="o">$</span><span class="n">map</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">renderLeaflet</span><span class="p">({</span><span class="w">
+    </span><span class="n">leaflet</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stationdata</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+      </span><span class="n">addProviderTiles</span><span class="p">(</span><span class="s2">"Esri.WorldImagery"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+      </span><span class="n">addMarkers</span><span class="p">(</span><span class="n">lng</span><span class="o">=~</span><span class="n">Longitude</span><span class="p">,</span><span class="w"> </span><span class="n">lat</span><span class="o">=~</span><span class="n">Latitude</span><span class="p">,</span><span class="w"> </span><span class="n">layerId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">58</span><span class="p">,</span><span class="w"> </span><span class="n">popup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="n">Station</span><span class="p">)</span><span class="w">
+  </span><span class="p">})</span><span class="w">
+
+
+
+  </span><span class="n">observe</span><span class="p">({</span><span class="w"> </span><span class="c1"># update the pie chart on map clicks
+</span><span class="w">    </span><span class="n">p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">input</span><span class="o">$</span><span class="n">map_marker_click</span><span class="w">
+    </span><span class="k">if</span><span class="p">(</span><span class="nf">is.null</span><span class="p">(</span><span class="n">p</span><span class="p">)){</span><span class="w">
+      </span><span class="nf">return</span><span class="p">()</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+    </span><span class="n">ds</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">colnames</span><span class="p">(</span><span class="n">stationdata</span><span class="p">)[</span><span class="m">27</span><span class="o">:</span><span class="m">36</span><span class="p">],</span><span class="w">
+                     </span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">stationdata</span><span class="p">[</span><span class="n">p</span><span class="o">$</span><span class="n">id</span><span class="w"> </span><span class="p">,</span><span class="m">27</span><span class="o">:</span><span class="m">36</span><span class="p">]))</span><span class="w">
+
+    </span><span class="n">output</span><span class="o">$</span><span class="n">trendPlot</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">renderPlotly</span><span class="p">({</span><span class="w">
+      </span><span class="n">p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">plot_ly</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">labels</span><span class="p">,</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">values</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"pie"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+        </span><span class="n">layout</span><span class="p">(</span><span class="n">paper_bgcolor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"rgb(255,255,255,255)"</span><span class="p">,</span><span class="w"> </span><span class="n">plot_bgcolor</span><span class="o">=</span><span class="s2">"rgb(100,0,0,100)"</span><span class="p">)</span><span class="w">
+    </span><span class="p">})</span><span class="w">
+
+    </span><span class="c1"># this part is for testing the observe
+</span><span class="w">    </span><span class="c1"># text2&lt;-paste("You've selected point ", p$id)
+</span><span class="w">    </span><span class="c1"># output$Click_text&lt;-renderText({
+</span><span class="w">    </span><span class="c1">#   text2
+</span><span class="w">    </span><span class="c1"># })
+</span><span class="w">
+  </span><span class="p">})</span><span class="w">
+
+
+</span><span class="p">})</span></code></pre></figure>
+
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2016/08/09/example-content/">
+            Example content
+            <small>09 Aug 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2016/08/05/Some-IDL-examples/">
+            Some IDL examples
+            <small>05 Aug 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2016/08/05/IPOPP-modis-flowchart/">
+            IMaRS IPOPP modis Data Flowchart
+            <small>05 Aug 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>
