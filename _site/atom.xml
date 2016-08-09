@@ -4,7 +4,7 @@
  <title>Asurin</title>
  <link href="http://localhost:4000//atom.xml" rel="self"/>
  <link href="http://localhost:4000//"/>
- <updated>2016-08-09T17:03:18-04:00</updated>
+ <updated>2016-08-09T17:05:30-04:00</updated>
  <id>http://localhost:4000/</id>
  <author>
    <name>Mark Otto</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Example content</title>
    <link href="http://localhost:4000//2016/08/09/example-content/"/>
-   <updated>2016-08-09T17:03:18-04:00</updated>
+   <updated>2016-08-09T17:05:30-04:00</updated>
    <id>http://localhost:4000//2016/08/09/example-content</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
   Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
@@ -160,7 +160,7 @@ be able to know where different kind of algae lives.&lt;/p&gt;
 are used. The HPLC data for different stations are shown in a pie chart, which
 is built by plotly.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/shinyapp-pie.PNG&quot; alt=&quot;Figure 1. Stations&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/shinyapp-pie.gif&quot; alt=&quot;Figure 1. Stations&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The source code are shown below and you can download them from
 &lt;a href=&quot;https://github.com/asurinsaka/shiny_leaflet_plotly&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
