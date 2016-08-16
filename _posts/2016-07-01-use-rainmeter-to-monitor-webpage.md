@@ -103,6 +103,12 @@ RegExp=(?siU)(?(?=.*<a href='.*tiff'>).*<a href='.*tiff'>(.*).tiff</a><br />)...
 {% endhighlight  %}
 
 
+## Log
+
+2016-08-16 Occasionally this plugin would dead somehow. Refresh would not work,
+just restart Rainmeter would solve the problem. To debug this plugin, just
+uncomment `debug=2` and check log from Rainmeter.
+
 ## Code
 
 {% highlight ini %}
