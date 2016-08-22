@@ -4,7 +4,7 @@
  <title>Asurin</title>
  <link href="http://localhost:4000//atom.xml" rel="self"/>
  <link href="http://localhost:4000//"/>
- <updated>2016-08-09T17:09:10-04:00</updated>
+ <updated>2016-08-22T15:34:15-04:00</updated>
  <id>http://localhost:4000/</id>
  <author>
    <name>Mark Otto</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Example content</title>
-   <link href="http://localhost:4000//2016/08/09/example-content/"/>
-   <updated>2016-08-09T17:09:10-04:00</updated>
-   <id>http://localhost:4000//2016/08/09/example-content</id>
+   <link href="http://localhost:4000//2016/08/22/example-content/"/>
+   <updated>2016-08-22T15:34:15-04:00</updated>
+   <id>http://localhost:4000//2016/08/22/example-content</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
   Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
 &lt;/div&gt;
@@ -149,18 +149,20 @@
    <id>http://localhost:4000//2016/08/09/Shinyapp</id>
    <content type="html">&lt;p&gt;One research in our lab is regarding the algae.&lt;/p&gt;
 
-&lt;p&gt;First they collected water samples from 58 locations around Florida Key[Figure 1].
+&lt;p&gt;First they collected water samples from 58 locations around Florida Key.
 After collection, the samples are run through HPLC to get
 information about the species of chlorophylls. From those information, we would
 be able to know where different kind of algae lives.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/shinyapp-stations.PNG&quot; alt=&quot;Figure 1. Stations&quot; /&gt;&lt;/p&gt;
+&lt;!--![Figure 1. Stations](/images/shinyapp-stations.PNG)
+--&gt;
 
 &lt;p&gt;To help people analysis those HPLC data. A leaflet map build with shiny server
 are used. The HPLC data for different stations are shown in a pie chart, which
 is built by plotly.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/shinyapp-pie.gif&quot; alt=&quot;Figure 1. Stations&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/shinyapp-pie.gif&quot; alt=&quot;Figure 1. Stations&quot; /&gt;
+&lt;!--break--&gt;&lt;/p&gt;
 
 &lt;p&gt;The source code are shown below and you can download them from
 &lt;a href=&quot;https://github.com/asurinsaka/shiny_leaflet_plotly&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
@@ -406,6 +408,12 @@ download a tool called &lt;a href=&quot;https://docs.rainmeter.net/tips/webparse
 &lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser&lt;/span&gt;
 &lt;span class=&quot;py&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;#Station#[&amp;amp;MeasureDate]
 &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;RegExp=(?siU)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;log&quot;&gt;Log&lt;/h2&gt;
+
+&lt;p&gt;2016-08-16 Occasionally this plugin would dead somehow. Refresh would not work,
+just restart Rainmeter would solve the problem. To debug this plugin, just
+uncomment &lt;code class=&quot;highlighter-rouge&quot;&gt;debug=2&lt;/code&gt; and check log from Rainmeter.&lt;/p&gt;
 
 &lt;h2 id=&quot;code&quot;&gt;Code&lt;/h2&gt;
 
@@ -711,6 +719,8 @@ will forget and loose important command that you have used.&lt;/p&gt;
 
 &lt;p&gt;Put the following commands in your ~/.bashrc file or your ~/.bash_profile file.&lt;/p&gt;
 
+&lt;!--break--&gt;
+
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# append instand of overwrite across sections&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;shopt&lt;/span&gt; -s histappend
 
@@ -724,7 +734,38 @@ will forget and loose important command that you have used.&lt;/p&gt;
 &lt;span class=&quot;c&quot;&gt;# add date and time information for each entry&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;HISTTIMEFORMAT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;%m/%d/%y %T &quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Now you will have the history recorded from all the sessions you have opened.&lt;/p&gt;
+&lt;p&gt;Sometimes you want to ignore some test commands or commands includes passwords
+in your history records. Here is how to do that:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# igore commands start with a space&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;HISTCONTROL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ignorespace&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You may also want to ignore duplicated entries&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# igore duplicated commands&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;HISTCONTROL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ignoreredups&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;To ignore both of them, you can do either &lt;code class=&quot;highlighter-rouge&quot;&gt;ignorespace:ignoreredups&lt;/code&gt; or
+&lt;code class=&quot;highlighter-rouge&quot;&gt;ignoreboth&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The complete list of commands to be added in ~/.bashrc is:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# append instand of overwrite across sections&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;shopt&lt;/span&gt; -s histappend
+
+&lt;span class=&quot;c&quot;&gt;# write and read history file every time you hit return&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;PROMPT_COMMAND&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;history -n;history -a&#39;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# increase your history entries and file size&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;HISTSIZE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;100000
+&lt;span class=&quot;nv&quot;&gt;HISTFILESIZE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;100000
+
+&lt;span class=&quot;c&quot;&gt;# add date and time information for each entry&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;HISTTIMEFORMAT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;%m/%d/%y %T &quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# ignore commands started with space and duplicated entries&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;HISTCONTROL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ignoreboth&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
 </content>
  </entry>
  

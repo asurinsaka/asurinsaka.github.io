@@ -13,6 +13,8 @@ Here is how to save all your histories.
 
 Put the following commands in your ~/.bashrc file or your ~/.bash_profile file.
 
+
+<!--break-->
 {% highlight sh %}
 # append instand of overwrite across sections
 shopt -s histappend
@@ -29,5 +31,40 @@ HISTTIMEFORMAT="%m/%d/%y %T "
 
 {% endhighlight %}
 
+Sometimes you want to ignore some test commands or commands includes passwords
+in your history records. Here is how to do that:
 
-Now you will have the history recorded from all the sessions you have opened.
+{% highlight sh %}
+# igore commands start with a space
+HISTCONTROL=ignorespace
+{% endhighlight %}
+
+You may also want to ignore duplicated entries
+
+{% highlight sh %}
+# igore duplicated commands
+HISTCONTROL=ignoreredups
+{% endhighlight %}
+
+
+To ignore both of them, you can do either `ignorespace:ignoreredups` or
+`ignoreboth`.
+
+The complete list of commands to be added in ~/.bashrc is:
+{% highlight sh %}
+# append instand of overwrite across sections
+shopt -s histappend
+
+# write and read history file every time you hit return
+PROMPT_COMMAND='history -n;history -a'
+
+# increase your history entries and file size
+HISTSIZE=100000
+HISTFILESIZE=100000
+
+# add date and time information for each entry
+HISTTIMEFORMAT="%m/%d/%y %T "
+
+# ignore commands started with space and duplicated entries
+HISTCONTROL=ignoreboth
+{% endhighlight %}
