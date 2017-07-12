@@ -4,7 +4,7 @@
  <title>Asurin</title>
  <link href="http://localhost:4000//atom.xml" rel="self"/>
  <link href="http://localhost:4000//"/>
- <updated>2016-08-22T15:34:15-04:00</updated>
+ <updated>2017-07-12T15:35:38-05:00</updated>
  <id>http://localhost:4000/</id>
  <author>
    <name>Mark Otto</name>
@@ -13,139 +13,9 @@
 
  
  <entry>
-   <title>Example content</title>
-   <link href="http://localhost:4000//2016/08/22/example-content/"/>
-   <updated>2016-08-22T15:34:15-04:00</updated>
-   <id>http://localhost:4000//2016/08/22/example-content</id>
-   <content type="html">&lt;div class=&quot;message&quot;&gt;
-  Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
-&lt;/div&gt;
-
-&lt;p&gt;Cum sociis natoque penatibus et magnis &lt;a href=&quot;#&quot;&gt;dis parturient montes&lt;/a&gt;, nascetur ridiculus mus. &lt;em&gt;Aenean eu leo quam.&lt;/em&gt; Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Etiam porta &lt;strong&gt;sem malesuada magna&lt;/strong&gt; mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.&lt;/p&gt;
-
-&lt;h2 id=&quot;inline-html-elements&quot;&gt;Inline HTML elements&lt;/h2&gt;
-
-&lt;p&gt;HTML defines a long list of available inline tags, a complete list of which can be found on the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element&quot;&gt;Mozilla Developer Network&lt;/a&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;To bold text&lt;/strong&gt;, use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;To italicize text&lt;/em&gt;, use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;em&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Abbreviations, like &lt;abbr title=&quot;HyperText Markup Langage&quot;&gt;HTML&lt;/abbr&gt; should use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;abbr&amp;gt;&lt;/code&gt;, with an optional &lt;code class=&quot;highlighter-rouge&quot;&gt;title&lt;/code&gt; attribute for the full phrase.&lt;/li&gt;
-  &lt;li&gt;Citations, like &lt;cite&gt;— Mark otto&lt;/cite&gt;, should use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;cite&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;del&gt;Deleted&lt;/del&gt; text should use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;del&amp;gt;&lt;/code&gt; and &lt;ins&gt;inserted&lt;/ins&gt; text should use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;ins&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Superscript &lt;sup&gt;text&lt;/sup&gt; uses &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;sup&amp;gt;&lt;/code&gt; and subscript &lt;sub&gt;text&lt;/sub&gt; uses &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;sub&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Most of these elements are styled by browsers with few modifications on our part.
-&lt;!--break--&gt;
-## Heading&lt;/p&gt;
-
-&lt;p&gt;Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.&lt;/p&gt;
-
-&lt;h3 id=&quot;code&quot;&gt;Code&lt;/h3&gt;
-
-&lt;p&gt;Cum sociis natoque penatibus et magnis dis &lt;code class=&quot;highlighter-rouge&quot;&gt;code element&lt;/code&gt; montes, nascetur ridiculus mus.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Example can be run directly in your JavaScript console&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Create a function that takes two arguments and returns the sum of those arguments&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;return a + b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Call the function&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// &amp;gt; 8&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.&lt;/p&gt;
-
-&lt;h3 id=&quot;lists&quot;&gt;Lists&lt;/h3&gt;
-
-&lt;p&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Praesent commodo cursus magna, vel scelerisque nisl consectetur et.&lt;/li&gt;
-  &lt;li&gt;Donec id elit non mi porta gravida at eget metus.&lt;/li&gt;
-  &lt;li&gt;Nulla vitae elit libero, a pharetra augue.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Vestibulum id ligula porta felis euismod semper.&lt;/li&gt;
-  &lt;li&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/li&gt;
-  &lt;li&gt;Maecenas sed diam eget risus varius blandit sit amet non magna.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.&lt;/p&gt;
-
-&lt;dl&gt;
-  &lt;dt&gt;HyperText Markup Language (HTML)&lt;/dt&gt;
-  &lt;dd&gt;The language used to describe and define the content of a Web page&lt;/dd&gt;
-
-  &lt;dt&gt;Cascading Style Sheets (CSS)&lt;/dt&gt;
-  &lt;dd&gt;Used to describe the appearance of Web content&lt;/dd&gt;
-
-  &lt;dt&gt;JavaScript (JS)&lt;/dt&gt;
-  &lt;dd&gt;The programming language used to build advanced Web sites and applications&lt;/dd&gt;
-&lt;/dl&gt;
-
-&lt;p&gt;Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/p&gt;
-
-&lt;h3 id=&quot;tables&quot;&gt;Tables&lt;/h3&gt;
-
-&lt;p&gt;Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Name&lt;/th&gt;
-      &lt;th&gt;Upvotes&lt;/th&gt;
-      &lt;th&gt;Downvotes&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tfoot&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Totals&lt;/td&gt;
-      &lt;td&gt;21&lt;/td&gt;
-      &lt;td&gt;23&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tfoot&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Alice&lt;/td&gt;
-      &lt;td&gt;10&lt;/td&gt;
-      &lt;td&gt;11&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Bob&lt;/td&gt;
-      &lt;td&gt;4&lt;/td&gt;
-      &lt;td&gt;3&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Charlie&lt;/td&gt;
-      &lt;td&gt;7&lt;/td&gt;
-      &lt;td&gt;9&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Want to see something else added? &lt;a href=&quot;https://github.com/poole/poole/issues/new&quot;&gt;Open an issue.&lt;/a&gt;&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
    <title>Shinyapp</title>
    <link href="http://localhost:4000//2016/08/09/Shinyapp/"/>
-   <updated>2016-08-09T00:00:00-04:00</updated>
+   <updated>2016-08-09T00:00:00-05:00</updated>
    <id>http://localhost:4000//2016/08/09/Shinyapp</id>
    <content type="html">&lt;p&gt;One research in our lab is regarding the algae.&lt;/p&gt;
 
@@ -225,7 +95,7 @@ is built by plotly.&lt;/p&gt;
     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
     &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# this part is for testing the observe
-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# text2&amp;lt;-paste(&quot;You&#39;ve selected point &quot;, p$id)
+&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# text2&amp;lt;-paste(&quot;You've selected point &quot;, p$id)
 &lt;/span&gt;&lt;span class=&quot;w&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# output$Click_text&amp;lt;-renderText({
 &lt;/span&gt;&lt;span class=&quot;w&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;#   text2
 &lt;/span&gt;&lt;span class=&quot;w&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# })
@@ -245,7 +115,7 @@ March 13 2016 and March 20 2016 to the map.&lt;/p&gt;
  <entry>
    <title>Some IDL examples</title>
    <link href="http://localhost:4000//2016/08/05/Some-IDL-examples/"/>
-   <updated>2016-08-05T00:00:00-04:00</updated>
+   <updated>2016-08-05T00:00:00-05:00</updated>
    <id>http://localhost:4000//2016/08/05/Some-IDL-examples</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.harrisgeospatial.com/ProductsandSolutions/GeospatialProducts/IDL.aspx&quot;&gt;IDL&lt;/a&gt;
 is an old software from harris geospacial for visualizing data. Here are some
@@ -268,7 +138,7 @@ examples of IDL.&lt;/p&gt;
  <entry>
    <title>IMaRS IPOPP modis Data Flowchart</title>
    <link href="http://localhost:4000//2016/08/05/IPOPP-modis-flowchart/"/>
-   <updated>2016-08-05T00:00:00-04:00</updated>
+   <updated>2016-08-05T00:00:00-05:00</updated>
    <id>http://localhost:4000//2016/08/05/IPOPP-modis-flowchart</id>
    <content type="html">&lt;p&gt;This is a flowchart of IMaRS modis data. The chart includes products names and
 marker names for different stations.&lt;/p&gt;
@@ -280,7 +150,7 @@ marker names for different stations.&lt;/p&gt;
  <entry>
    <title>IPOPP 2.5 installation</title>
    <link href="http://localhost:4000//2016/08/01/IPOPP-Installation/"/>
-   <updated>2016-08-01T00:00:00-04:00</updated>
+   <updated>2016-08-01T00:00:00-05:00</updated>
    <id>http://localhost:4000//2016/08/01/IPOPP-Installation</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;https://directreadout.sci.gsfc.nasa.gov/?id=dspContent&amp;amp;cid=68&quot;&gt;IPOPP (the International Polar Orbiter Processing Package)&lt;/a&gt;
 is a free software used to process raw hdf satellite data from Suomi National
@@ -317,7 +187,7 @@ script install_ipopp.sh&lt;/p&gt;
  <entry>
    <title>Use Rainmeter to Monitor Webpage</title>
    <link href="http://localhost:4000//rainmeter/2016/07/01/use-rainmeter-to-monitor-webpage/"/>
-   <updated>2016-07-01T00:00:00-04:00</updated>
+   <updated>2016-07-01T00:00:00-05:00</updated>
    <id>http://localhost:4000//rainmeter/2016/07/01/use-rainmeter-to-monitor-webpage</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
   Due to the length of the code. The complete code is at the end of this post.
@@ -361,7 +231,7 @@ items in the list.&lt;/p&gt;
 
 &lt;p&gt;In the following code:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ini&quot; data-lang=&quot;ini&quot;&gt;&lt;span class=&quot;py&quot;&gt;RegExp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;(?siU)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ini&quot; data-lang=&quot;ini&quot;&gt;&lt;span class=&quot;py&quot;&gt;RegExp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;(?siU)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h4 id=&quot;options&quot;&gt;Options&lt;/h4&gt;
 &lt;table&gt;
@@ -388,26 +258,30 @@ items in the list.&lt;/p&gt;
 &lt;p&gt;To match unknown numbers of repeation, I have to use &lt;a href=&quot;https://docs.rainmeter.net/tips/webparser-lookahead-assertions-in-regexp/&quot;&gt;lookahead assertion&lt;/a&gt;
  in my
 regular expression.&lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)&lt;/code&gt;&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)&lt;/code&gt;&lt;br /&gt;
 The &lt;code class=&quot;highlighter-rouge&quot;&gt;(?&lt;/code&gt; at the beginning, which pairs the &lt;code class=&quot;highlighter-rouge&quot;&gt;)&lt;/code&gt; at the end is an IF conditional
 directive. &lt;br /&gt;
-The &lt;code class=&quot;highlighter-rouge&quot;&gt;(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;)&lt;/code&gt; is the lookahead assertion.&lt;/p&gt;
+The &lt;code class=&quot;highlighter-rouge&quot;&gt;(?=.*&amp;lt;a href='.*tiff'&amp;gt;)&lt;/code&gt; is the lookahead assertion.&lt;/p&gt;
 
 &lt;h4 id=&quot;rainregexp&quot;&gt;RainRegExp&lt;/h4&gt;
 
 &lt;p&gt;To figure out the correct regular expression to use for web parser, you can
 download a tool called &lt;a href=&quot;https://docs.rainmeter.net/tips/webparser-debugging-regexp/#RainRegExp&quot;&gt;RainRegExp&lt;/a&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ini&quot; data-lang=&quot;ini&quot;&gt;&lt;span class=&quot;c&quot;&gt;; get today&#39;s date to put into the url
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ini&quot; data-lang=&quot;ini&quot;&gt;&lt;span class=&quot;c&quot;&gt;; get today's date to put into the url
 &lt;/span&gt;&lt;span class=&quot;nn&quot;&gt;[MeasureDate]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Time&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;%Y-%m-%d&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Time
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;%Y-%m-%d
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[MeasureParent]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser
+&lt;/span&gt;
 &lt;span class=&quot;py&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;#Station#[&amp;amp;MeasureDate]
-&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;RegExp=(?siU)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;RegExp=(?siU)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h2 id=&quot;log&quot;&gt;Log&lt;/h2&gt;
 
@@ -418,11 +292,14 @@ uncomment &lt;code class=&quot;highlighter-rouge&quot;&gt;debug=2&lt;/code&gt; a
 &lt;h2 id=&quot;code&quot;&gt;Code&lt;/h2&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ini&quot; data-lang=&quot;ini&quot;&gt;&lt;span class=&quot;nn&quot;&gt;[Rainmeter]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;500&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Author&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Asurin&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;500
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Author&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Asurin
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[Variables]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Station&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;http://imars.marine.usf.edu/legacy-names/index.php?area=a05&amp;amp;date=&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Station&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;http://imars.marine.usf.edu/legacy-names/index.php?area=a05&amp;amp;date=
+&lt;/span&gt;
 
 &lt;span class=&quot;c&quot;&gt;;-------------------------------------------------------------
 ;-------------------------------------------------------------
@@ -430,277 +307,487 @@ uncomment &lt;code class=&quot;highlighter-rouge&quot;&gt;debug=2&lt;/code&gt; a
 
 &lt;span class=&quot;c&quot;&gt;; a line between title and the list
 &lt;/span&gt;&lt;span class=&quot;nn&quot;&gt;[MeterLine]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Image&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Image
+&lt;/span&gt;
 &lt;span class=&quot;py&quot;&gt;ImageName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;#@#Line.png
-&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;X=0&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;35&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;200&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;3&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Group&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Current&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;X=0
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;35
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;200
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;3
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Group&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Current
+&lt;/span&gt;
 
 &lt;span class=&quot;c&quot;&gt;; transparent background
 &lt;/span&gt;&lt;span class=&quot;nn&quot;&gt;[MeterBackground]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Image&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;SolidColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0,0,0,1&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;200&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Image
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;SolidColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0,0,0,1
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;200
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280
+&lt;/span&gt;
 
 &lt;span class=&quot;c&quot;&gt;;-------------------------------------------------------------
 ;-------------------------------------------------------------
-; get today&#39;s date to put into the url
+; get today's date to put into the url
 &lt;/span&gt;&lt;span class=&quot;nn&quot;&gt;[MeasureDate]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Time&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;%Y-%m-%d&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Time
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;%Y-%m-%d
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[MeasureParent]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser
+&lt;/span&gt;
 &lt;span class=&quot;py&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;#Station#[&amp;amp;MeasureDate]
-&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;OnRefreshAction=[!Log &quot;[MeasureDate]&quot;]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;RegExp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;(?siU)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;).*&amp;lt;a href=&#39;.*tiff&#39;&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Debug&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;OnRefreshAction=[!Log &quot;[MeasureDate]&quot;]
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;RegExp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;(?siU)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)(?(?=.*&amp;lt;a href='.*tiff'&amp;gt;).*&amp;lt;a href='.*tiff'&amp;gt;(.*).tiff&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;)
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Debug&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;2
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[MeasureChild1]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[MeasureParent]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;StringIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Substitute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;:&quot;No Data!&quot;&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[MeasureParent]
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;StringIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Substitute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;:&quot;No Data!&quot;
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[MeasureChild2]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[MeasureParent]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;StringIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;2&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Substitute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;:&quot;No Data!&quot;&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[MeasureParent]
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;StringIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;2
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Substitute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;:&quot;No Data!&quot;
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[MeasureChild3]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[MeasureParent]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;StringIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;3&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Substitute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;:&quot;No Data!&quot;&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[MeasureParent]
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;StringIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;3
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Substitute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;:&quot;No Data!&quot;
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[MeasureChild4]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[MeasureParent]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;StringIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;4&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Substitute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;:&quot;No Data!&quot;&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[MeasureParent]
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;StringIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;4
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Substitute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;:&quot;No Data!&quot;
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[MeasureChild5]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[MeasureParent]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;StringIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;5&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Substitute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;:&quot;No Data!&quot;&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[MeasureParent]
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;StringIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;5
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Substitute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;:&quot;No Data!&quot;
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[MeasureChild6]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[MeasureParent]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;StringIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;6&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Substitute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;:&quot;No Data!&quot;&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[MeasureParent]
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;StringIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;6
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Substitute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;:&quot;No Data!&quot;
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[MeasureChild7]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[MeasureParent]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;StringIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;7&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Substitute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;:&quot;No Data!&quot;&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[MeasureParent]
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;StringIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;7
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Substitute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;:&quot;No Data!&quot;
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[MeasureChild8]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[MeasureParent]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;StringIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;8&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Substitute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;:&quot;No Data!&quot;&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[MeasureParent]
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;StringIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;8
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Substitute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;:&quot;No Data!&quot;
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[MeasureChild9]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[MeasureParent]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;StringIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;9&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Substitute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;:&quot;No Data!&quot;&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[MeasureParent]
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;StringIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;9
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Substitute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;:&quot;No Data!&quot;
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[MeasureChild10]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[MeasureParent]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;StringIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;10&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Substitute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;:&quot;No Data!&quot;&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Measure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Plugin
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;WebParser
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[MeasureParent]
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;StringIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;10
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Substitute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;:&quot;No Data!&quot;
+&lt;/span&gt;
 
 &lt;span class=&quot;c&quot;&gt;;-------------------------------------------------------------
 ;-------------------------------------------------------------
 &lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;; title
 &lt;/span&gt;&lt;span class=&quot;nn&quot;&gt;[MeterTextNotes]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;15&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;10&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;50&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;15
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;10
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;50
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0
+&lt;/span&gt;
 &lt;span class=&quot;py&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Sat Products&quot;&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;AntiAlias=1
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[MeterData1]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;MeasureName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;MeasureChild1&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;45&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;190&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;12&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;ClipString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;MeasureName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;MeasureChild1
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;45
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;190
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;12
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;ClipString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[MeterData2]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;MeasureName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;MeasureChild2&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;60&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;190&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;12&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;ClipString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;MeasureName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;MeasureChild2
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;60
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;190
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;12
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;ClipString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[MeterData3]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;MeasureName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;MeasureChild3&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;75&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;190&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;12&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;ClipString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;MeasureName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;MeasureChild3
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;75
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;190
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;12
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;ClipString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[MeterData4]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;MeasureName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;MeasureChild4&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;90&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;190&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;12&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;ClipString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;MeasureName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;MeasureChild4
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;90
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;190
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;12
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;ClipString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[MeterData5]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;MeasureName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;MeasureChild5&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;105&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;190&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;12&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;ClipString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;MeasureName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;MeasureChild5
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;105
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;190
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;12
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;ClipString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[MeterData6]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;MeasureName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;MeasureChild6&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;120&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;190&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;12&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;ClipString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;MeasureName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;MeasureChild6
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;120
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;190
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;12
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;ClipString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[MeterData7]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;MeasureName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;MeasureChild7&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;135&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;190&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;12&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;ClipString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;MeasureName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;MeasureChild7
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;135
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;190
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;12
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;ClipString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[MeterData8]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;MeasureName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;MeasureChild8&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;150&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;190&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;12&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;ClipString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;MeasureName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;MeasureChild8
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;150
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;190
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;12
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;ClipString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[MeterData9]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;MeasureName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;MeasureChild9&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;165&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;190&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;12&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;ClipString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;MeasureName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;MeasureChild9
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;165
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;190
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;12
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;ClipString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[MeterData10]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;MeasureName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;MeasureChild10&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;180&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;190&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;12&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;ClipString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;MeasureName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;MeasureChild10
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;180
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;190
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;12
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;ClipString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1
+&lt;/span&gt;
 
 &lt;span class=&quot;nn&quot;&gt;[MeterData11]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;MeasureName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;MeasureDate&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;200&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;190&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;12&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Meter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;String
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;MeasureName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;MeasureDate
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;0
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;200
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;190
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;280
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;255,255,255
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;12
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;FontFace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Aovel Sans
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;StringAlign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Left
+&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;AntiAlias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1
+&lt;/span&gt;
 &lt;span class=&quot;py&quot;&gt;ClipString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </content>
@@ -709,7 +796,7 @@ uncomment &lt;code class=&quot;highlighter-rouge&quot;&gt;debug=2&lt;/code&gt; a
  <entry>
    <title>More History for Linux Bash</title>
    <link href="http://localhost:4000//linux/2016/06/30/more-history-for-linux-bash/"/>
-   <updated>2016-06-30T00:00:00-04:00</updated>
+   <updated>2016-06-30T00:00:00-05:00</updated>
    <id>http://localhost:4000//linux/2016/06/30/more-history-for-linux-bash</id>
    <content type="html">&lt;p&gt;If you open Multiple sections of Linux terminal, only one copy of history will
 be saved in your .bash_history file. This would be really annoying because you
@@ -721,28 +808,34 @@ will forget and loose important command that you have used.&lt;/p&gt;
 
 &lt;!--break--&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# append instand of overwrite across sections&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# append instand of overwrite across sections
+&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;shopt&lt;/span&gt; -s histappend
 
-&lt;span class=&quot;c&quot;&gt;# write and read history file every time you hit return&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;PROMPT_COMMAND&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;history -n;history -a&#39;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# write and read history file every time you hit return
+&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;PROMPT_COMMAND&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'history -n;history -a'&lt;/span&gt;
 
-&lt;span class=&quot;c&quot;&gt;# increase your history entries and file size&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# increase your history entries and file size
+&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;HISTSIZE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;100000
 &lt;span class=&quot;nv&quot;&gt;HISTFILESIZE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;100000
 
-&lt;span class=&quot;c&quot;&gt;# add date and time information for each entry&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# add date and time information for each entry
+&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;HISTTIMEFORMAT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;%m/%d/%y %T &quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Sometimes you want to ignore some test commands or commands includes passwords
 in your history records. Here is how to do that:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# igore commands start with a space&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# igore commands start with a space
+&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;HISTCONTROL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ignorespace&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;You may also want to ignore duplicated entries&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# igore duplicated commands&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# igore duplicated commands
+&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;HISTCONTROL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ignoreredups&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;To ignore both of them, you can do either &lt;code class=&quot;highlighter-rouge&quot;&gt;ignorespace:ignoreredups&lt;/code&gt; or
@@ -750,20 +843,25 @@ in your history records. Here is how to do that:&lt;/p&gt;
 
 &lt;p&gt;The complete list of commands to be added in ~/.bashrc is:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# append instand of overwrite across sections&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# append instand of overwrite across sections
+&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;shopt&lt;/span&gt; -s histappend
 
-&lt;span class=&quot;c&quot;&gt;# write and read history file every time you hit return&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;PROMPT_COMMAND&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;history -n;history -a&#39;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# write and read history file every time you hit return
+&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;PROMPT_COMMAND&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'history -n;history -a'&lt;/span&gt;
 
-&lt;span class=&quot;c&quot;&gt;# increase your history entries and file size&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# increase your history entries and file size
+&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;HISTSIZE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;100000
 &lt;span class=&quot;nv&quot;&gt;HISTFILESIZE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;100000
 
-&lt;span class=&quot;c&quot;&gt;# add date and time information for each entry&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# add date and time information for each entry
+&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;HISTTIMEFORMAT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;%m/%d/%y %T &quot;&lt;/span&gt;
 
-&lt;span class=&quot;c&quot;&gt;# ignore commands started with space and duplicated entries&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# ignore commands started with space and duplicated entries
+&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;HISTCONTROL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ignoreboth&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </content>
@@ -772,7 +870,7 @@ in your history records. Here is how to do that:&lt;/p&gt;
  <entry>
    <title>How I Build this Website</title>
    <link href="http://localhost:4000//2016/06/29/how-i-build-this-website/"/>
-   <updated>2016-06-29T00:00:00-04:00</updated>
+   <updated>2016-06-29T00:00:00-05:00</updated>
    <id>http://localhost:4000//2016/06/29/how-i-build-this-website</id>
    <content type="html">&lt;p&gt;This website is based on Lanyon and changed the color scheme to &lt;a href=&quot;https://github.com/voronianski/oceanic-next-color-scheme&quot;&gt;Oceanic Next Color Scheme&lt;/a&gt;. The color scheme was found from &lt;a href=&quot;http://komodoide.com/packages/schemes/&quot;&gt;Komodoide&lt;/a&gt;. The IDE I used for editing is &lt;a href=&quot;https://atom.io&quot;&gt;Atom&lt;/a&gt;. I also added the read more link by the method published
 &lt;a href=&quot;https://gist.github.com/mikeygee/2626538&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
@@ -824,7 +922,7 @@ in your history records. Here is how to do that:&lt;/p&gt;
  <entry>
    <title>What's Jekyll?</title>
    <link href="http://localhost:4000//2013/12/31/whats-jekyll/"/>
-   <updated>2013-12-31T00:00:00-05:00</updated>
+   <updated>2013-12-31T00:00:00-06:00</updated>
    <id>http://localhost:4000//2013/12/31/whats-jekyll</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From &lt;a href=&quot;https://github.com/mojombo/jekyll/blob/master/README.markdown&quot;&gt;the project’s readme&lt;/a&gt;:&lt;/p&gt;
 

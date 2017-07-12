@@ -75,7 +75,7 @@
 
   <div class="sidebar-item">
     <p>
-      &copy; 2016. All rights reserved.
+      &copy; 2017. All rights reserved.
     </p>
   </div>
 </div>
@@ -178,12 +178,16 @@ download a tool called <a href="https://docs.rainmeter.net/tips/webparser-debugg
 
 <figure class="highlight"><pre><code class="language-ini" data-lang="ini"><span class="c">; get today's date to put into the url
 </span><span class="nn">[MeasureDate]</span>
-<span class="py">Measure</span><span class="p">=</span><span class="s">Time</span>
-<span class="py">Format</span><span class="p">=</span> <span class="s">%Y-%m-%d</span>
+<span class="py">Measure</span><span class="p">=</span><span class="s">Time
+</span>
+<span class="py">Format</span><span class="p">=</span> <span class="s">%Y-%m-%d
+</span>
 
 <span class="nn">[MeasureParent]</span>
-<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin</span>
-<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser</span>
+<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin
+</span>
+<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser
+</span>
 <span class="py">URL</span><span class="p">=</span><span class="c">#Station#[&amp;MeasureDate]
 </span><span class="s">RegExp=(?siU)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)...</span></code></pre></figure>
 
@@ -196,11 +200,14 @@ uncomment <code class="highlighter-rouge">debug=2</code> and check log from Rain
 <h2 id="code">Code</h2>
 
 <figure class="highlight"><pre><code class="language-ini" data-lang="ini"><span class="nn">[Rainmeter]</span>
-<span class="py">Update</span><span class="p">=</span><span class="s">500</span>
-<span class="py">Author</span><span class="p">=</span> <span class="s">Asurin</span>
+<span class="py">Update</span><span class="p">=</span><span class="s">500
+</span>
+<span class="py">Author</span><span class="p">=</span> <span class="s">Asurin
+</span>
 
 <span class="nn">[Variables]</span>
-<span class="py">Station</span><span class="p">=</span><span class="s">http://imars.marine.usf.edu/legacy-names/index.php?area=a05&amp;date=</span>
+<span class="py">Station</span><span class="p">=</span><span class="s">http://imars.marine.usf.edu/legacy-names/index.php?area=a05&amp;date=
+</span>
 
 <span class="c">;-------------------------------------------------------------
 ;-------------------------------------------------------------
@@ -208,277 +215,487 @@ uncomment <code class="highlighter-rouge">debug=2</code> and check log from Rain
 
 <span class="c">; a line between title and the list
 </span><span class="nn">[MeterLine]</span>
-<span class="py">Meter</span><span class="p">=</span><span class="s">Image</span>
+<span class="py">Meter</span><span class="p">=</span><span class="s">Image
+</span>
 <span class="py">ImageName</span><span class="p">=</span><span class="c">#@#Line.png
-</span><span class="s">X=0</span>
-<span class="py">Y</span><span class="p">=</span><span class="s">35</span>
-<span class="py">W</span><span class="p">=</span><span class="s">200</span>
-<span class="py">H</span><span class="p">=</span><span class="s">3</span>
-<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1</span>
-<span class="py">Group</span><span class="p">=</span><span class="s">Current</span>
+</span><span class="s">X=0
+</span>
+<span class="py">Y</span><span class="p">=</span><span class="s">35
+</span>
+<span class="py">W</span><span class="p">=</span><span class="s">200
+</span>
+<span class="py">H</span><span class="p">=</span><span class="s">3
+</span>
+<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1
+</span>
+<span class="py">Group</span><span class="p">=</span><span class="s">Current
+</span>
 
 <span class="c">; transparent background
 </span><span class="nn">[MeterBackground]</span>
-<span class="py">Meter</span><span class="p">=</span><span class="s">Image</span>
-<span class="py">SolidColor</span><span class="p">=</span><span class="s">0,0,0,1</span>
-<span class="py">X</span><span class="p">=</span><span class="s">0</span>
-<span class="py">Y</span><span class="p">=</span><span class="s">0</span>
-<span class="py">W</span><span class="p">=</span><span class="s">200</span>
-<span class="py">H</span><span class="p">=</span><span class="s">280</span>
+<span class="py">Meter</span><span class="p">=</span><span class="s">Image
+</span>
+<span class="py">SolidColor</span><span class="p">=</span><span class="s">0,0,0,1
+</span>
+<span class="py">X</span><span class="p">=</span><span class="s">0
+</span>
+<span class="py">Y</span><span class="p">=</span><span class="s">0
+</span>
+<span class="py">W</span><span class="p">=</span><span class="s">200
+</span>
+<span class="py">H</span><span class="p">=</span><span class="s">280
+</span>
 
 <span class="c">;-------------------------------------------------------------
 ;-------------------------------------------------------------
 ; get today's date to put into the url
 </span><span class="nn">[MeasureDate]</span>
-<span class="py">Measure</span><span class="p">=</span><span class="s">Time</span>
-<span class="py">Format</span><span class="p">=</span> <span class="s">%Y-%m-%d</span>
+<span class="py">Measure</span><span class="p">=</span><span class="s">Time
+</span>
+<span class="py">Format</span><span class="p">=</span> <span class="s">%Y-%m-%d
+</span>
 
 <span class="nn">[MeasureParent]</span>
-<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin</span>
-<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser</span>
+<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin
+</span>
+<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser
+</span>
 <span class="py">URL</span><span class="p">=</span><span class="c">#Station#[&amp;MeasureDate]
-</span><span class="s">OnRefreshAction=[!Log "[MeasureDate]"]</span>
-<span class="py">RegExp</span><span class="p">=</span><span class="s">(?siU)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)</span>
-<span class="py">Debug</span><span class="p">=</span><span class="s">2</span>
+</span><span class="s">OnRefreshAction=[!Log "[MeasureDate]"]
+</span>
+<span class="py">RegExp</span><span class="p">=</span><span class="s">(?siU)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)(?(?=.*&lt;a href='.*tiff'&gt;).*&lt;a href='.*tiff'&gt;(.*).tiff&lt;/a&gt;&lt;br /&gt;)
+</span>
+<span class="py">Debug</span><span class="p">=</span><span class="s">2
+</span>
 
 <span class="nn">[MeasureChild1]</span>
-<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin</span>
-<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser</span>
-<span class="py">URL</span><span class="p">=</span><span class="s">[MeasureParent]</span>
-<span class="py">StringIndex</span><span class="p">=</span><span class="s">1</span>
-<span class="py">Substitute</span><span class="p">=</span><span class="s">"":"No Data!"</span>
+<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin
+</span>
+<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser
+</span>
+<span class="py">URL</span><span class="p">=</span><span class="s">[MeasureParent]
+</span>
+<span class="py">StringIndex</span><span class="p">=</span><span class="s">1
+</span>
+<span class="py">Substitute</span><span class="p">=</span><span class="s">"":"No Data!"
+</span>
 
 <span class="nn">[MeasureChild2]</span>
-<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin</span>
-<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser</span>
-<span class="py">URL</span><span class="p">=</span><span class="s">[MeasureParent]</span>
-<span class="py">StringIndex</span><span class="p">=</span><span class="s">2</span>
-<span class="py">Substitute</span><span class="p">=</span><span class="s">"":"No Data!"</span>
+<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin
+</span>
+<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser
+</span>
+<span class="py">URL</span><span class="p">=</span><span class="s">[MeasureParent]
+</span>
+<span class="py">StringIndex</span><span class="p">=</span><span class="s">2
+</span>
+<span class="py">Substitute</span><span class="p">=</span><span class="s">"":"No Data!"
+</span>
 
 <span class="nn">[MeasureChild3]</span>
-<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin</span>
-<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser</span>
-<span class="py">URL</span><span class="p">=</span><span class="s">[MeasureParent]</span>
-<span class="py">StringIndex</span><span class="p">=</span><span class="s">3</span>
-<span class="py">Substitute</span><span class="p">=</span><span class="s">"":"No Data!"</span>
+<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin
+</span>
+<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser
+</span>
+<span class="py">URL</span><span class="p">=</span><span class="s">[MeasureParent]
+</span>
+<span class="py">StringIndex</span><span class="p">=</span><span class="s">3
+</span>
+<span class="py">Substitute</span><span class="p">=</span><span class="s">"":"No Data!"
+</span>
 
 <span class="nn">[MeasureChild4]</span>
-<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin</span>
-<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser</span>
-<span class="py">URL</span><span class="p">=</span><span class="s">[MeasureParent]</span>
-<span class="py">StringIndex</span><span class="p">=</span><span class="s">4</span>
-<span class="py">Substitute</span><span class="p">=</span><span class="s">"":"No Data!"</span>
+<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin
+</span>
+<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser
+</span>
+<span class="py">URL</span><span class="p">=</span><span class="s">[MeasureParent]
+</span>
+<span class="py">StringIndex</span><span class="p">=</span><span class="s">4
+</span>
+<span class="py">Substitute</span><span class="p">=</span><span class="s">"":"No Data!"
+</span>
 
 <span class="nn">[MeasureChild5]</span>
-<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin</span>
-<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser</span>
-<span class="py">URL</span><span class="p">=</span><span class="s">[MeasureParent]</span>
-<span class="py">StringIndex</span><span class="p">=</span><span class="s">5</span>
-<span class="py">Substitute</span><span class="p">=</span><span class="s">"":"No Data!"</span>
+<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin
+</span>
+<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser
+</span>
+<span class="py">URL</span><span class="p">=</span><span class="s">[MeasureParent]
+</span>
+<span class="py">StringIndex</span><span class="p">=</span><span class="s">5
+</span>
+<span class="py">Substitute</span><span class="p">=</span><span class="s">"":"No Data!"
+</span>
 
 <span class="nn">[MeasureChild6]</span>
-<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin</span>
-<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser</span>
-<span class="py">URL</span><span class="p">=</span><span class="s">[MeasureParent]</span>
-<span class="py">StringIndex</span><span class="p">=</span><span class="s">6</span>
-<span class="py">Substitute</span><span class="p">=</span><span class="s">"":"No Data!"</span>
+<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin
+</span>
+<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser
+</span>
+<span class="py">URL</span><span class="p">=</span><span class="s">[MeasureParent]
+</span>
+<span class="py">StringIndex</span><span class="p">=</span><span class="s">6
+</span>
+<span class="py">Substitute</span><span class="p">=</span><span class="s">"":"No Data!"
+</span>
 
 <span class="nn">[MeasureChild7]</span>
-<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin</span>
-<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser</span>
-<span class="py">URL</span><span class="p">=</span><span class="s">[MeasureParent]</span>
-<span class="py">StringIndex</span><span class="p">=</span><span class="s">7</span>
-<span class="py">Substitute</span><span class="p">=</span><span class="s">"":"No Data!"</span>
+<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin
+</span>
+<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser
+</span>
+<span class="py">URL</span><span class="p">=</span><span class="s">[MeasureParent]
+</span>
+<span class="py">StringIndex</span><span class="p">=</span><span class="s">7
+</span>
+<span class="py">Substitute</span><span class="p">=</span><span class="s">"":"No Data!"
+</span>
 
 <span class="nn">[MeasureChild8]</span>
-<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin</span>
-<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser</span>
-<span class="py">URL</span><span class="p">=</span><span class="s">[MeasureParent]</span>
-<span class="py">StringIndex</span><span class="p">=</span><span class="s">8</span>
-<span class="py">Substitute</span><span class="p">=</span><span class="s">"":"No Data!"</span>
+<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin
+</span>
+<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser
+</span>
+<span class="py">URL</span><span class="p">=</span><span class="s">[MeasureParent]
+</span>
+<span class="py">StringIndex</span><span class="p">=</span><span class="s">8
+</span>
+<span class="py">Substitute</span><span class="p">=</span><span class="s">"":"No Data!"
+</span>
 
 <span class="nn">[MeasureChild9]</span>
-<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin</span>
-<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser</span>
-<span class="py">URL</span><span class="p">=</span><span class="s">[MeasureParent]</span>
-<span class="py">StringIndex</span><span class="p">=</span><span class="s">9</span>
-<span class="py">Substitute</span><span class="p">=</span><span class="s">"":"No Data!"</span>
+<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin
+</span>
+<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser
+</span>
+<span class="py">URL</span><span class="p">=</span><span class="s">[MeasureParent]
+</span>
+<span class="py">StringIndex</span><span class="p">=</span><span class="s">9
+</span>
+<span class="py">Substitute</span><span class="p">=</span><span class="s">"":"No Data!"
+</span>
 
 <span class="nn">[MeasureChild10]</span>
-<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin</span>
-<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser</span>
-<span class="py">URL</span><span class="p">=</span><span class="s">[MeasureParent]</span>
-<span class="py">StringIndex</span><span class="p">=</span><span class="s">10</span>
-<span class="py">Substitute</span><span class="p">=</span><span class="s">"":"No Data!"</span>
+<span class="py">Measure</span><span class="p">=</span><span class="s">Plugin
+</span>
+<span class="py">Plugin</span><span class="p">=</span><span class="s">WebParser
+</span>
+<span class="py">URL</span><span class="p">=</span><span class="s">[MeasureParent]
+</span>
+<span class="py">StringIndex</span><span class="p">=</span><span class="s">10
+</span>
+<span class="py">Substitute</span><span class="p">=</span><span class="s">"":"No Data!"
+</span>
 
 <span class="c">;-------------------------------------------------------------
 ;-------------------------------------------------------------
 </span>
 <span class="c">; title
 </span><span class="nn">[MeterTextNotes]</span>
-<span class="py">Meter</span><span class="p">=</span><span class="s">String</span>
-<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255</span>
-<span class="py">FontSize</span><span class="p">=</span><span class="s">15</span>
-<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans</span>
-<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left</span>
-<span class="py">FontSize</span><span class="p">=</span><span class="s">10</span>
-<span class="py">X</span><span class="p">=</span><span class="s">50</span>
-<span class="py">Y</span><span class="p">=</span><span class="s">0</span>
+<span class="py">Meter</span><span class="p">=</span><span class="s">String
+</span>
+<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255
+</span>
+<span class="py">FontSize</span><span class="p">=</span><span class="s">15
+</span>
+<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans
+</span>
+<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left
+</span>
+<span class="py">FontSize</span><span class="p">=</span><span class="s">10
+</span>
+<span class="py">X</span><span class="p">=</span><span class="s">50
+</span>
+<span class="py">Y</span><span class="p">=</span><span class="s">0
+</span>
 <span class="py">Text</span><span class="p">=</span><span class="s">"Sat Products"</span>
-<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1</span>
+<span class="s">AntiAlias=1
+</span>
 
 <span class="nn">[MeterData1]</span>
-<span class="py">Meter</span><span class="p">=</span><span class="s">String</span>
-<span class="py">MeasureName</span><span class="p">=</span><span class="s">MeasureChild1</span>
-<span class="py">X</span><span class="p">=</span><span class="s">0</span>
-<span class="py">Y</span><span class="p">=</span><span class="s">45</span>
-<span class="py">W</span><span class="p">=</span><span class="s">190</span>
-<span class="py">H</span><span class="p">=</span><span class="s">280</span>
-<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255</span>
-<span class="py">FontSize</span><span class="p">=</span><span class="s">12</span>
-<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans</span>
-<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left</span>
-<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1</span>
-<span class="py">ClipString</span><span class="p">=</span><span class="s">1</span>
+<span class="py">Meter</span><span class="p">=</span><span class="s">String
+</span>
+<span class="py">MeasureName</span><span class="p">=</span><span class="s">MeasureChild1
+</span>
+<span class="py">X</span><span class="p">=</span><span class="s">0
+</span>
+<span class="py">Y</span><span class="p">=</span><span class="s">45
+</span>
+<span class="py">W</span><span class="p">=</span><span class="s">190
+</span>
+<span class="py">H</span><span class="p">=</span><span class="s">280
+</span>
+<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255
+</span>
+<span class="py">FontSize</span><span class="p">=</span><span class="s">12
+</span>
+<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans
+</span>
+<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left
+</span>
+<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1
+</span>
+<span class="py">ClipString</span><span class="p">=</span><span class="s">1
+</span>
 
 <span class="nn">[MeterData2]</span>
-<span class="py">Meter</span><span class="p">=</span><span class="s">String</span>
-<span class="py">MeasureName</span><span class="p">=</span><span class="s">MeasureChild2</span>
-<span class="py">X</span><span class="p">=</span><span class="s">0</span>
-<span class="py">Y</span><span class="p">=</span><span class="s">60</span>
-<span class="py">W</span><span class="p">=</span><span class="s">190</span>
-<span class="py">H</span><span class="p">=</span><span class="s">280</span>
-<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255</span>
-<span class="py">FontSize</span><span class="p">=</span><span class="s">12</span>
-<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans</span>
-<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left</span>
-<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1</span>
-<span class="py">ClipString</span><span class="p">=</span><span class="s">1</span>
+<span class="py">Meter</span><span class="p">=</span><span class="s">String
+</span>
+<span class="py">MeasureName</span><span class="p">=</span><span class="s">MeasureChild2
+</span>
+<span class="py">X</span><span class="p">=</span><span class="s">0
+</span>
+<span class="py">Y</span><span class="p">=</span><span class="s">60
+</span>
+<span class="py">W</span><span class="p">=</span><span class="s">190
+</span>
+<span class="py">H</span><span class="p">=</span><span class="s">280
+</span>
+<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255
+</span>
+<span class="py">FontSize</span><span class="p">=</span><span class="s">12
+</span>
+<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans
+</span>
+<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left
+</span>
+<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1
+</span>
+<span class="py">ClipString</span><span class="p">=</span><span class="s">1
+</span>
 
 <span class="nn">[MeterData3]</span>
-<span class="py">Meter</span><span class="p">=</span><span class="s">String</span>
-<span class="py">MeasureName</span><span class="p">=</span><span class="s">MeasureChild3</span>
-<span class="py">X</span><span class="p">=</span><span class="s">0</span>
-<span class="py">Y</span><span class="p">=</span><span class="s">75</span>
-<span class="py">W</span><span class="p">=</span><span class="s">190</span>
-<span class="py">H</span><span class="p">=</span><span class="s">280</span>
-<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255</span>
-<span class="py">FontSize</span><span class="p">=</span><span class="s">12</span>
-<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans</span>
-<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left</span>
-<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1</span>
-<span class="py">ClipString</span><span class="p">=</span><span class="s">1</span>
+<span class="py">Meter</span><span class="p">=</span><span class="s">String
+</span>
+<span class="py">MeasureName</span><span class="p">=</span><span class="s">MeasureChild3
+</span>
+<span class="py">X</span><span class="p">=</span><span class="s">0
+</span>
+<span class="py">Y</span><span class="p">=</span><span class="s">75
+</span>
+<span class="py">W</span><span class="p">=</span><span class="s">190
+</span>
+<span class="py">H</span><span class="p">=</span><span class="s">280
+</span>
+<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255
+</span>
+<span class="py">FontSize</span><span class="p">=</span><span class="s">12
+</span>
+<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans
+</span>
+<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left
+</span>
+<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1
+</span>
+<span class="py">ClipString</span><span class="p">=</span><span class="s">1
+</span>
 
 <span class="nn">[MeterData4]</span>
-<span class="py">Meter</span><span class="p">=</span><span class="s">String</span>
-<span class="py">MeasureName</span><span class="p">=</span><span class="s">MeasureChild4</span>
-<span class="py">X</span><span class="p">=</span><span class="s">0</span>
-<span class="py">Y</span><span class="p">=</span><span class="s">90</span>
-<span class="py">W</span><span class="p">=</span><span class="s">190</span>
-<span class="py">H</span><span class="p">=</span><span class="s">280</span>
-<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255</span>
-<span class="py">FontSize</span><span class="p">=</span><span class="s">12</span>
-<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans</span>
-<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left</span>
-<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1</span>
-<span class="py">ClipString</span><span class="p">=</span><span class="s">1</span>
+<span class="py">Meter</span><span class="p">=</span><span class="s">String
+</span>
+<span class="py">MeasureName</span><span class="p">=</span><span class="s">MeasureChild4
+</span>
+<span class="py">X</span><span class="p">=</span><span class="s">0
+</span>
+<span class="py">Y</span><span class="p">=</span><span class="s">90
+</span>
+<span class="py">W</span><span class="p">=</span><span class="s">190
+</span>
+<span class="py">H</span><span class="p">=</span><span class="s">280
+</span>
+<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255
+</span>
+<span class="py">FontSize</span><span class="p">=</span><span class="s">12
+</span>
+<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans
+</span>
+<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left
+</span>
+<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1
+</span>
+<span class="py">ClipString</span><span class="p">=</span><span class="s">1
+</span>
 
 <span class="nn">[MeterData5]</span>
-<span class="py">Meter</span><span class="p">=</span><span class="s">String</span>
-<span class="py">MeasureName</span><span class="p">=</span><span class="s">MeasureChild5</span>
-<span class="py">X</span><span class="p">=</span><span class="s">0</span>
-<span class="py">Y</span><span class="p">=</span><span class="s">105</span>
-<span class="py">W</span><span class="p">=</span><span class="s">190</span>
-<span class="py">H</span><span class="p">=</span><span class="s">280</span>
-<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255</span>
-<span class="py">FontSize</span><span class="p">=</span><span class="s">12</span>
-<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans</span>
-<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left</span>
-<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1</span>
-<span class="py">ClipString</span><span class="p">=</span><span class="s">1</span>
+<span class="py">Meter</span><span class="p">=</span><span class="s">String
+</span>
+<span class="py">MeasureName</span><span class="p">=</span><span class="s">MeasureChild5
+</span>
+<span class="py">X</span><span class="p">=</span><span class="s">0
+</span>
+<span class="py">Y</span><span class="p">=</span><span class="s">105
+</span>
+<span class="py">W</span><span class="p">=</span><span class="s">190
+</span>
+<span class="py">H</span><span class="p">=</span><span class="s">280
+</span>
+<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255
+</span>
+<span class="py">FontSize</span><span class="p">=</span><span class="s">12
+</span>
+<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans
+</span>
+<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left
+</span>
+<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1
+</span>
+<span class="py">ClipString</span><span class="p">=</span><span class="s">1
+</span>
 
 <span class="nn">[MeterData6]</span>
-<span class="py">Meter</span><span class="p">=</span><span class="s">String</span>
-<span class="py">MeasureName</span><span class="p">=</span><span class="s">MeasureChild6</span>
-<span class="py">X</span><span class="p">=</span><span class="s">0</span>
-<span class="py">Y</span><span class="p">=</span><span class="s">120</span>
-<span class="py">W</span><span class="p">=</span><span class="s">190</span>
-<span class="py">H</span><span class="p">=</span><span class="s">280</span>
-<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255</span>
-<span class="py">FontSize</span><span class="p">=</span><span class="s">12</span>
-<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans</span>
-<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left</span>
-<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1</span>
-<span class="py">ClipString</span><span class="p">=</span><span class="s">1</span>
+<span class="py">Meter</span><span class="p">=</span><span class="s">String
+</span>
+<span class="py">MeasureName</span><span class="p">=</span><span class="s">MeasureChild6
+</span>
+<span class="py">X</span><span class="p">=</span><span class="s">0
+</span>
+<span class="py">Y</span><span class="p">=</span><span class="s">120
+</span>
+<span class="py">W</span><span class="p">=</span><span class="s">190
+</span>
+<span class="py">H</span><span class="p">=</span><span class="s">280
+</span>
+<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255
+</span>
+<span class="py">FontSize</span><span class="p">=</span><span class="s">12
+</span>
+<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans
+</span>
+<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left
+</span>
+<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1
+</span>
+<span class="py">ClipString</span><span class="p">=</span><span class="s">1
+</span>
 
 <span class="nn">[MeterData7]</span>
-<span class="py">Meter</span><span class="p">=</span><span class="s">String</span>
-<span class="py">MeasureName</span><span class="p">=</span><span class="s">MeasureChild7</span>
-<span class="py">X</span><span class="p">=</span><span class="s">0</span>
-<span class="py">Y</span><span class="p">=</span><span class="s">135</span>
-<span class="py">W</span><span class="p">=</span><span class="s">190</span>
-<span class="py">H</span><span class="p">=</span><span class="s">280</span>
-<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255</span>
-<span class="py">FontSize</span><span class="p">=</span><span class="s">12</span>
-<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans</span>
-<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left</span>
-<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1</span>
-<span class="py">ClipString</span><span class="p">=</span><span class="s">1</span>
+<span class="py">Meter</span><span class="p">=</span><span class="s">String
+</span>
+<span class="py">MeasureName</span><span class="p">=</span><span class="s">MeasureChild7
+</span>
+<span class="py">X</span><span class="p">=</span><span class="s">0
+</span>
+<span class="py">Y</span><span class="p">=</span><span class="s">135
+</span>
+<span class="py">W</span><span class="p">=</span><span class="s">190
+</span>
+<span class="py">H</span><span class="p">=</span><span class="s">280
+</span>
+<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255
+</span>
+<span class="py">FontSize</span><span class="p">=</span><span class="s">12
+</span>
+<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans
+</span>
+<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left
+</span>
+<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1
+</span>
+<span class="py">ClipString</span><span class="p">=</span><span class="s">1
+</span>
 
 <span class="nn">[MeterData8]</span>
-<span class="py">Meter</span><span class="p">=</span><span class="s">String</span>
-<span class="py">MeasureName</span><span class="p">=</span><span class="s">MeasureChild8</span>
-<span class="py">X</span><span class="p">=</span><span class="s">0</span>
-<span class="py">Y</span><span class="p">=</span><span class="s">150</span>
-<span class="py">W</span><span class="p">=</span><span class="s">190</span>
-<span class="py">H</span><span class="p">=</span><span class="s">280</span>
-<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255</span>
-<span class="py">FontSize</span><span class="p">=</span><span class="s">12</span>
-<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans</span>
-<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left</span>
-<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1</span>
-<span class="py">ClipString</span><span class="p">=</span><span class="s">1</span>
+<span class="py">Meter</span><span class="p">=</span><span class="s">String
+</span>
+<span class="py">MeasureName</span><span class="p">=</span><span class="s">MeasureChild8
+</span>
+<span class="py">X</span><span class="p">=</span><span class="s">0
+</span>
+<span class="py">Y</span><span class="p">=</span><span class="s">150
+</span>
+<span class="py">W</span><span class="p">=</span><span class="s">190
+</span>
+<span class="py">H</span><span class="p">=</span><span class="s">280
+</span>
+<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255
+</span>
+<span class="py">FontSize</span><span class="p">=</span><span class="s">12
+</span>
+<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans
+</span>
+<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left
+</span>
+<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1
+</span>
+<span class="py">ClipString</span><span class="p">=</span><span class="s">1
+</span>
 
 <span class="nn">[MeterData9]</span>
-<span class="py">Meter</span><span class="p">=</span><span class="s">String</span>
-<span class="py">MeasureName</span><span class="p">=</span><span class="s">MeasureChild9</span>
-<span class="py">X</span><span class="p">=</span><span class="s">0</span>
-<span class="py">Y</span><span class="p">=</span><span class="s">165</span>
-<span class="py">W</span><span class="p">=</span><span class="s">190</span>
-<span class="py">H</span><span class="p">=</span><span class="s">280</span>
-<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255</span>
-<span class="py">FontSize</span><span class="p">=</span><span class="s">12</span>
-<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans</span>
-<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left</span>
-<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1</span>
-<span class="py">ClipString</span><span class="p">=</span><span class="s">1</span>
+<span class="py">Meter</span><span class="p">=</span><span class="s">String
+</span>
+<span class="py">MeasureName</span><span class="p">=</span><span class="s">MeasureChild9
+</span>
+<span class="py">X</span><span class="p">=</span><span class="s">0
+</span>
+<span class="py">Y</span><span class="p">=</span><span class="s">165
+</span>
+<span class="py">W</span><span class="p">=</span><span class="s">190
+</span>
+<span class="py">H</span><span class="p">=</span><span class="s">280
+</span>
+<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255
+</span>
+<span class="py">FontSize</span><span class="p">=</span><span class="s">12
+</span>
+<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans
+</span>
+<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left
+</span>
+<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1
+</span>
+<span class="py">ClipString</span><span class="p">=</span><span class="s">1
+</span>
 
 <span class="nn">[MeterData10]</span>
-<span class="py">Meter</span><span class="p">=</span><span class="s">String</span>
-<span class="py">MeasureName</span><span class="p">=</span><span class="s">MeasureChild10</span>
-<span class="py">X</span><span class="p">=</span><span class="s">0</span>
-<span class="py">Y</span><span class="p">=</span><span class="s">180</span>
-<span class="py">W</span><span class="p">=</span><span class="s">190</span>
-<span class="py">H</span><span class="p">=</span><span class="s">280</span>
-<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255</span>
-<span class="py">FontSize</span><span class="p">=</span><span class="s">12</span>
-<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans</span>
-<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left</span>
-<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1</span>
-<span class="py">ClipString</span><span class="p">=</span><span class="s">1</span>
+<span class="py">Meter</span><span class="p">=</span><span class="s">String
+</span>
+<span class="py">MeasureName</span><span class="p">=</span><span class="s">MeasureChild10
+</span>
+<span class="py">X</span><span class="p">=</span><span class="s">0
+</span>
+<span class="py">Y</span><span class="p">=</span><span class="s">180
+</span>
+<span class="py">W</span><span class="p">=</span><span class="s">190
+</span>
+<span class="py">H</span><span class="p">=</span><span class="s">280
+</span>
+<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255
+</span>
+<span class="py">FontSize</span><span class="p">=</span><span class="s">12
+</span>
+<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans
+</span>
+<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left
+</span>
+<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1
+</span>
+<span class="py">ClipString</span><span class="p">=</span><span class="s">1
+</span>
 
 <span class="nn">[MeterData11]</span>
-<span class="py">Meter</span><span class="p">=</span><span class="s">String</span>
-<span class="py">MeasureName</span><span class="p">=</span><span class="s">MeasureDate</span>
-<span class="py">X</span><span class="p">=</span><span class="s">0</span>
-<span class="py">Y</span><span class="p">=</span><span class="s">200</span>
-<span class="py">W</span><span class="p">=</span><span class="s">190</span>
-<span class="py">H</span><span class="p">=</span><span class="s">280</span>
-<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255</span>
-<span class="py">FontSize</span><span class="p">=</span><span class="s">12</span>
-<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans</span>
-<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left</span>
-<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1</span>
+<span class="py">Meter</span><span class="p">=</span><span class="s">String
+</span>
+<span class="py">MeasureName</span><span class="p">=</span><span class="s">MeasureDate
+</span>
+<span class="py">X</span><span class="p">=</span><span class="s">0
+</span>
+<span class="py">Y</span><span class="p">=</span><span class="s">200
+</span>
+<span class="py">W</span><span class="p">=</span><span class="s">190
+</span>
+<span class="py">H</span><span class="p">=</span><span class="s">280
+</span>
+<span class="py">FontColor</span><span class="p">=</span><span class="s">255,255,255
+</span>
+<span class="py">FontSize</span><span class="p">=</span><span class="s">12
+</span>
+<span class="py">FontFace</span><span class="p">=</span><span class="s">Aovel Sans
+</span>
+<span class="py">StringAlign</span><span class="p">=</span><span class="s">Left
+</span>
+<span class="py">AntiAlias</span><span class="p">=</span><span class="s">1
+</span>
 <span class="py">ClipString</span><span class="p">=</span><span class="s">1</span></code></pre></figure>
 
 
@@ -487,15 +704,6 @@ uncomment <code class="highlighter-rouge">debug=2</code> and check log from Rain
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/2016/08/22/example-content/">
-            Example content
-            <small>22 Aug 2016</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -510,6 +718,15 @@ uncomment <code class="highlighter-rouge">debug=2</code> and check log from Rain
         <h3>
           <a href="/2016/08/05/Some-IDL-examples/">
             Some IDL examples
+            <small>05 Aug 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2016/08/05/IPOPP-modis-flowchart/">
+            IMaRS IPOPP modis Data Flowchart
             <small>05 Aug 2016</small>
           </a>
         </h3>

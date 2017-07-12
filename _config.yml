@@ -10,7 +10,7 @@ description:         'Asurin <br /> System Engineer <br /> Web Developer <br />'
 url:                 http://localhost:4000/
 baseurl:             ''
 
-gems:                [jekyll-paginate, jekyll-last-modified-at]
+plugins:                [jekyll-paginate, jekyll-last-modified-at]
 paginate:            5
 
 # About/contact
