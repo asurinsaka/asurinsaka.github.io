@@ -59,8 +59,8 @@ html {
 }
 
 body {
-  color: #C0C5CE;
-  background-color: #1B2B34;
+  color: #515151;
+  background-color: #fff;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -110,7 +110,7 @@ p {
 }
 
 strong {
-  color: #D8DEE9;
+  color: #303030;
 }
 
 
@@ -156,7 +156,7 @@ code {
   padding: .25em .5em;
   font-size: 85%;
   color: #bf616a;
-  background-color: #343D46;
+  background-color: #f9f9f9;
   border-radius: 3px;
 }
 pre {
@@ -170,7 +170,7 @@ pre {
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
-  background-color: #343D46;
+  background-color: #f9f9f9;
 }
 pre code {
   padding: 0;
@@ -248,7 +248,7 @@ th {
 }
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
-  background-color: #343D46;
+  background-color: #f9f9f9;
 }
 
 
@@ -274,8 +274,8 @@ tbody tr:nth-child(odd) th {
 .message {
   margin-bottom: 1rem;
   padding: 1rem;
-  color: #CDD3DE;
-  background-color: #343D46;
+  color: #717171;
+  background-color: #f9f9f9;
 }
 
 
