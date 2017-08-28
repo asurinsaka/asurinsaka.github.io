@@ -47,7 +47,7 @@ html {
 h1, h2, h3, h4, h5, h6 {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  color: #5FB3B3;
+  color: #313131;
   letter-spacing: -.025rem;
 }
 
@@ -316,7 +316,7 @@ a.sidebar-nav-item:focus {
 .page-title,
 .post-title,
 .post-title a {
-  color: #EC5f67;
+  color: #303030;
 }
 .page-title,
 .post-title {
@@ -445,7 +445,7 @@ a.pagination-item:hover {
 .theme-base-08 .sidebar,
 .theme-base-08 .sidebar-toggle:active,
 .theme-base-08 #sidebar-checkbox:checked ~ .sidebar-toggle {
-  background-color: #343D46;
+  background-color: #ac4142;
 }
 .theme-base-08 .container a,
 .theme-base-08 .sidebar-toggle,

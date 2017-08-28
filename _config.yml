@@ -7,7 +7,7 @@ permalink:           pretty
 title:               Asurin
 tagline:             'System Engineer, Data Scientist, Web Developer'
 description:         'Asurin <br /> System Engineer <br /> Web Developer <br />'
-url:                 http://localhost:4000/
+url:                 http://asurinsaka.github.io/
 baseurl:             ''
 
 plugins:                [jekyll-paginate, jekyll-last-modified-at]
@@ -15,9 +15,8 @@ paginate:            5
 
 # About/contact
 author:
-  name:              Mark Otto
-#  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              Asurin
+  email:             qiaozha@gmail.com
 
 # Custom vars
 version:             1.0.0
