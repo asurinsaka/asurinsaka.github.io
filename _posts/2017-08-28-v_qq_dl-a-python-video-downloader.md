@@ -19,8 +19,10 @@ However, it only download at 2KB/s while downloading directly.
 So I started to program my own downloader and use proxy and multiple threaded
 downloading to increase the speed. The downloader can also resume from broken
 downloads.
+<!--break-->
 
-# 1. HTTP partial requests
+
+## 1. HTTP partial requests
 
 HTTP range requests allow to send only a portion of an HTTP message from a server
 to a client. This is very useful for resuming downloads.
@@ -28,7 +30,7 @@ to a client. This is very useful for resuming downloads.
 We can check whether the server sports partial by checking "Accept-Ranges" in the
 header of the HTTP response. This is not implemented in my program right now.
 
-# 2. Using Python to download the file
+## 2. Using Python to download the file
 
 There is a very easy to use python HTTP package called [requests](http://docs.python-requests.org/en/master/) can be used to
 download files from internet. A sample download code is here:
@@ -48,7 +50,7 @@ def download_file(url):
 This part is the core code for downloading. However, we need to wrap the code
 with multithreading and also need to monitor the progress to support resuming.
 
-# 3. Python multithreading
+## 3. Python multithreading
 
 We can use either multithreading or multiprocessing to increase the download
 speed. To monitor the download progress, data has to be shared between instance.
@@ -107,7 +109,7 @@ if thread_count > 0:
 {% endhighlight  %}
 
 
-# 4. Tracking progress
+## 4. Tracking progress
 
 To be able to resume broken downloads, the program has to have the ability to
 track and record downloading progress for each file. In this program, we divided

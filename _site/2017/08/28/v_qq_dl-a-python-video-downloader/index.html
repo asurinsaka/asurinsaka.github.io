@@ -111,9 +111,10 @@ However, it only download at 2KB/s while downloading directly.</p>
 
 <p>So I started to program my own downloader and use proxy and multiple threaded
 downloading to increase the speed. The downloader can also resume from broken
-downloads.</p>
+downloads.
+<!--break--></p>
 
-<h1 id="1-http-partial-requests">1. HTTP partial requests</h1>
+<h2 id="1-http-partial-requests">1. HTTP partial requests</h2>
 
 <p>HTTP range requests allow to send only a portion of an HTTP message from a server
 to a client. This is very useful for resuming downloads.</p>
@@ -121,7 +122,7 @@ to a client. This is very useful for resuming downloads.</p>
 <p>We can check whether the server sports partial by checking “Accept-Ranges” in the
 header of the HTTP response. This is not implemented in my program right now.</p>
 
-<h1 id="2-using-python-to-download-the-file">2. Using Python to download the file</h1>
+<h2 id="2-using-python-to-download-the-file">2. Using Python to download the file</h2>
 
 <p>There is a very easy to use python HTTP package called <a href="http://docs.python-requests.org/en/master/">requests</a> can be used to
 download files from internet. A sample download code is here:</p>
@@ -140,7 +141,7 @@ download files from internet. A sample download code is here:</p>
 <p>This part is the core code for downloading. However, we need to wrap the code
 with multithreading and also need to monitor the progress to support resuming.</p>
 
-<h1 id="3-python-multithreading">3. Python multithreading</h1>
+<h2 id="3-python-multithreading">3. Python multithreading</h2>
 
 <p>We can use either multithreading or multiprocessing to increase the download
 speed. To monitor the download progress, data has to be shared between instance.
@@ -199,7 +200,7 @@ for the multithreading for 2 reasons.</p>
     <span class="n">pool</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="n">pool</span><span class="o">.</span><span class="n">join</span><span class="p">()</span></code></pre></figure>
 
-<h1 id="4-tracking-progress">4. Tracking progress</h1>
+<h2 id="4-tracking-progress">4. Tracking progress</h2>
 
 <p>To be able to resume broken downloads, the program has to have the ability to
 track and record downloading progress for each file. In this program, we divided

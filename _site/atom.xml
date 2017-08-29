@@ -4,7 +4,7 @@
  <title>Asurin</title>
  <link href="http://asurinsaka.github.io//atom.xml" rel="self"/>
  <link href="http://asurinsaka.github.io//"/>
- <updated>2017-08-29T15:06:44-05:00</updated>
+ <updated>2017-08-29T15:09:43-05:00</updated>
  <id>http://asurinsaka.github.io/</id>
  <author>
    <name>Asurin</name>
@@ -31,9 +31,10 @@ However, it only download at 2KB/s while downloading directly.&lt;/p&gt;
 
 &lt;p&gt;So I started to program my own downloader and use proxy and multiple threaded
 downloading to increase the speed. The downloader can also resume from broken
-downloads.&lt;/p&gt;
+downloads.
+&lt;!--break--&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;1-http-partial-requests&quot;&gt;1. HTTP partial requests&lt;/h1&gt;
+&lt;h2 id=&quot;1-http-partial-requests&quot;&gt;1. HTTP partial requests&lt;/h2&gt;
 
 &lt;p&gt;HTTP range requests allow to send only a portion of an HTTP message from a server
 to a client. This is very useful for resuming downloads.&lt;/p&gt;
@@ -41,7 +42,7 @@ to a client. This is very useful for resuming downloads.&lt;/p&gt;
 &lt;p&gt;We can check whether the server sports partial by checking “Accept-Ranges” in the
 header of the HTTP response. This is not implemented in my program right now.&lt;/p&gt;
 
-&lt;h1 id=&quot;2-using-python-to-download-the-file&quot;&gt;2. Using Python to download the file&lt;/h1&gt;
+&lt;h2 id=&quot;2-using-python-to-download-the-file&quot;&gt;2. Using Python to download the file&lt;/h2&gt;
 
 &lt;p&gt;There is a very easy to use python HTTP package called &lt;a href=&quot;http://docs.python-requests.org/en/master/&quot;&gt;requests&lt;/a&gt; can be used to
 download files from internet. A sample download code is here:&lt;/p&gt;
@@ -60,7 +61,7 @@ download files from internet. A sample download code is here:&lt;/p&gt;
 &lt;p&gt;This part is the core code for downloading. However, we need to wrap the code
 with multithreading and also need to monitor the progress to support resuming.&lt;/p&gt;
 
-&lt;h1 id=&quot;3-python-multithreading&quot;&gt;3. Python multithreading&lt;/h1&gt;
+&lt;h2 id=&quot;3-python-multithreading&quot;&gt;3. Python multithreading&lt;/h2&gt;
 
 &lt;p&gt;We can use either multithreading or multiprocessing to increase the download
 speed. To monitor the download progress, data has to be shared between instance.
@@ -119,7 +120,7 @@ for the multithreading for 2 reasons.&lt;/p&gt;
     &lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h1 id=&quot;4-tracking-progress&quot;&gt;4. Tracking progress&lt;/h1&gt;
+&lt;h2 id=&quot;4-tracking-progress&quot;&gt;4. Tracking progress&lt;/h2&gt;
 
 &lt;p&gt;To be able to resume broken downloads, the program has to have the ability to
 track and record downloading progress for each file. In this program, we divided
