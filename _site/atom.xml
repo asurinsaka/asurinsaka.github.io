@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Asurin</title>
- <link href="http://localhost:4000/atom.xml" rel="self"/>
- <link href="http://localhost:4000/"/>
- <updated>2017-08-29T15:05:54-05:00</updated>
- <id>http://localhost:4000</id>
+ <link href="http://asurinsaka.github.io//atom.xml" rel="self"/>
+ <link href="http://asurinsaka.github.io//"/>
+ <updated>2017-08-29T15:06:44-05:00</updated>
+ <id>http://asurinsaka.github.io/</id>
  <author>
    <name>Asurin</name>
    <email>qiaozha@gmail.com</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>v_qq_dl a small video downloader</title>
-   <link href="http://localhost:4000/2017/08/28/v_qq_dl-a-python-video-downloader/"/>
+   <link href="http://asurinsaka.github.io//2017/08/28/v_qq_dl-a-python-video-downloader/"/>
    <updated>2017-08-28T00:00:00-05:00</updated>
-   <id>http://localhost:4000/2017/08/28/v_qq_dl-a-python-video-downloader</id>
+   <id>http://asurinsaka.github.io//2017/08/28/v_qq_dl-a-python-video-downloader</id>
    <content type="html">&lt;p&gt;There is a Chinese video hosting website v.qq.com from Tencent company has many
 interesting tv shows. The servers are in China so it would be slow to watch
 in web browser. And I usually watch my TV with Nexus Player, which dose not have
@@ -154,9 +154,9 @@ the media file into blocks and use an info file to track each block. To resuming
  
  <entry>
    <title>Shinyapp</title>
-   <link href="http://localhost:4000/2016/08/09/Shinyapp/"/>
+   <link href="http://asurinsaka.github.io//2016/08/09/Shinyapp/"/>
    <updated>2016-08-09T00:00:00-05:00</updated>
-   <id>http://localhost:4000/2016/08/09/Shinyapp</id>
+   <id>http://asurinsaka.github.io//2016/08/09/Shinyapp</id>
    <content type="html">&lt;p&gt;One research in our lab is regarding the algae.&lt;/p&gt;
 
 &lt;p&gt;First they collected water samples from 58 locations around Florida Key.
@@ -254,9 +254,9 @@ March 13 2016 and March 20 2016 to the map.&lt;/p&gt;
  
  <entry>
    <title>Some IDL examples</title>
-   <link href="http://localhost:4000/2016/08/05/Some-IDL-examples/"/>
+   <link href="http://asurinsaka.github.io//2016/08/05/Some-IDL-examples/"/>
    <updated>2016-08-05T00:00:00-05:00</updated>
-   <id>http://localhost:4000/2016/08/05/Some-IDL-examples</id>
+   <id>http://asurinsaka.github.io//2016/08/05/Some-IDL-examples</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.harrisgeospatial.com/ProductsandSolutions/GeospatialProducts/IDL.aspx&quot;&gt;IDL&lt;/a&gt;
 is an old software from harris geospacial for visualizing data. Here are some
 examples of IDL.&lt;/p&gt;
@@ -277,9 +277,9 @@ examples of IDL.&lt;/p&gt;
  
  <entry>
    <title>IMaRS IPOPP modis Data Flowchart</title>
-   <link href="http://localhost:4000/2016/08/05/IPOPP-modis-flowchart/"/>
+   <link href="http://asurinsaka.github.io//2016/08/05/IPOPP-modis-flowchart/"/>
    <updated>2016-08-05T00:00:00-05:00</updated>
-   <id>http://localhost:4000/2016/08/05/IPOPP-modis-flowchart</id>
+   <id>http://asurinsaka.github.io//2016/08/05/IPOPP-modis-flowchart</id>
    <content type="html">&lt;p&gt;This is a flowchart of IMaRS modis data. The chart includes products names and
 marker names for different stations.&lt;/p&gt;
 
@@ -289,9 +289,9 @@ marker names for different stations.&lt;/p&gt;
  
  <entry>
    <title>IPOPP 2.5 installation</title>
-   <link href="http://localhost:4000/2016/08/01/IPOPP-Installation/"/>
+   <link href="http://asurinsaka.github.io//2016/08/01/IPOPP-Installation/"/>
    <updated>2016-08-01T00:00:00-05:00</updated>
-   <id>http://localhost:4000/2016/08/01/IPOPP-Installation</id>
+   <id>http://asurinsaka.github.io//2016/08/01/IPOPP-Installation</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;https://directreadout.sci.gsfc.nasa.gov/?id=dspContent&amp;amp;cid=68&quot;&gt;IPOPP (the International Polar Orbiter Processing Package)&lt;/a&gt;
 is a free software used to process raw hdf satellite data from Suomi National
  Polar orbiting Partnership(SNPP), Aqua, and Terra missions. It generate tiff
@@ -326,9 +326,9 @@ script install_ipopp.sh&lt;/p&gt;
  
  <entry>
    <title>Use Rainmeter to Monitor Webpage</title>
-   <link href="http://localhost:4000/rainmeter/2016/07/01/use-rainmeter-to-monitor-webpage/"/>
+   <link href="http://asurinsaka.github.io//rainmeter/2016/07/01/use-rainmeter-to-monitor-webpage/"/>
    <updated>2016-07-01T00:00:00-05:00</updated>
-   <id>http://localhost:4000/rainmeter/2016/07/01/use-rainmeter-to-monitor-webpage</id>
+   <id>http://asurinsaka.github.io//rainmeter/2016/07/01/use-rainmeter-to-monitor-webpage</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
   Due to the length of the code. The complete code is at the end of this post.
 &lt;/div&gt;
@@ -935,9 +935,9 @@ uncomment &lt;code class=&quot;highlighter-rouge&quot;&gt;debug=2&lt;/code&gt; a
  
  <entry>
    <title>More History for Linux Bash</title>
-   <link href="http://localhost:4000/linux/2016/06/30/more-history-for-linux-bash/"/>
+   <link href="http://asurinsaka.github.io//linux/2016/06/30/more-history-for-linux-bash/"/>
    <updated>2016-06-30T00:00:00-05:00</updated>
-   <id>http://localhost:4000/linux/2016/06/30/more-history-for-linux-bash</id>
+   <id>http://asurinsaka.github.io//linux/2016/06/30/more-history-for-linux-bash</id>
    <content type="html">&lt;p&gt;If you open Multiple sections of Linux terminal, only one copy of history will
 be saved in your .bash_history file. This would be really annoying because you
 will forget and loose important command that you have used.&lt;/p&gt;
@@ -1009,9 +1009,9 @@ in your history records. Here is how to do that:&lt;/p&gt;
  
  <entry>
    <title>How I Build this Website</title>
-   <link href="http://localhost:4000/2016/06/29/how-i-build-this-website/"/>
+   <link href="http://asurinsaka.github.io//2016/06/29/how-i-build-this-website/"/>
    <updated>2016-06-29T00:00:00-05:00</updated>
-   <id>http://localhost:4000/2016/06/29/how-i-build-this-website</id>
+   <id>http://asurinsaka.github.io//2016/06/29/how-i-build-this-website</id>
    <content type="html">&lt;p&gt;This website is based on Lanyon and changed the color scheme to &lt;a href=&quot;https://github.com/voronianski/oceanic-next-color-scheme&quot;&gt;Oceanic Next Color Scheme&lt;/a&gt;. The color scheme was found from &lt;a href=&quot;http://komodoide.com/packages/schemes/&quot;&gt;Komodoide&lt;/a&gt;. The IDE I used for editing is &lt;a href=&quot;https://atom.io&quot;&gt;Atom&lt;/a&gt;. I also added the read more link by the method published
 &lt;a href=&quot;https://gist.github.com/mikeygee/2626538&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
@@ -1061,9 +1061,9 @@ in your history records. Here is how to do that:&lt;/p&gt;
  
  <entry>
    <title>What's Jekyll?</title>
-   <link href="http://localhost:4000/2013/12/31/whats-jekyll/"/>
+   <link href="http://asurinsaka.github.io//2013/12/31/whats-jekyll/"/>
    <updated>2013-12-31T00:00:00-06:00</updated>
-   <id>http://localhost:4000/2013/12/31/whats-jekyll</id>
+   <id>http://asurinsaka.github.io//2013/12/31/whats-jekyll</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From &lt;a href=&quot;https://github.com/mojombo/jekyll/blob/master/README.markdown&quot;&gt;the project’s readme&lt;/a&gt;:&lt;/p&gt;
 
 &lt;blockquote&gt;
