@@ -9,6 +9,7 @@ tagline:             'System Engineer, Data Scientist, Web Developer'
 description:         'Asurin <br /> System Engineer <br /> Web Developer <br />'
 url:                 http://asurinsaka.github.io/
 baseurl:             ''
+github_username:     asurinsaka
 
 plugins:                [jekyll-paginate, jekyll-last-modified-at]
 paginate:            5
