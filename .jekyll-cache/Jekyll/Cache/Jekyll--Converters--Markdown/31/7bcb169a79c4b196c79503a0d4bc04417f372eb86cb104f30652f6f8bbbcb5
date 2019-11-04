@@ -1,0 +1,67 @@
+I"¶<p>If you open Multiple sections of Linux terminal, only one copy of history will
+be saved in your .bash_history file. This would be really annoying because you
+will forget and loose important command that you have used.</p>
+
+<p>Here is how to save all your histories.</p>
+
+<p>Put the following commands in your ~/.bashrc file or your ~/.bash_profile file.</p>
+
+<!--break-->
+
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># append instand of overwrite across sections
+</span>
+<span class="nb">shopt</span> <span class="nt">-s</span> histappend
+
+<span class="c"># write and read history file every time you hit return
+</span>
+<span class="nv">PROMPT_COMMAND</span><span class="o">=</span><span class="s1">'history -n;history -a'</span>
+
+<span class="c"># increase your history entries and file size
+</span>
+<span class="nv">HISTSIZE</span><span class="o">=</span>100000
+<span class="nv">HISTFILESIZE</span><span class="o">=</span>100000
+
+<span class="c"># add date and time information for each entry
+</span>
+<span class="nv">HISTTIMEFORMAT</span><span class="o">=</span><span class="s2">"%m/%d/%y %T "</span></code></pre></figure>
+
+<p>Sometimes you want to ignore some test commands or commands includes passwords
+in your history records. Here is how to do that:</p>
+
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># igore commands start with a space
+</span>
+<span class="nv">HISTCONTROL</span><span class="o">=</span>ignorespace</code></pre></figure>
+
+<p>You may also want to ignore duplicated entries</p>
+
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># igore duplicated commands
+</span>
+<span class="nv">HISTCONTROL</span><span class="o">=</span>ignoreredups</code></pre></figure>
+
+<p>To ignore both of them, you can do either <code class="highlighter-rouge">ignorespace:ignoreredups</code> or
+<code class="highlighter-rouge">ignoreboth</code>.</p>
+
+<p>The complete list of commands to be added in ~/.bashrc is:</p>
+
+<figure class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># append instand of overwrite across sections
+</span>
+<span class="nb">shopt</span> <span class="nt">-s</span> histappend
+
+<span class="c"># write and read history file every time you hit return
+</span>
+<span class="nv">PROMPT_COMMAND</span><span class="o">=</span><span class="s1">'history -n;history -a'</span>
+
+<span class="c"># increase your history entries and file size
+</span>
+<span class="nv">HISTSIZE</span><span class="o">=</span>100000
+<span class="nv">HISTFILESIZE</span><span class="o">=</span>100000
+
+<span class="c"># add date and time information for each entry
+</span>
+<span class="nv">HISTTIMEFORMAT</span><span class="o">=</span><span class="s2">"%m/%d/%y %T "</span>
+
+<span class="c"># ignore commands started with space and duplicated entries
+</span>
+<span class="nv">HISTCONTROL</span><span class="o">=</span>ignoreboth</code></pre></figure>
+
+:ET

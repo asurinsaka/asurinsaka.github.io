@@ -5,9 +5,9 @@ permalink:           pretty
 
 # Setup
 title:               Asurin
-tagline:             'System Engineer, Data Scientist, Web Developer'
-description:         'Asurin <br /> System Engineer <br /> Web Developer <br />'
-url:                 http://asurinsaka.github.io/
+tagline:             'Software Developer'
+description:         'Asurin <br /> Software Developer <br />'
+url:                 https://asurinsaka.github.io/
 baseurl:             ''
 github_username:     asurinsaka
 
@@ -21,3 +21,4 @@ author:
 
 # Custom vars
 version:             1.0.0
+

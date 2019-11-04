@@ -1,0 +1,93 @@
+I"¿)<p>One research in our lab is regarding the algae.</p>
+
+<p>First they collected water samples from 58 locations around Florida Key.
+After collection, the samples are run through HPLC to get
+information about the species of chlorophylls. From those information, we would
+be able to know where different kind of algae lives.</p>
+
+<!--![Figure 1. Stations](/images/shinyapp-stations.PNG)
+-->
+
+<p>To help people analysis those HPLC data. A leaflet map build with shiny server
+are used. The HPLC data for different stations are shown in a pie chart, which
+is built by plotly.</p>
+
+<p><img src="/images/shinyapp-pie.gif" alt="Figure 1. Stations" />
+<!--break--></p>
+
+<p>The source code are shown below and you can download them from
+<a href="https://github.com/asurinsaka/shiny_leaflet_plotly">github</a></p>
+
+<h2 id="uir">ui.R</h2>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">library</span><span class="p">(</span><span class="n">shiny</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">plotly</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">leaflet</span><span class="p">)</span><span class="w">
+
+</span><span class="n">shinyUI</span><span class="p">(</span><span class="w"> </span><span class="n">bootstrapPage</span><span class="p">(</span><span class="w">
+  </span><span class="n">tags</span><span class="o">$</span><span class="n">style</span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"text/css"</span><span class="p">,</span><span class="w"> </span><span class="s2">"html, body {width:100%;height:100%}"</span><span class="p">),</span><span class="w">
+  </span><span class="n">leafletOutput</span><span class="p">(</span><span class="s2">"map"</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"100%"</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"100%"</span><span class="p">),</span><span class="w">
+  </span><span class="n">absolutePanel</span><span class="p">(</span><span class="n">top</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w">
+
+                </span><span class="n">plotlyOutput</span><span class="p">(</span><span class="s2">"trendPlot"</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">400</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">300</span><span class="p">)</span><span class="w">
+  </span><span class="p">),</span><span class="w">
+  </span><span class="c1"># this is for testing the observe</span><span class="w">
+  </span><span class="n">verbatimTextOutput</span><span class="p">(</span><span class="s2">"Click_text"</span><span class="p">)</span><span class="w">
+</span><span class="p">))</span></code></pre></figure>
+
+<h2 id="serverr">server.R</h2>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">library</span><span class="p">(</span><span class="n">shiny</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">plotly</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">leaflet</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">## begin server file</span><span class="w">
+
+</span><span class="c1"># read data file</span><span class="w">
+</span><span class="n">stationdata</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s2">"./Muller-Karger_05-17_report.csv"</span><span class="p">,</span><span class="n">head</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s2">","</span><span class="p">)</span><span class="w">
+</span><span class="nf">attributes</span><span class="p">(</span><span class="n">stationdata</span><span class="p">)</span><span class="w">
+
+
+
+
+</span><span class="n">shinyServer</span><span class="p">(</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">input</span><span class="p">,</span><span class="w"> </span><span class="n">output</span><span class="p">){</span><span class="w">
+
+  </span><span class="c1"># station map</span><span class="w">
+  </span><span class="n">output</span><span class="o">$</span><span class="n">map</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">renderLeaflet</span><span class="p">({</span><span class="w">
+    </span><span class="n">leaflet</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stationdata</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+      </span><span class="n">addProviderTiles</span><span class="p">(</span><span class="s2">"Esri.WorldImagery"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+      </span><span class="n">addMarkers</span><span class="p">(</span><span class="n">lng</span><span class="o">=~</span><span class="n">Longitude</span><span class="p">,</span><span class="w"> </span><span class="n">lat</span><span class="o">=~</span><span class="n">Latitude</span><span class="p">,</span><span class="w"> </span><span class="n">layerId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">58</span><span class="p">,</span><span class="w"> </span><span class="n">popup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="n">Station</span><span class="p">)</span><span class="w">
+  </span><span class="p">})</span><span class="w">
+
+
+
+  </span><span class="n">observe</span><span class="p">({</span><span class="w"> </span><span class="c1"># update the pie chart on map clicks</span><span class="w">
+    </span><span class="n">p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">input</span><span class="o">$</span><span class="n">map_marker_click</span><span class="w">
+    </span><span class="k">if</span><span class="p">(</span><span class="nf">is.null</span><span class="p">(</span><span class="n">p</span><span class="p">)){</span><span class="w">
+      </span><span class="nf">return</span><span class="p">()</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+    </span><span class="n">ds</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">colnames</span><span class="p">(</span><span class="n">stationdata</span><span class="p">)[</span><span class="m">27</span><span class="o">:</span><span class="m">36</span><span class="p">],</span><span class="w">
+                     </span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">stationdata</span><span class="p">[</span><span class="n">p</span><span class="o">$</span><span class="n">id</span><span class="w"> </span><span class="p">,</span><span class="m">27</span><span class="o">:</span><span class="m">36</span><span class="p">]))</span><span class="w">
+
+    </span><span class="n">output</span><span class="o">$</span><span class="n">trendPlot</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">renderPlotly</span><span class="p">({</span><span class="w">
+      </span><span class="n">p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">plot_ly</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">labels</span><span class="p">,</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">values</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"pie"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+        </span><span class="n">layout</span><span class="p">(</span><span class="n">paper_bgcolor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"rgb(255,255,255,255)"</span><span class="p">,</span><span class="w"> </span><span class="n">plot_bgcolor</span><span class="o">=</span><span class="s2">"rgb(100,0,0,100)"</span><span class="p">)</span><span class="w">
+    </span><span class="p">})</span><span class="w">
+
+    </span><span class="c1"># this part is for testing the observe</span><span class="w">
+    </span><span class="c1"># text2&lt;-paste("You've selected point ", p$id)</span><span class="w">
+    </span><span class="c1"># output$Click_text&lt;-renderText({</span><span class="w">
+    </span><span class="c1">#   text2</span><span class="w">
+    </span><span class="c1"># })</span><span class="w">
+
+  </span><span class="p">})</span><span class="w">
+
+
+</span><span class="p">})</span></code></pre></figure>
+
+<h2 id="todo-list">Todo List:</h2>
+
+<p>Add average SST(sea surface temperature) and chlor_a(chlorophyll a) data between
+March 13 2016 and March 20 2016 to the map.</p>
+:ET

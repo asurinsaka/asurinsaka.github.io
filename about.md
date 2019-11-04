@@ -3,26 +3,31 @@ layout: page
 title: About Me
 ---
 
-
-
-## Education
-
-China Agricultural University
-
-University of South Florida
-
-## Roles
-
-System Engineer: Institute for Marine Remote Sensing
-
-Web Developer: Interdisciplinary Nuclear Magnetic Resonance Facility
-
 ## Skills
 
 * Linux Administration: Puppet/Amanda/Bash/Python/NFS/Samba/Apache
 
-* Web Developing: CodeIgnitor/CSS/HTML/PHP
+* Web Developing: Flask/Angular
 
-* Database: MySQL
+* Database: MySQL, DynamoDB
 
-* Programming: C/Python/Java
+* Programming: Python
+
+## Work Experience
+
+* APR 2018 - JUN 2019: Director of Technology, Ilerasoft
+
+* DEC 2017 - APR 2018: Data Analyst, Ilerasoft
+
+* MAR 2016 - JUL 2017: System Engineer, IMaRS
+
+* AUG 2009 - MAY 2013: Teaching/Researching Assistant, USFINMRF
+
+## Education
+
+* BS: Biochemistry, China Agricultural University
+
+* PhD: Computational Chemistry, University of South Florida
+
+* MS: Computer Engineering, University of South Florida
+

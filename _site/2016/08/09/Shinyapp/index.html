@@ -39,7 +39,7 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
-    <p>Asurin <br /> System Engineer <br /> Web Developer <br /></p>
+    <p>Asurin <br /> Software Developer <br /></p>
   </div>
 
   <nav class="sidebar-nav">
@@ -67,6 +67,12 @@
     
       
         
+          <a class="sidebar-nav-item" href="/niuniu/">Niu Niu</a>
+        
+      
+    
+      
+        
       
     
 
@@ -75,7 +81,7 @@
 
   <div class="sidebar-item">
     <p>
-      &copy; 2017. All rights reserved.
+      &copy; 2019. All rights reserved.
     </p>
   </div>
 </div>
@@ -88,7 +94,7 @@
         <div class="container">
           <h3 class="masthead-title">
             <a href="/" title="Home">Asurin</a>
-            <small>System Engineer, Data Scientist, Web Developer</small>
+            <small>Software Developer</small>
           </h3>
         </div>
       </div>
@@ -130,8 +136,8 @@ is built by plotly.</p>
 
                 </span><span class="n">plotlyOutput</span><span class="p">(</span><span class="s2">"trendPlot"</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">400</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">300</span><span class="p">)</span><span class="w">
   </span><span class="p">),</span><span class="w">
-  </span><span class="c1"># this is for testing the observe
-</span><span class="w">  </span><span class="n">verbatimTextOutput</span><span class="p">(</span><span class="s2">"Click_text"</span><span class="p">)</span><span class="w">
+  </span><span class="c1"># this is for testing the observe</span><span class="w">
+  </span><span class="n">verbatimTextOutput</span><span class="p">(</span><span class="s2">"Click_text"</span><span class="p">)</span><span class="w">
 </span><span class="p">))</span></code></pre></figure>
 
 <h2 id="serverr">server.R</h2>
@@ -140,9 +146,9 @@ is built by plotly.</p>
 </span><span class="n">library</span><span class="p">(</span><span class="n">plotly</span><span class="p">)</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">leaflet</span><span class="p">)</span><span class="w">
 
-</span><span class="c1">## begin server file
-</span><span class="w">
-</span><span class="c1"># read data file
+</span><span class="c1">## begin server file</span><span class="w">
+
+</span><span class="c1"># read data file</span><span class="w">
 </span><span class="n">stationdata</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read.csv</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s2">"./Muller-Karger_05-17_report.csv"</span><span class="p">,</span><span class="n">head</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s2">","</span><span class="p">)</span><span class="w">
 </span><span class="nf">attributes</span><span class="p">(</span><span class="n">stationdata</span><span class="p">)</span><span class="w">
 
@@ -151,8 +157,8 @@ is built by plotly.</p>
 
 </span><span class="n">shinyServer</span><span class="p">(</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">input</span><span class="p">,</span><span class="w"> </span><span class="n">output</span><span class="p">){</span><span class="w">
 
-  </span><span class="c1"># station map
-</span><span class="w">  </span><span class="n">output</span><span class="o">$</span><span class="n">map</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">renderLeaflet</span><span class="p">({</span><span class="w">
+  </span><span class="c1"># station map</span><span class="w">
+  </span><span class="n">output</span><span class="o">$</span><span class="n">map</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">renderLeaflet</span><span class="p">({</span><span class="w">
     </span><span class="n">leaflet</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stationdata</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
       </span><span class="n">addProviderTiles</span><span class="p">(</span><span class="s2">"Esri.WorldImagery"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
       </span><span class="n">addMarkers</span><span class="p">(</span><span class="n">lng</span><span class="o">=~</span><span class="n">Longitude</span><span class="p">,</span><span class="w"> </span><span class="n">lat</span><span class="o">=~</span><span class="n">Latitude</span><span class="p">,</span><span class="w"> </span><span class="n">layerId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">58</span><span class="p">,</span><span class="w"> </span><span class="n">popup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="n">Station</span><span class="p">)</span><span class="w">
@@ -160,8 +166,8 @@ is built by plotly.</p>
 
 
 
-  </span><span class="n">observe</span><span class="p">({</span><span class="w"> </span><span class="c1"># update the pie chart on map clicks
-</span><span class="w">    </span><span class="n">p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">input</span><span class="o">$</span><span class="n">map_marker_click</span><span class="w">
+  </span><span class="n">observe</span><span class="p">({</span><span class="w"> </span><span class="c1"># update the pie chart on map clicks</span><span class="w">
+    </span><span class="n">p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">input</span><span class="o">$</span><span class="n">map_marker_click</span><span class="w">
     </span><span class="k">if</span><span class="p">(</span><span class="nf">is.null</span><span class="p">(</span><span class="n">p</span><span class="p">)){</span><span class="w">
       </span><span class="nf">return</span><span class="p">()</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -174,12 +180,12 @@ is built by plotly.</p>
         </span><span class="n">layout</span><span class="p">(</span><span class="n">paper_bgcolor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"rgb(255,255,255,255)"</span><span class="p">,</span><span class="w"> </span><span class="n">plot_bgcolor</span><span class="o">=</span><span class="s2">"rgb(100,0,0,100)"</span><span class="p">)</span><span class="w">
     </span><span class="p">})</span><span class="w">
 
-    </span><span class="c1"># this part is for testing the observe
-</span><span class="w">    </span><span class="c1"># text2&lt;-paste("You've selected point ", p$id)
-</span><span class="w">    </span><span class="c1"># output$Click_text&lt;-renderText({
-</span><span class="w">    </span><span class="c1">#   text2
-</span><span class="w">    </span><span class="c1"># })
-</span><span class="w">
+    </span><span class="c1"># this part is for testing the observe</span><span class="w">
+    </span><span class="c1"># text2&lt;-paste("You've selected point ", p$id)</span><span class="w">
+    </span><span class="c1"># output$Click_text&lt;-renderText({</span><span class="w">
+    </span><span class="c1">#   text2</span><span class="w">
+    </span><span class="c1"># })</span><span class="w">
+
   </span><span class="p">})</span><span class="w">
 
 

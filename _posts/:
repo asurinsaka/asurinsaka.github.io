@@ -1,0 +1,6 @@
+---
+layout: post
+title: Niu Niu
+tags: [gallery]]
+---
+{% include image-gallery.html folder="/uploads/album" %}
