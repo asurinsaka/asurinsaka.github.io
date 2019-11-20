@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Asurin</title>
- <link href="http://0.0.0.0:4000/atom.xml" rel="self"/>
- <link href="http://0.0.0.0:4000/"/>
- <updated>2019-11-04T09:35:57-06:00</updated>
- <id>http://0.0.0.0:4000</id>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2019-11-20T10:53:59-06:00</updated>
+ <id>http://localhost:4000</id>
  <author>
    <name>Asurin</name>
    <email>qiaozha@gmail.com</email>
@@ -13,10 +13,62 @@
 
  
  <entry>
+   <title>Reading The Clean Coder</title>
+   <link href="http://localhost:4000/2019/11/20/The_Clean_Coder/"/>
+   <updated>2019-11-20T00:00:00-06:00</updated>
+   <id>http://localhost:4000/2019/11/20/The_Clean_Coder</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/images/the_clean_coder.jpg&quot; alt=&quot;The Clean Coder&quot; /&gt;
+After finished reading
+&lt;a href=&quot;/images/the_clean_coder.jpg&quot;&gt;The Clean Coder&lt;/a&gt;
+ yesterday, I found that many of the 
+problems I have met in my previous company has already been talked about 
+in this book.&lt;/p&gt;
+
+&lt;p&gt;The book did not show anything about the tech staff. Most importantly, it is
+talking about how to deal with business people, how to give an estimate about
+project time, and tests.&lt;/p&gt;
+
+&lt;p&gt;Those are the things we programmer face in day to day life but never learned
+from school. I have to admit that I could have done a lot better if I have
+read the book before. I would be more “professional”.
+&lt;!--break--&gt;&lt;/p&gt;
+
+&lt;p&gt;As a team leader, I have been asked several times about an estimate of how
+long the project would take. I always have difficulty to answer that
+question. If I have read the book, I could give a more accurate estimate and
+perform more professional about the project time when my boss asked.&lt;/p&gt;
+
+&lt;p&gt;When my boss was pushing us to commit, I skipped the tests and wrote much
+dirty code for the backend of that project. Which later I found so difficult
+to understand and I refuse to change it at all. I really should have a
+principle at that time and refused to write such code. And should have
+rewritten them as soon as I have found how bad they were.&lt;/p&gt;
+
+&lt;p&gt;We never write enough tests at the previous company. Nobody in the company
+understand the different kinds of tests and how to write unit tests.
+We do not have QA at all. One of the teammates was manually testing many
+functions. I called for the importance of the tests in many meetings, but even
+I doubt whether those tests worth my time. We run into problems that
+some bugs leaked into the production. But because not many people were
+using our product, it did not cause any problem. Except once I feel shame I
+was the one who implemented the but in our code and the search was not
+working at all. I have admitted the problem in front of my boss and said to
+avoid the same problem in the future, we need tests. But still, no tests.&lt;/p&gt;
+
+&lt;p&gt;To summarize, I have learned something important about how to perform
+professionally in my career. The book also said the importance of mentoring.
+I wish I had a good mentor in software development. I had one good mentor
+named Gabriel when I was a System Engineer. I was and am still very grateful
+for all the guidance he provided to me. But this time, I was not so lucky
+and have to figure everything out all by myself.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>v_qq_dl a small video downloader</title>
-   <link href="http://0.0.0.0:4000/2017/08/28/v_qq_dl-a-python-video-downloader/"/>
+   <link href="http://localhost:4000/2017/08/28/v_qq_dl-a-python-video-downloader/"/>
    <updated>2017-08-28T00:00:00-05:00</updated>
-   <id>http://0.0.0.0:4000/2017/08/28/v_qq_dl-a-python-video-downloader</id>
+   <id>http://localhost:4000/2017/08/28/v_qq_dl-a-python-video-downloader</id>
    <content type="html">&lt;p&gt;There is a Chinese video hosting website v.qq.com from Tencent company has many
 interesting tv shows. The servers are in China so it would be slow to watch
 in web browser. And I usually watch my TV with Nexus Player, which dose not have
@@ -155,9 +207,9 @@ the media file into blocks and use an info file to track each block. To resuming
  
  <entry>
    <title>Shinyapp</title>
-   <link href="http://0.0.0.0:4000/2016/08/09/Shinyapp/"/>
+   <link href="http://localhost:4000/2016/08/09/Shinyapp/"/>
    <updated>2016-08-09T00:00:00-05:00</updated>
-   <id>http://0.0.0.0:4000/2016/08/09/Shinyapp</id>
+   <id>http://localhost:4000/2016/08/09/Shinyapp</id>
    <content type="html">&lt;p&gt;One research in our lab is regarding the algae.&lt;/p&gt;
 
 &lt;p&gt;First they collected water samples from 58 locations around Florida Key.
@@ -255,9 +307,9 @@ March 13 2016 and March 20 2016 to the map.&lt;/p&gt;
  
  <entry>
    <title>Some IDL examples</title>
-   <link href="http://0.0.0.0:4000/2016/08/05/Some-IDL-examples/"/>
+   <link href="http://localhost:4000/2016/08/05/Some-IDL-examples/"/>
    <updated>2016-08-05T00:00:00-05:00</updated>
-   <id>http://0.0.0.0:4000/2016/08/05/Some-IDL-examples</id>
+   <id>http://localhost:4000/2016/08/05/Some-IDL-examples</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.harrisgeospatial.com/ProductsandSolutions/GeospatialProducts/IDL.aspx&quot;&gt;IDL&lt;/a&gt;
 is an old software from harris geospacial for visualizing data. Here are some
 examples of IDL.&lt;/p&gt;
@@ -278,9 +330,9 @@ examples of IDL.&lt;/p&gt;
  
  <entry>
    <title>IMaRS IPOPP modis Data Flowchart</title>
-   <link href="http://0.0.0.0:4000/2016/08/05/IPOPP-modis-flowchart/"/>
+   <link href="http://localhost:4000/2016/08/05/IPOPP-modis-flowchart/"/>
    <updated>2016-08-05T00:00:00-05:00</updated>
-   <id>http://0.0.0.0:4000/2016/08/05/IPOPP-modis-flowchart</id>
+   <id>http://localhost:4000/2016/08/05/IPOPP-modis-flowchart</id>
    <content type="html">&lt;p&gt;This is a flowchart of IMaRS modis data. The chart includes products names and
 marker names for different stations.&lt;/p&gt;
 
@@ -290,9 +342,9 @@ marker names for different stations.&lt;/p&gt;
  
  <entry>
    <title>IPOPP 2.5 installation</title>
-   <link href="http://0.0.0.0:4000/2016/08/01/IPOPP-Installation/"/>
+   <link href="http://localhost:4000/2016/08/01/IPOPP-Installation/"/>
    <updated>2016-08-01T00:00:00-05:00</updated>
-   <id>http://0.0.0.0:4000/2016/08/01/IPOPP-Installation</id>
+   <id>http://localhost:4000/2016/08/01/IPOPP-Installation</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;https://directreadout.sci.gsfc.nasa.gov/?id=dspContent&amp;amp;cid=68&quot;&gt;IPOPP (the International Polar Orbiter Processing Package)&lt;/a&gt;
 is a free software used to process raw hdf satellite data from Suomi National
  Polar orbiting Partnership(SNPP), Aqua, and Terra missions. It generate tiff
@@ -327,9 +379,9 @@ script install_ipopp.sh&lt;/p&gt;
  
  <entry>
    <title>Use Rainmeter to Monitor Webpage</title>
-   <link href="http://0.0.0.0:4000/rainmeter/2016/07/01/use-rainmeter-to-monitor-webpage/"/>
+   <link href="http://localhost:4000/rainmeter/2016/07/01/use-rainmeter-to-monitor-webpage/"/>
    <updated>2016-07-01T00:00:00-05:00</updated>
-   <id>http://0.0.0.0:4000/rainmeter/2016/07/01/use-rainmeter-to-monitor-webpage</id>
+   <id>http://localhost:4000/rainmeter/2016/07/01/use-rainmeter-to-monitor-webpage</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
   Due to the length of the code. The complete code is at the end of this post.
 &lt;/div&gt;
@@ -936,9 +988,9 @@ uncomment &lt;code class=&quot;highlighter-rouge&quot;&gt;debug=2&lt;/code&gt; a
  
  <entry>
    <title>More History for Linux Bash</title>
-   <link href="http://0.0.0.0:4000/linux/2016/06/30/more-history-for-linux-bash/"/>
+   <link href="http://localhost:4000/linux/2016/06/30/more-history-for-linux-bash/"/>
    <updated>2016-06-30T00:00:00-05:00</updated>
-   <id>http://0.0.0.0:4000/linux/2016/06/30/more-history-for-linux-bash</id>
+   <id>http://localhost:4000/linux/2016/06/30/more-history-for-linux-bash</id>
    <content type="html">&lt;p&gt;If you open Multiple sections of Linux terminal, only one copy of history will
 be saved in your .bash_history file. This would be really annoying because you
 will forget and loose important command that you have used.&lt;/p&gt;
@@ -1010,9 +1062,9 @@ in your history records. Here is how to do that:&lt;/p&gt;
  
  <entry>
    <title>How I Build this Website</title>
-   <link href="http://0.0.0.0:4000/2016/06/29/how-i-build-this-website/"/>
+   <link href="http://localhost:4000/2016/06/29/how-i-build-this-website/"/>
    <updated>2016-06-29T00:00:00-05:00</updated>
-   <id>http://0.0.0.0:4000/2016/06/29/how-i-build-this-website</id>
+   <id>http://localhost:4000/2016/06/29/how-i-build-this-website</id>
    <content type="html">&lt;p&gt;This website is based on Lanyon and changed the color scheme to &lt;a href=&quot;https://github.com/voronianski/oceanic-next-color-scheme&quot;&gt;Oceanic Next Color Scheme&lt;/a&gt;. The color scheme was found from &lt;a href=&quot;http://komodoide.com/packages/schemes/&quot;&gt;Komodoide&lt;/a&gt;. The IDE I used for editing is &lt;a href=&quot;https://atom.io&quot;&gt;Atom&lt;/a&gt;. I also added the read more link by the method published
 &lt;a href=&quot;https://gist.github.com/mikeygee/2626538&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
@@ -1062,9 +1114,9 @@ in your history records. Here is how to do that:&lt;/p&gt;
  
  <entry>
    <title>What's Jekyll?</title>
-   <link href="http://0.0.0.0:4000/2013/12/31/whats-jekyll/"/>
+   <link href="http://localhost:4000/2013/12/31/whats-jekyll/"/>
    <updated>2013-12-31T00:00:00-06:00</updated>
-   <id>http://0.0.0.0:4000/2013/12/31/whats-jekyll</id>
+   <id>http://localhost:4000/2013/12/31/whats-jekyll</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From &lt;a href=&quot;https://github.com/mojombo/jekyll/blob/master/README.markdown&quot;&gt;the project’s readme&lt;/a&gt;:&lt;/p&gt;
 
 &lt;blockquote&gt;
