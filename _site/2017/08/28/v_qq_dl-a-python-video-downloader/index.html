@@ -332,13 +332,17 @@ mySwipeIt.on('swipeLeft',function(e){
         
       
     
+      
+        
+      
+    
 
 
   </nav>
 
   <div class="sidebar-item">
     <p>
-      &copy; 2019. All rights reserved.
+      &copy; 2023. All rights reserved.
     </p>
   </div>
 </div>
@@ -391,14 +395,14 @@ header of the HTTP response. This is not implemented in my program right now.</p
 download files from internet. A sample download code is here:</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">download_file</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
-    <span class="n">local_filename</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">'/'</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">local_filename</span> <span class="o">=</span> <span class="n">url</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s">'/'</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
     <span class="c1"># NOTE the stream=True parameter
-</span>    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">local_filename</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">iter_content</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="mi">1024</span><span class="p">):</span>
+</span>    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="n">local_filename</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">r</span><span class="p">.</span><span class="nf">iter_content</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="mi">1024</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">chunk</span><span class="p">:</span> <span class="c1"># filter out keep-alive new chunks
-</span>                <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
-                <span class="n">f</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+</span>                <span class="n">f</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+                <span class="n">f</span><span class="p">.</span><span class="nf">flush</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">local_filename</span></code></pre></figure>
 
 <p>This part is the core code for downloading. However, we need to wrap the code
@@ -424,44 +428,44 @@ for the multithreading for 2 reasons.</p>
 
 <span class="c1"># Each thread is responsible for one block of the one media file, this for loop pack
 # the arguments in the args list
-</span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">info_file</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">urls</span><span class="p">,</span> <span class="n">files</span><span class="p">,</span> <span class="n">info_files</span><span class="p">,</span> <span class="n">sizes</span><span class="p">)):</span>
-    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+</span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">info_file</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span> <span class="ow">in</span> <span class="nf">enumerate</span><span class="p">(</span><span class="nf">zip</span><span class="p">(</span><span class="n">urls</span><span class="p">,</span> <span class="n">files</span><span class="p">,</span> <span class="n">info_files</span><span class="p">,</span> <span class="n">sizes</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">isfile</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
         <span class="k">continue</span>
 
     <span class="n">workname</span> <span class="o">=</span> <span class="n">filename</span> <span class="o">+</span> <span class="s">'.download'</span>
 
     <span class="c1"># each block has 3 parts, the start of the block, the offset, the end of the block
-</span>    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">info_file</span><span class="p">)</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">info_file</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">_x</span><span class="p">,</span> <span class="n">blocks</span> <span class="o">=</span> <span class="n">read_data</span><span class="p">(</span><span class="n">info_file</span><span class="p">)</span>
+</span>    <span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">isfile</span><span class="p">(</span><span class="n">info_file</span><span class="p">)</span> <span class="ow">and</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">getsize</span><span class="p">(</span><span class="n">info_file</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">_x</span><span class="p">,</span> <span class="n">blocks</span> <span class="o">=</span> <span class="nf">read_data</span><span class="p">(</span><span class="n">info_file</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">block_count</span><span class="p">,</span> <span class="n">remain</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">block_size</span><span class="p">)</span>
+        <span class="n">block_count</span><span class="p">,</span> <span class="n">remain</span> <span class="o">=</span> <span class="nf">divmod</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">block_size</span><span class="p">)</span>
 
-        <span class="n">blocks</span> <span class="o">=</span> <span class="p">[[</span><span class="n">i</span> <span class="o">*</span> <span class="n">block_size</span><span class="p">,</span> <span class="n">i</span> <span class="o">*</span> <span class="n">block_size</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">block_size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">block_count</span><span class="p">)]</span>
+        <span class="n">blocks</span> <span class="o">=</span> <span class="p">[[</span><span class="n">i</span> <span class="o">*</span> <span class="n">block_size</span><span class="p">,</span> <span class="n">i</span> <span class="o">*</span> <span class="n">block_size</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">block_size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">block_count</span><span class="p">)]</span>
         <span class="n">blocks</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="n">remain</span>
 
-        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">workname</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
-            <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">b</span><span class="s">''</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="n">workname</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+            <span class="n">fp</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="sa">b</span><span class="s">''</span><span class="p">)</span>
 
-    <span class="n">file_info</span> <span class="o">=</span> <span class="n">FileInfo</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span>
+    <span class="n">file_info</span> <span class="o">=</span> <span class="nc">FileInfo</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span>
 
-    <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">_monitor</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">file_info</span><span class="p">,</span> <span class="n">blocks</span><span class="p">,</span> <span class="n">info_file</span><span class="p">))</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="n">threading</span><span class="p">.</span><span class="nc">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">_monitor</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">file_info</span><span class="p">,</span> <span class="n">blocks</span><span class="p">,</span> <span class="n">info_file</span><span class="p">)).</span><span class="nf">start</span><span class="p">()</span>
 
-    <span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">workname</span><span class="p">,</span> <span class="s">'rb+'</span><span class="p">)</span>
-    <span class="n">fps</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
-    <span class="n">new_args</span> <span class="o">=</span> <span class="p">[(</span><span class="n">url</span><span class="p">,</span> <span class="n">blocks</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">fp</span><span class="p">,</span> <span class="n">buffer_size</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">blocks</span><span class="p">))</span> <span class="k">if</span> <span class="n">blocks</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">blocks</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]]</span>
+    <span class="n">fp</span> <span class="o">=</span> <span class="nf">open</span><span class="p">(</span><span class="n">workname</span><span class="p">,</span> <span class="s">'rb+'</span><span class="p">)</span>
+    <span class="n">fps</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
+    <span class="n">new_args</span> <span class="o">=</span> <span class="p">[(</span><span class="n">url</span><span class="p">,</span> <span class="n">blocks</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">fp</span><span class="p">,</span> <span class="n">buffer_size</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">blocks</span><span class="p">))</span> <span class="k">if</span> <span class="n">blocks</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">blocks</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]]</span>
     <span class="k">if</span> <span class="n">new_args</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
-        <span class="n">args</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">new_args</span><span class="p">)</span>
+        <span class="n">args</span><span class="p">.</span><span class="nf">extend</span><span class="p">(</span><span class="n">new_args</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="n">thread_count</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
-    <span class="n">thread_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">thread_count</span> <span class="o">&gt;</span> <span class="nf">len</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+    <span class="n">thread_count</span> <span class="o">=</span> <span class="nf">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">thread_count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="c1"># Use a progress bar to show the downloading the progress
-</span>    <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">_progress_bar</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">sizes</span><span class="p">))</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-    <span class="n">pool</span> <span class="o">=</span> <span class="n">ThreadPool</span><span class="p">(</span><span class="n">thread_count</span><span class="p">)</span>
-    <span class="n">pool</span><span class="o">.</span><span class="nb">map</span><span class="p">(</span><span class="n">_worker</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
-    <span class="n">pool</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    <span class="n">pool</span><span class="o">.</span><span class="n">join</span><span class="p">()</span></code></pre></figure>
+</span>    <span class="n">threading</span><span class="p">.</span><span class="nc">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">_progress_bar</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">sizes</span><span class="p">)).</span><span class="nf">start</span><span class="p">()</span>
+    <span class="n">pool</span> <span class="o">=</span> <span class="nc">ThreadPool</span><span class="p">(</span><span class="n">thread_count</span><span class="p">)</span>
+    <span class="n">pool</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="n">_worker</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+    <span class="n">pool</span><span class="p">.</span><span class="nf">close</span><span class="p">()</span>
+    <span class="n">pool</span><span class="p">.</span><span class="nf">join</span><span class="p">()</span></code></pre></figure>
 
 <h2 id="4-tracking-progress">4. Tracking progress</h2>
 
@@ -471,26 +475,26 @@ the media file into blocks and use an info file to track each block. To resuming
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">_worker</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
     <span class="n">url</span><span class="p">,</span> <span class="n">block</span><span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="n">buffer_size</span> <span class="o">=</span> <span class="n">args</span>
-    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Range'</span><span class="p">:</span> <span class="s">'bytes=</span><span class="si">%</span><span class="s">s-</span><span class="si">%</span><span class="s">s'</span> <span class="o">%</span> <span class="p">(</span><span class="n">block</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">block</span><span class="p">[</span><span class="mi">2</span><span class="p">])}</span>
-    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Range'</span><span class="p">:</span> <span class="s">'bytes=%s-%s'</span> <span class="o">%</span> <span class="p">(</span><span class="n">block</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">block</span><span class="p">[</span><span class="mi">2</span><span class="p">])}</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
     <span class="c1"># TODO :requests.exceptions.ChunkedEncodingError: ("Connection broken: ConnectionResetError(54, 'Connection reset by peer')", ConnectionResetError(54, 'Connection reset by peer'))
-</span>    <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">iter_content</span><span class="p">(</span><span class="n">buffer_size</span><span class="p">):</span>
+</span>    <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">r</span><span class="p">.</span><span class="nf">iter_content</span><span class="p">(</span><span class="n">buffer_size</span><span class="p">):</span>
         <span class="k">with</span> <span class="n">lock</span><span class="p">:</span>
-            <span class="n">fp</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">block</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-            <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
-            <span class="n">block</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
-        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">'</span><span class="err">\</span><span class="s">_worker: {} {}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">block</span><span class="p">,</span> <span class="n">headers</span><span class="p">))</span>
+            <span class="n">fp</span><span class="p">.</span><span class="nf">seek</span><span class="p">(</span><span class="n">block</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">fp</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+            <span class="n">block</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="nf">len</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+        <span class="n">logging</span><span class="p">.</span><span class="nf">debug</span><span class="p">(</span><span class="s">'\_worker: {} {}'</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">block</span><span class="p">,</span> <span class="n">headers</span><span class="p">))</span>
 
 
 <span class="k">def</span> <span class="nf">_monitor</span><span class="p">(</span><span class="n">file_info</span><span class="p">,</span> <span class="n">blocks</span><span class="p">,</span> <span class="n">info_file</span><span class="p">):</span>
     <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
         <span class="k">with</span> <span class="n">lock</span><span class="p">:</span>
-            <span class="n">percent</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">block</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">block</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">block</span> <span class="ow">in</span> <span class="n">blocks</span><span class="p">])</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="n">file_info</span><span class="o">.</span><span class="n">size</span>
+            <span class="n">percent</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">([</span><span class="n">block</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">block</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">block</span> <span class="ow">in</span> <span class="n">blocks</span><span class="p">])</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="n">file_info</span><span class="p">.</span><span class="n">size</span>
             <span class="k">if</span> <span class="n">percent</span> <span class="o">&gt;=</span> <span class="mi">100</span><span class="p">:</span>
                 <span class="k">break</span>
-            <span class="n">write_data</span><span class="p">(</span><span class="n">info_file</span><span class="p">,</span> <span class="p">(</span><span class="n">file_info</span><span class="p">,</span> <span class="n">blocks</span><span class="p">))</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">'_monitor: {} {} {}percent {}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">file_info</span><span class="o">.</span><span class="n">filename</span><span class="p">,</span> <span class="n">file_info</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">percent</span><span class="p">,</span> <span class="n">blocks</span><span class="p">))</span></code></pre></figure>
+            <span class="nf">write_data</span><span class="p">(</span><span class="n">info_file</span><span class="p">,</span> <span class="p">(</span><span class="n">file_info</span><span class="p">,</span> <span class="n">blocks</span><span class="p">))</span>
+        <span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">logging</span><span class="p">.</span><span class="nf">debug</span><span class="p">(</span><span class="s">'_monitor: {} {} {}percent {}'</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">file_info</span><span class="p">.</span><span class="n">filename</span><span class="p">,</span> <span class="n">file_info</span><span class="p">.</span><span class="n">size</span><span class="p">,</span> <span class="n">percent</span><span class="p">,</span> <span class="n">blocks</span><span class="p">))</span></code></pre></figure>
 
 <p>The source code of the project is <a href="https://github.com/asurinsaka/v_qq_dl">here</a>:</p>
 
@@ -499,6 +503,15 @@ the media file into blocks and use an info file to track each block. To resuming
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2023/03/03/Download_latest_video_from_YouTube_Channel/">
+            Download Latest video from YouTube channel
+            <small>03 Mar 2023</small>
+          </a>
+        </h3>
+      </li>
     
       <li>
         <h3>
@@ -514,15 +527,6 @@ the media file into blocks and use an info file to track each block. To resuming
           <a href="/2016/08/09/Shinyapp/">
             Shinyapp
             <small>09 Aug 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2016/08/05/Some-IDL-examples/">
-            Some IDL examples
-            <small>05 Aug 2016</small>
           </a>
         </h3>
       </li>
