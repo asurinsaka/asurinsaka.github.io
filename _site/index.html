@@ -365,6 +365,27 @@ mySwipeIt.on('swipeLeft',function(e){
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/2023/03/26/Visualize-DAG-with-pyvis/">
+        Visualize DAG with pyvis
+      </a>
+    </h1>
+
+    <span class="post-date">26 Mar 2023</span>
+
+    <p>In previous post <a href="/2023/03/25/visualize-DAG-with-graphviz/">Visualize DAG with Graphviz</a>, I talked about how to use Graphviz to display DAG. Graphviz is greate but it can only generate pictures in svg. For nodes with large amount of data, it will be hard to show all the data in a single picture.</p>
+
+<p>With today’s javascript, it will be nice to show and hide node infomation dynamically. Rowland has created a internal repo called gexplorer, which runs on a flask server with vis.js on the front end. The problem with this implementation is that it is hard to share the data. The other people has to have access to your server, or have to spin up his own server. Or he can only receive screenshot of the picture. I think it would be nice if we have this kinda of dynamic implementation with jupyterlab.</p>
+
+<p>Last Friday(03/24/2023), a colleage Tzintzuni Garcia from bio team of GDC, did a presentation about his attempt. He used <a href="https://docs.bokeh.org/en/latest/">bokeh</a> to build the visulaizaiton. Network is shown in the example pictures of bokeh but I could not find good tutorial about how to build network with bokeh on its offical website. I think network is not one of their main focus. And in the presentation, the library is not hendling hierarchy for DAG very well.</p>
+
+<p>Recently I found a python library called <a href="https://pyvis.readthedocs.io/en/latest/">pyvis</a>. Which also use <a href="https://visjs.org/">vis.js</a>. vis.js is a 
+    
+    <a href="/2023/03/26/Visualize-DAG-with-pyvis/">read more</a>
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/2023/03/25/visualize-DAG-with-graphviz/">
         Visualize DAG with Graphviz
       </a>
@@ -457,36 +478,6 @@ downloads.
 
     
     <a href="/2017/08/28/v_qq_dl-a-python-video-downloader/">read more</a>
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2016/08/09/Shinyapp/">
-        Shinyapp
-      </a>
-    </h1>
-
-    <span class="post-date">09 Aug 2016</span>
-
-    <p>One research in our lab is regarding the algae.</p>
-
-<p>First they collected water samples from 58 locations around Florida Key.
-After collection, the samples are run through HPLC to get
-information about the species of chlorophylls. From those information, we would
-be able to know where different kind of algae lives.</p>
-
-<!--![Figure 1. Stations](/images/shinyapp-stations.PNG)
--->
-
-<p>To help people analysis those HPLC data. A leaflet map build with shiny server
-are used. The HPLC data for different stations are shown in a pie chart, which
-is built by plotly.</p>
-
-<p><img src="/images/shinyapp-pie.gif" alt="Figure 1. Stations" />
-
-    
-    <a href="/2016/08/09/Shinyapp/">read more</a>
     
   </div>
   

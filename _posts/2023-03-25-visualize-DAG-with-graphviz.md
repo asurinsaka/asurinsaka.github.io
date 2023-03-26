@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Visualize DAG with Graphviz
-tags: [DAG, visualization]
+tags: [DAG, visualization, graphviz]
 ---
 
 At GDC, we have a graph saved in database. The structure of the graph is defined with [GDCDictioanry](https://github.com/NCI-GDC/gdcdictionary/). 
