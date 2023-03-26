@@ -429,9 +429,10 @@ format. With complicated test cases, we will need many nodes and edges in the te
     <span class="na">label</span><span class="pi">:</span> <span class="s">read_groups</span></code></pre></figure>
 
 <p>To help us with large test data, we should visualize the test data. It is much easier to understand the relationships with charts than reading
-a yaml file. <a href="https://graphviz.org/">Graphviz</a> is an opensource graph visualization software. Which is very helpful in our case.</p>
+a yaml file. <a href="https://graphviz.org/">Graphviz</a> is an opensource graph visualization software. <a href="https://en.wikipedia.org/wiki/DOT_(graph_description_language)">Dot language</a> is used by graphviz to create the graph. As we are mostly using python 
+for our develop, we use the python version of <a href="https://graphviz.readthedocs.io/en/stable/index.html">graphviz</a> to generate our chart.</p>
 
-<p>To visualize our test data, I wrote a script to use graphviz to create a chart for it. And my colleague Rowland add color to
+<p>To visualize our test data, I wrote a the following script using graphviz to create a chart. And my colleague Rowland add color to
 the graph so different node types will have different colors.</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="n">json</span>
@@ -505,6 +506,8 @@ the graph so different node types will have different colors.</p>
 
 <span class="n">UUID_NAMESPACE_SEED</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="nf">getenv</span><span class="p">(</span><span class="s">"UUID_NAMESPACE_SEED"</span><span class="p">,</span> <span class="s">"f0d2633b-cd8b-45ca-ae86-1d5c759ba0d1"</span><span class="p">)</span>
 <span class="n">UUID_NAMESPACE</span> <span class="o">=</span> <span class="n">uuid</span><span class="p">.</span><span class="nc">UUID</span><span class="p">(</span><span class="s">"urn:uuid:{}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">UUID_NAMESPACE_SEED</span><span class="p">),</span> <span class="n">version</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span></code></pre></figure>
+
+<p>It simply use <code class="language-plaintext highlighter-rouge">dot.node(node_id)</code> to add a node to the chart and <code class="language-plaintext highlighter-rouge">dot.edge(src_node_id, dest_node_id)</code> to add an edge to the chart.</p>
 
 <p>Now the data above will be converted to the following chart:</p>
 

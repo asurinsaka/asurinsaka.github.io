@@ -70,9 +70,10 @@ edges:
     label: read_groups
 {% endhighlight %}
 To help us with large test data, we should visualize the test data. It is much easier to understand the relationships with charts than reading
-a yaml file. [Graphviz](https://graphviz.org/) is an opensource graph visualization software. Which is very helpful in our case. 
+a yaml file. [Graphviz](https://graphviz.org/) is an opensource graph visualization software. [Dot language](https://en.wikipedia.org/wiki/DOT_(graph_description_language)) is used by graphviz to create the graph. As we are mostly using python 
+for our develop, we use the python version of [graphviz](https://graphviz.readthedocs.io/en/stable/index.html) to generate our chart. 
 
-To visualize our test data, I wrote a script to use graphviz to create a chart for it. And my colleague Rowland add color to
+To visualize our test data, I wrote a the following script using graphviz to create a chart. And my colleague Rowland add color to
 the graph so different node types will have different colors.
 
 {% highlight python %}
@@ -148,6 +149,8 @@ def get_color(label: str) -> str:
 UUID_NAMESPACE_SEED = os.getenv("UUID_NAMESPACE_SEED", "f0d2633b-cd8b-45ca-ae86-1d5c759ba0d1")
 UUID_NAMESPACE = uuid.UUID("urn:uuid:{}".format(UUID_NAMESPACE_SEED), version=4)
 {% endhighlight %}
+
+It simply use `dot.node(node_id)` to add a node to the chart and `dot.edge(src_node_id, dest_node_id)` to add an edge to the chart. 
 
 Now the data above will be converted to the following chart:
 

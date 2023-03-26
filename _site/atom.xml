@@ -4,7 +4,7 @@
  <title>Asurin</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2023-03-25T20:10:10-05:00</updated>
+ <updated>2023-03-25T20:22:58-05:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Asurin</name>
@@ -82,9 +82,10 @@ format. With complicated test cases, we will need many nodes and edges in the te
     &lt;span class=&quot;na&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;read_groups&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;To help us with large test data, we should visualize the test data. It is much easier to understand the relationships with charts than reading
-a yaml file. &lt;a href=&quot;https://graphviz.org/&quot;&gt;Graphviz&lt;/a&gt; is an opensource graph visualization software. Which is very helpful in our case.&lt;/p&gt;
+a yaml file. &lt;a href=&quot;https://graphviz.org/&quot;&gt;Graphviz&lt;/a&gt; is an opensource graph visualization software. &lt;a href=&quot;https://en.wikipedia.org/wiki/DOT_(graph_description_language)&quot;&gt;Dot language&lt;/a&gt; is used by graphviz to create the graph. As we are mostly using python 
+for our develop, we use the python version of &lt;a href=&quot;https://graphviz.readthedocs.io/en/stable/index.html&quot;&gt;graphviz&lt;/a&gt; to generate our chart.&lt;/p&gt;
 
-&lt;p&gt;To visualize our test data, I wrote a script to use graphviz to create a chart for it. And my colleague Rowland add color to
+&lt;p&gt;To visualize our test data, I wrote a the following script using graphviz to create a chart. And my colleague Rowland add color to
 the graph so different node types will have different colors.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;
@@ -158,6 +159,8 @@ the graph so different node types will have different colors.&lt;/p&gt;
 
 &lt;span class=&quot;n&quot;&gt;UUID_NAMESPACE_SEED&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getenv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UUID_NAMESPACE_SEED&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;f0d2633b-cd8b-45ca-ae86-1d5c759ba0d1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;UUID_NAMESPACE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uuid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;UUID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;urn:uuid:{}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UUID_NAMESPACE_SEED&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It simply use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dot.node(node_id)&lt;/code&gt; to add a node to the chart and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dot.edge(src_node_id, dest_node_id)&lt;/code&gt; to add an edge to the chart.&lt;/p&gt;
 
 &lt;p&gt;Now the data above will be converted to the following chart:&lt;/p&gt;
 
