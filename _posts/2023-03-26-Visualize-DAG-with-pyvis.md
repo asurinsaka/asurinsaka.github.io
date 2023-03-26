@@ -154,5 +154,91 @@ A few things to metion about this code.
 
 ## Examle
 
+The code is run in our jupyterlab server, which will fetch out the data from our postgres database. Due to the size of the data, I have limited the max_depth and max_width to 10.
+
 ![sample_subtree](/images/pyvis_gdc/sample_subtree.png)
+
+## Code
+
+The following is the code for the live data:
+
+{% highlight python %}
+from collections import deque
+
+
+@lru_cache(maxsize=256)
+def get_color(label: str) -> str:
+    label = str(uuid.uuid5(UUID_NAMESPACE, label))
+    label_color = hex(int("".join(map(str, map(ord, label)))) & 0x00FFFFFF)
+    return "#{:f<6}".format(label_color[2:])
+
+
+UUID_NAMESPACE_SEED = os.getenv("UUID_NAMESPACE_SEED", "f0d2633b-cd8b-45ca-ae86-1d5c759ba0d1")
+UUID_NAMESPACE = uuid.UUID("urn:uuid:{}".format(UUID_NAMESPACE_SEED), version=4)
+
+
+def draw_subtree(node_id, max_depth=5, max_width=float('inf'), show_buttons=False):
+
+    got_net = Network(notebook=True, cdn_resources='in_line', layout=True, directed=True, height='1500px')
+
+    edge_pointer = 'in'
+
+    with g.session_scope() as s:
+        root = g.nodes().get(node_id)
+
+        marked = set()
+        queue = deque([(root, 0)])
+
+
+        marked.add(root.node_id)
+        got_net.add_node(
+            root.node_id, 
+            label=root.label, 
+            title=f'{root.label} {root.node_id}\n' + '\n'.join(f"{k}: {v}" for k, v in root.props.items()), 
+            level=0, 
+            color=get_color(root.label)
+        )
+
+
+        while queue:
+            current, depth = queue.popleft()
+
+
+            if depth + 1 > max_depth:
+                continue
+
+            edges = current.edges_out if edge_pointer == "out" else current.edges_in
+            for i, edge in enumerate(edges, 1):
+
+                n = edge.dst if edge_pointer == "out" else edge.src
+
+                if n.node_id not in marked:
+                    queue.append((n, depth + 1))
+                    marked.add(n.node_id)
+                    got_net.add_node(
+                        n.node_id, 
+                        label=n.label, 
+                        title=f'{n.label} {n.node_id}\n' + '\n'.join(f"{k}: {v}" for k, v in n.props.items()), 
+                        level=depth+1, 
+                        color=get_color(n.label)
+                    )
+
+                    
+                got_net.add_edge(edge.src.node_id, edge.dst.node_id)
+                
+                if i >= max_width:
+                    break
+
+
+
+    neighbor_map = got_net.get_adj_list()
+    
+    if show_buttons:
+        got_net.show_buttons()
+    return got_net.show("gameofthrones.html") 
+    {% endhighlight %}
+
+The thing to notice about this code is that, to get good hierarchical layout, I rewrte the bsf method in our [psqlgraph](https://github.com/NCI-GDC/psqlgraph) repo and set the level property for each node. This was before I figure out the hierarchical sortMethod property. But I kept this implementation so I can set the max_width for my graph. 
+
+
 
