@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-  d>
+  <head>
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -19,7 +19,6 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/lanyon.css">
-  <link rel="stylesheet" href="/public/css/github.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 
   <!-- Icons -->
@@ -372,141 +371,140 @@ format. With complicated test cases, we will need many nodes and edges in the te
 
 <p><img src="/images/graphviz_gdc/gdcdictionary.png" alt="gdcdictionary" /></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-nodes:
-  - label: case
-    node_id: ee327e98-a722-4609-a9ff-e1da88169b3e
-    submitter_id: case_1
-  - label: sample
-    submitter_id: sample_1
-    tissue_type: Normal
-    sample_type: Blood Derived Normal
-  - label: portion
-    submitter_id: portion_1
-  - label: analyte
-    submitter_id: analyte_1
-  - label: aliquot
-    node_id: 1f8557c3-33a3-4fca-b7d1-2464f14c9514
-    submitter_id: aliquot_1
-    no_matched_normal_wxs: false
-    no_matched_normal_targeted_sequencing: false
-    selected_normal_wxs: true
-    analyte_type: DNA
-    selected_normal_targeted_sequencing: false
-  - label: read_group
-    node_id: dfbdabb5-5d9e-442a-a9ac-eea5132324ed
-    submitter_id: rg_1
-    single_cell_library: Chromium 3' Gene Expression v3 Library
-    target_capture_kit: SureSelect Human All Exon v5
-  - label: read_group
-    node_id: 2c560954-d0d0-4d35-9c44-24e483059697
-    submitter_id: rg_2
-    single_cell_library: Chromium 3' Gene Expression v3 Library
-  - label: submitted_unaligned_reads
-    node_id: 57261c6c-918d-4b71-b96c-80db0024fa7a
-    submitter_id: sur_1
-    experimental_strategy: m6A MeRIP-Seq
-edges:
-  - src: sample_1
-    dst: case_1
-    label: cases
-  - src: portion_1
-    dst: sample_1
-    label: samples
-  - src: analyte_1
-    dst: portion_1
-    label: portions
-  - src: aliquot_1
-    dst: analyte_1
-    label: analytes
-  - src: rg_1
-    dst: aliquot_1
-    label: aliquots
-  - src: rg_2
-    dst: aliquot_1
-    label: aliquots
-  - src: sur_1
-    dst: rg_1
-    label: read_groups
-</code></pre></div></div>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="nn">---</span>
+<span class="na">nodes</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">case</span>
+    <span class="na">node_id</span><span class="pi">:</span> <span class="s">ee327e98-a722-4609-a9ff-e1da88169b3e</span>
+    <span class="na">submitter_id</span><span class="pi">:</span> <span class="s">case_1</span>
+  <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">sample</span>
+    <span class="na">submitter_id</span><span class="pi">:</span> <span class="s">sample_1</span>
+    <span class="na">tissue_type</span><span class="pi">:</span> <span class="s">Normal</span>
+    <span class="na">sample_type</span><span class="pi">:</span> <span class="s">Blood Derived Normal</span>
+  <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">portion</span>
+    <span class="na">submitter_id</span><span class="pi">:</span> <span class="s">portion_1</span>
+  <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">analyte</span>
+    <span class="na">submitter_id</span><span class="pi">:</span> <span class="s">analyte_1</span>
+  <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">aliquot</span>
+    <span class="na">node_id</span><span class="pi">:</span> <span class="s">1f8557c3-33a3-4fca-b7d1-2464f14c9514</span>
+    <span class="na">submitter_id</span><span class="pi">:</span> <span class="s">aliquot_1</span>
+    <span class="na">no_matched_normal_wxs</span><span class="pi">:</span> <span class="kc">false</span>
+    <span class="na">no_matched_normal_targeted_sequencing</span><span class="pi">:</span> <span class="kc">false</span>
+    <span class="na">selected_normal_wxs</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">analyte_type</span><span class="pi">:</span> <span class="s">DNA</span>
+    <span class="na">selected_normal_targeted_sequencing</span><span class="pi">:</span> <span class="kc">false</span>
+  <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">read_group</span>
+    <span class="na">node_id</span><span class="pi">:</span> <span class="s">dfbdabb5-5d9e-442a-a9ac-eea5132324ed</span>
+    <span class="na">submitter_id</span><span class="pi">:</span> <span class="s">rg_1</span>
+    <span class="na">single_cell_library</span><span class="pi">:</span> <span class="s">Chromium 3' Gene Expression v3 Library</span>
+    <span class="na">target_capture_kit</span><span class="pi">:</span> <span class="s">SureSelect Human All Exon v5</span>
+  <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">read_group</span>
+    <span class="na">node_id</span><span class="pi">:</span> <span class="s">2c560954-d0d0-4d35-9c44-24e483059697</span>
+    <span class="na">submitter_id</span><span class="pi">:</span> <span class="s">rg_2</span>
+    <span class="na">single_cell_library</span><span class="pi">:</span> <span class="s">Chromium 3' Gene Expression v3 Library</span>
+  <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s">submitted_unaligned_reads</span>
+    <span class="na">node_id</span><span class="pi">:</span> <span class="s">57261c6c-918d-4b71-b96c-80db0024fa7a</span>
+    <span class="na">submitter_id</span><span class="pi">:</span> <span class="s">sur_1</span>
+    <span class="na">experimental_strategy</span><span class="pi">:</span> <span class="s">m6A MeRIP-Seq</span>
+<span class="na">edges</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">src</span><span class="pi">:</span> <span class="s">sample_1</span>
+    <span class="na">dst</span><span class="pi">:</span> <span class="s">case_1</span>
+    <span class="na">label</span><span class="pi">:</span> <span class="s">cases</span>
+  <span class="pi">-</span> <span class="na">src</span><span class="pi">:</span> <span class="s">portion_1</span>
+    <span class="na">dst</span><span class="pi">:</span> <span class="s">sample_1</span>
+    <span class="na">label</span><span class="pi">:</span> <span class="s">samples</span>
+  <span class="pi">-</span> <span class="na">src</span><span class="pi">:</span> <span class="s">analyte_1</span>
+    <span class="na">dst</span><span class="pi">:</span> <span class="s">portion_1</span>
+    <span class="na">label</span><span class="pi">:</span> <span class="s">portions</span>
+  <span class="pi">-</span> <span class="na">src</span><span class="pi">:</span> <span class="s">aliquot_1</span>
+    <span class="na">dst</span><span class="pi">:</span> <span class="s">analyte_1</span>
+    <span class="na">label</span><span class="pi">:</span> <span class="s">analytes</span>
+  <span class="pi">-</span> <span class="na">src</span><span class="pi">:</span> <span class="s">rg_1</span>
+    <span class="na">dst</span><span class="pi">:</span> <span class="s">aliquot_1</span>
+    <span class="na">label</span><span class="pi">:</span> <span class="s">aliquots</span>
+  <span class="pi">-</span> <span class="na">src</span><span class="pi">:</span> <span class="s">rg_2</span>
+    <span class="na">dst</span><span class="pi">:</span> <span class="s">aliquot_1</span>
+    <span class="na">label</span><span class="pi">:</span> <span class="s">aliquots</span>
+  <span class="pi">-</span> <span class="na">src</span><span class="pi">:</span> <span class="s">sur_1</span>
+    <span class="na">dst</span><span class="pi">:</span> <span class="s">rg_1</span>
+    <span class="na">label</span><span class="pi">:</span> <span class="s">read_groups</span></code></pre></figure>
+
 <p>To help us with large test data, we should visualize the test data. It is much easier to understand the relationships with charts than reading
 a yaml file. <a href="https://graphviz.org/">Graphviz</a> is an opensource graph visualization software. Which is very helpful in our case.</p>
 
 <p>To visualize our test data, I wrote a script to use graphviz to create a chart for it. And my colleague Rowland add color to
 the graph so different node types will have different colors.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import json
-import os
-import uuid
-from functools import lru_cache
-from typing import Dict, List
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="n">json</span>
+<span class="kn">import</span> <span class="n">os</span>
+<span class="kn">import</span> <span class="n">uuid</span>
+<span class="kn">from</span> <span class="n">functools</span> <span class="kn">import</span> <span class="n">lru_cache</span>
+<span class="kn">from</span> <span class="n">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span>
 
-import requests
-import yaml
-from graphviz import Digraph
+<span class="kn">import</span> <span class="n">requests</span>
+<span class="kn">import</span> <span class="n">yaml</span>
+<span class="kn">from</span> <span class="n">graphviz</span> <span class="kn">import</span> <span class="n">Digraph</span>
 
-def draw(nodes: List[Dict[str, str]], edges: List[Dict[str, str]], reverse=False):
-    dot = Digraph('g', filename='btree.gv',
-        node_attr={'shape': 'record'})
+<span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="n">nodes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]],</span> <span class="n">edges</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]],</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="n">dot</span> <span class="o">=</span> <span class="nc">Digraph</span><span class="p">(</span><span class="s">'g'</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'btree.gv'</span><span class="p">,</span>
+        <span class="n">node_attr</span><span class="o">=</span><span class="p">{</span><span class="s">'shape'</span><span class="p">:</span> <span class="s">'record'</span><span class="p">})</span>
 
-    node_id_to_submitter_id = {}
-    for node in nodes:
-        submitter_id = node.get("submitter_id")
-        node_id = node.get("node_id")
-        suffix = f"：{node['gencode_version']}" if node.get("gencode_version") else ''
+    <span class="n">node_id_to_submitter_id</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">:</span>
+        <span class="n">submitter_id</span> <span class="o">=</span> <span class="n">node</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"submitter_id"</span><span class="p">)</span>
+        <span class="n">node_id</span> <span class="o">=</span> <span class="n">node</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"node_id"</span><span class="p">)</span>
+        <span class="n">suffix</span> <span class="o">=</span> <span class="sa">f</span><span class="s">"：</span><span class="si">{</span><span class="n">node</span><span class="p">[</span><span class="s">'gencode_version'</span><span class="p">]</span><span class="si">}</span><span class="s">"</span> <span class="k">if</span> <span class="n">node</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"gencode_version"</span><span class="p">)</span> <span class="k">else</span> <span class="s">''</span>
 
-        if submitter_id and node_id:
-            node_id_to_submitter_id[node_id] = submitter_id + suffix
-        elif submitter_id:
-            node_id_to_submitter_id[submitter_id] = submitter_id + suffix
-        else:
-            node_id_to_submitter_id[node_id] = node_id + suffix
+        <span class="k">if</span> <span class="n">submitter_id</span> <span class="ow">and</span> <span class="n">node_id</span><span class="p">:</span>
+            <span class="n">node_id_to_submitter_id</span><span class="p">[</span><span class="n">node_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">submitter_id</span> <span class="o">+</span> <span class="n">suffix</span>
+        <span class="k">elif</span> <span class="n">submitter_id</span><span class="p">:</span>
+            <span class="n">node_id_to_submitter_id</span><span class="p">[</span><span class="n">submitter_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">submitter_id</span> <span class="o">+</span> <span class="n">suffix</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">node_id_to_submitter_id</span><span class="p">[</span><span class="n">node_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">node_id</span> <span class="o">+</span> <span class="n">suffix</span>
 
-    print(node_id_to_submitter_id)
+    <span class="nf">print</span><span class="p">(</span><span class="n">node_id_to_submitter_id</span><span class="p">)</span>
 
-    for node in nodes:
-        n_id = node_id_to_submitter_id.get(node.get("node_id") or node.get("submitter_id"))
-        # print(n_id, node.get("submitter_id"), node.get("node_id"))
-        dot.node(n_id, fillcolor=get_color(node["label"]), style="filled")
+    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">:</span>
+        <span class="n">n_id</span> <span class="o">=</span> <span class="n">node_id_to_submitter_id</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"node_id"</span><span class="p">)</span> <span class="ow">or</span> <span class="n">node</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"submitter_id"</span><span class="p">))</span>
+        <span class="c1"># print(n_id, node.get("submitter_id"), node.get("node_id"))
+</span>        <span class="n">dot</span><span class="p">.</span><span class="nf">node</span><span class="p">(</span><span class="n">n_id</span><span class="p">,</span> <span class="n">fillcolor</span><span class="o">=</span><span class="nf">get_color</span><span class="p">(</span><span class="n">node</span><span class="p">[</span><span class="s">"label"</span><span class="p">]),</span> <span class="n">style</span><span class="o">=</span><span class="s">"filled"</span><span class="p">)</span>
 
-    for edge in edges: 
-        src = node_id_to_submitter_id.get(edge["src"]) or edge["src"]
-        dst = node_id_to_submitter_id.get(edge["dst"]) or edge["dst"]
-        # print(src, dst, edge['src'], edge['dst'])
-        if reverse:
-            dot.edge(dst, src)
-        else:
-            dot.edge(src, dst)
+    <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">edges</span><span class="p">:</span> 
+        <span class="n">src</span> <span class="o">=</span> <span class="n">node_id_to_submitter_id</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="s">"src"</span><span class="p">])</span> <span class="ow">or</span> <span class="n">edge</span><span class="p">[</span><span class="s">"src"</span><span class="p">]</span>
+        <span class="n">dst</span> <span class="o">=</span> <span class="n">node_id_to_submitter_id</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="s">"dst"</span><span class="p">])</span> <span class="ow">or</span> <span class="n">edge</span><span class="p">[</span><span class="s">"dst"</span><span class="p">]</span>
+        <span class="c1"># print(src, dst, edge['src'], edge['dst'])
+</span>        <span class="k">if</span> <span class="n">reverse</span><span class="p">:</span>
+            <span class="n">dot</span><span class="p">.</span><span class="nf">edge</span><span class="p">(</span><span class="n">dst</span><span class="p">,</span> <span class="n">src</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dot</span><span class="p">.</span><span class="nf">edge</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)</span>
 
-    return dot
-
-
-def draw_yaml(yaml_raw):
-    try:
-        yaml_dict = yaml.load(yaml_raw)
-    except yaml.scanner.ScannerError:
-        yaml_dict = json.loads(yaml_raw)
-
-    return draw(yaml_dict['nodes'], yaml_dict['edges'])
+    <span class="k">return</span> <span class="n">dot</span>
 
 
-def draw_url(url):
-    response = requests.get(url)
-    print(response.status_code)
-    return draw_yaml(response.content)
+<span class="k">def</span> <span class="nf">draw_yaml</span><span class="p">(</span><span class="n">yaml_raw</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">yaml_dict</span> <span class="o">=</span> <span class="n">yaml</span><span class="p">.</span><span class="nf">load</span><span class="p">(</span><span class="n">yaml_raw</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">yaml</span><span class="p">.</span><span class="n">scanner</span><span class="p">.</span><span class="n">ScannerError</span><span class="p">:</span>
+        <span class="n">yaml_dict</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="nf">loads</span><span class="p">(</span><span class="n">yaml_raw</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="nf">draw</span><span class="p">(</span><span class="n">yaml_dict</span><span class="p">[</span><span class="s">'nodes'</span><span class="p">],</span> <span class="n">yaml_dict</span><span class="p">[</span><span class="s">'edges'</span><span class="p">])</span>
+
+
+<span class="k">def</span> <span class="nf">draw_url</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nf">draw_yaml</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">content</span><span class="p">)</span>
 
 
 
-@lru_cache(maxsize=256)
-def get_color(label: str) -&gt; str:
-    label = str(uuid.uuid5(UUID_NAMESPACE, label))
-    label_color = hex(int("".join(map(str, map(ord, label)))) &amp; 0x00FFFFFF)
-    return "#{:f&lt;6}".format(label_color[2:])
+<span class="nd">@lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">get_color</span><span class="p">(</span><span class="n">label</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="nf">str</span><span class="p">(</span><span class="n">uuid</span><span class="p">.</span><span class="nf">uuid5</span><span class="p">(</span><span class="n">UUID_NAMESPACE</span><span class="p">,</span> <span class="n">label</span><span class="p">))</span>
+    <span class="n">label_color</span> <span class="o">=</span> <span class="nf">hex</span><span class="p">(</span><span class="nf">int</span><span class="p">(</span><span class="s">""</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="nf">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nf">map</span><span class="p">(</span><span class="nb">ord</span><span class="p">,</span> <span class="n">label</span><span class="p">))))</span> <span class="o">&amp;</span> <span class="mh">0x00FFFFFF</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s">"#{:f&lt;6}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">label_color</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
 
 
-UUID_NAMESPACE_SEED = os.getenv("UUID_NAMESPACE_SEED", "f0d2633b-cd8b-45ca-ae86-1d5c759ba0d1")
-UUID_NAMESPACE = uuid.UUID("urn:uuid:{}".format(UUID_NAMESPACE_SEED), version=4)
-</code></pre></div></div>
+<span class="n">UUID_NAMESPACE_SEED</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="nf">getenv</span><span class="p">(</span><span class="s">"UUID_NAMESPACE_SEED"</span><span class="p">,</span> <span class="s">"f0d2633b-cd8b-45ca-ae86-1d5c759ba0d1"</span><span class="p">)</span>
+<span class="n">UUID_NAMESPACE</span> <span class="o">=</span> <span class="n">uuid</span><span class="p">.</span><span class="nc">UUID</span><span class="p">(</span><span class="s">"urn:uuid:{}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">UUID_NAMESPACE_SEED</span><span class="p">),</span> <span class="n">version</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span></code></pre></figure>
 
 <p>Now the data above will be converted to the following chart:</p>
 

@@ -11,7 +11,7 @@ format. With complicated test cases, we will need many nodes and edges in the te
 
 ![gdcdictionary](/images/graphviz_gdc/gdcdictionary.png)
 
-```
+{% highlight yaml %}
 ---
 nodes:
   - label: case
@@ -68,14 +68,14 @@ edges:
   - src: sur_1
     dst: rg_1
     label: read_groups
-```
+{% endhighlight %}
 To help us with large test data, we should visualize the test data. It is much easier to understand the relationships with charts than reading
 a yaml file. [Graphviz](https://graphviz.org/) is an opensource graph visualization software. Which is very helpful in our case. 
 
 To visualize our test data, I wrote a script to use graphviz to create a chart for it. And my colleague Rowland add color to
 the graph so different node types will have different colors.
 
-```
+{% highlight python %}
 import json
 import os
 import uuid
@@ -147,7 +147,7 @@ def get_color(label: str) -> str:
 
 UUID_NAMESPACE_SEED = os.getenv("UUID_NAMESPACE_SEED", "f0d2633b-cd8b-45ca-ae86-1d5c759ba0d1")
 UUID_NAMESPACE = uuid.UUID("urn:uuid:{}".format(UUID_NAMESPACE_SEED), version=4)
-```
+{% endhighlight %}
 
 Now the data above will be converted to the following chart:
 
