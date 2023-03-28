@@ -129,3 +129,22 @@ To audit your baseline file (check whehter any secrete is staged), run:
 detect-secrets audit .secrets.baseline
 {% endhighlight %}
 
+### --exclude-secretes
+
+A useful flag from detect-secretes is `--exclude-secretes`.
+
+Sometimes, you want to be able to ignore certain secret values in your scan. You can specify a regex rule as such:
+
+{% highlight bash %}
+$ detect-secrets scan --exclude-secrets '(fakesecret|\${.*})'
+{% endhighlight %}
+
+Or you can specify multiple regex rules as such:
+
+{% highlight bash %}
+$ detect-secrets scan --exclude-secrets 'fakesecret' --exclude-secrets '\${.*})'
+{% endhighlight %}
+
+There are many more hooks yet to discover, hope you enjoy your journy!
+
+
