@@ -87,7 +87,20 @@ The header for proton starts at 180 + 128 = 308.
 The data starts at 180 + 128 + 128 = 436.
 
 
+The number of points among each axis is 1024, and the tile size is 128. So the number of tiles among each axis is 1024 / 128 = 8.
 
+The tiles are saved in 1D vector, if we reorganize the 1d vector into 2D matrix, we will have the following:
 
+| <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> |
+|----------|----------|----------|----------|----------|----------|----------|----------|
+| 1        | 2        | 3        | 4        | 5        | 6        | 7        | 8        |
+| 9        | 10       | 11       | 12       | 13       | 14       | 15       | 16       |
+| 17       | 18       | 19       | 20       | 21       | 22       | 23       | 24       |
+| 25       | 26       | 27       | 28       | 29       | 30       | 31       | 32       |
+| 33       | 34       | 35       | 36       | 37       | 38       | 39       | 40       |
+| 41       | 42       | 43       | 44       | 45       | 46       | 47       | 48       |
+| 49       | 50       | 51       | 52       | 53       | 54       | 55       | 56       |
+| 57       | 58       | 59       | 60       | 61       | 62       | 63       | 64       |
 
+The data in each tile is also saved in row order. So if we have 64 data points in each tile and want to reorganize the data into 2d matrix, the data will also looks like the table above. 
 
