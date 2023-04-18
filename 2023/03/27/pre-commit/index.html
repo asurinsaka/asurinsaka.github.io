@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Pre-commit &middot; Asurin
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+    
+  <!-- Lightbox -->
+  <script src="/public/js/jquery.min.js"></script>
+  <style>
+.lightbox {width: 100%; height: 100%; position: fixed; top: 0; left: 0; background: rgba(0,0,0,0.85); z-index: 9999999; line-height: 0; cursor: pointer;}
+.lightbox .img {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	max-width: 100%;
+	max-height: 100%;
+}
+.lightbox .img img {opacity: 0; pointer-events: none; width: auto;}
+@media screen and (min-width: 1200px) {
+    .lightbox .img {
+		max-width: 1200px;
+    }
+}
+@media screen and (min-height: 1200px) {
+    .lightbox img {
+		max-height: 1200px;
+	}
+}
+.lightbox span {
+		display: block;
+		position: fixed;
+		bottom: 13px;
+		height: 1.5em;
+		line-height: 1.4em;
+		width: 100%;
+		text-align: center;
+		color: white;
+		text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+
+
+
+
+
+.lightbox .videoWrapperContainer {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	max-width: 900px;
+	max-height: 100%;
+}
+.lightbox .videoWrapperContainer .videoWrapper {
+	height: 0;
+	line-height: 0;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	padding-bottom: 56.333%; /* custom */
+	background: black;
+}
+.lightbox .videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	display: block;
+}
+.lightbox #prev, .lightbox #next {height: 50px; line-height: 36px; display: none; margin-top: -25px; position: fixed; top: 50%; padding: 0 15px; cursor: pointer; text-decoration: none; z-index: 99; color: white; font-size: 60px;}
+.lightbox.gallery #prev, .lightbox.gallery #next {display: block;}
+.lightbox #prev {left: 0;}
+.lightbox #next {right: 0;}
+.lightbox #close {height: 50px; width: 50px; position: fixed; cursor: pointer; text-decoration: none; z-index: 99; right: 0; top: 0;}
+.lightbox #close:after, .lightbox #close:before {position: absolute; margin-top: 22px; margin-left: 14px; content: ""; height: 3px; background: white; width: 23px;
+-webkit-transform-origin: 50% 50%;
+-moz-transform-origin: 50% 50%;
+-o-transform-origin: 50% 50%;
+transform-origin: 50% 50%;
+/* Safari */
+-webkit-transform: rotate(-45deg);
+/* Firefox */
+-moz-transform: rotate(-45deg);
+/* IE */
+-ms-transform: rotate(-45deg);
+/* Opera */
+-o-transform: rotate(-45deg);
+}
+.lightbox #close:after {
+/* Safari */
+-webkit-transform: rotate(45deg);
+/* Firefox */
+-moz-transform: rotate(45deg);
+/* IE */
+-ms-transform: rotate(45deg);
+/* Opera */
+-o-transform: rotate(45deg);
+}
+.lightbox, .lightbox * {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */}
+}
+</style>
+
+<script>
+function is_youtubelink(url) {
+  var p = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+  return (url.match(p)) ? RegExp.$1 : false;
+}
+function is_imagelink(url) {
+	var p = /([a-z\-_0-9\/\:\.]*\.(jpg|jpeg|png|gif))/i;
+	return (url.match(p)) ? true : false;
+}
+function is_vimeolink(url,el) {
+	var id = false;
+	$.ajax({
+	  url: 'https://vimeo.com/api/oembed.json?url='+url,
+	  async: true,
+	  success: function(response) {
+		if(response.video_id) {
+		  id = response.video_id;
+		  $(el).addClass('lightbox-vimeo').attr('data-id',id);
+		}
+	  }
+	});
+}
+
+$(document).ready(function() {
+	//add classes to links to be able to initiate lightboxes
+	$("a").each(function(){
+		var url = $(this).attr('href');
+		if(url) {
+			if(url.indexOf('vimeo') !== -1 && !$(this).hasClass('no-lightbox')) is_vimeolink(url,$(this));
+			if(is_youtubelink(url) && !$(this).hasClass('no-lightbox')) $(this).addClass('lightbox-youtube').attr('data-id',is_youtubelink(url));
+			if(is_imagelink(url) && !$(this).hasClass('no-lightbox')) {
+				$(this).addClass('lightbox-image');
+				var href = $(this).attr('href');
+				var filename = href.split('/').pop();
+				var split = filename.split(".");
+				var name = split[0];
+				$(this).attr('title',name);
+			}
+		}
+	});
+	//remove the clicked lightbox
+	$("body").on("click", ".lightbox", function(event){
+		if($(this).hasClass('gallery')) {
+
+			$(this).remove();
+
+			if($(event.target).attr('id')=='next') {
+				//next item
+				if($("a.gallery.current").nextAll("a.gallery:first").length) $("a.gallery.current").nextAll("a.gallery:first").click();
+				else $("a.gallery.current").parent().find("a.gallery").first().click();
+			}
+			else if ($(event.target).attr('id')=='prev') {
+				//prev item
+				if($("a.gallery.current").prevAll("a.gallery:first").length) $("a.gallery.current").prevAll("a.gallery:first").click();
+				else $("a.gallery.current").parent().find("a.gallery").last().click();
+			}
+			else {
+				$("a.gallery").removeClass('gallery');
+			}
+		}
+		else $(this).remove();
+	});
+	//prevent image from being draggable (for swipe)
+	$("body").on('dragstart', ".lightbox img", function(event) { event.preventDefault(); });
+	//add the youtube lightbox on click
+	$("a.lightbox-youtube").click(function(event){
+		event.preventDefault();
+		$('<div class="lightbox"><a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://www.youtube.com/embed/'+$(this).attr('data-id')+'?autoplay=1&showinfo=0&rel=0"></iframe></div></div></div>').appendTo('body');
+	});
+	//add the image lightbox on click
+	$("a.lightbox-image").click(function(event){
+		event.preventDefault();
+		$('<div class="lightbox"><a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="img" style="background: url(\''+$(this).attr('href')+'\') center center / contain no-repeat;" title="'+$(this).attr('title')+'" ><img src="'+$(this).attr('href')+'" alt="'+$(this).attr('title')+'" /></div><span>'+$(this).attr('title')+'</span></div>').appendTo('body');
+	});
+	//add the vimeo lightbox on click
+	$("body").on("click", "a.lightbox-vimeo", function(event){
+		event.preventDefault();
+		$('<div class="lightbox"><a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+$(this).attr('data-id')+'/?autoplay=1&byline=0&title=0&portrait=0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div></div>').appendTo('body');
+	});
+
+	$("body").on("click", "a[class*='lightbox-']", function(){
+		var link_elements = $(this).parent().find("a[class*='lightbox-']");
+		$(link_elements).removeClass('current');
+		for (var i=0; i<link_elements.length; i++) {
+			if($(this).attr('href') == $(link_elements[i]).attr('href')) {
+				$(link_elements[i]).addClass('current');
+			}
+		}
+		if(link_elements.length>1) {
+			$('.lightbox').addClass('gallery');
+			$(link_elements).addClass('gallery');
+		}
+	});
+
+
+});
+
+$(document).keydown(function(e) {
+    switch(e.which) {
+        case 37: // left
+        $("#prev").click();
+        break;
+        case 39: // right
+        $("#next").click();
+        break;
+	case 27: // esc
+        $("#close").click();
+        break;
+        default: return; // exit this handler for other keys
+    }
+    e.preventDefault(); // prevent the default action (scroll / move caret)
+});
+
+
+
+  /*===========================
+  Swipe-it v1.4.1
+  An event listener for swiping gestures with vanilla js.
+  https://github.com/tri613/swipe-it#readme
+
+  @Create 2016/09/22
+  @Update 2017/08/11
+  @Author Trina Lu
+  ===========================*/
+
+  "use strict";var _slicedToArray=function(){function n(n,t){var e=[],i=!0,o=!1,r=void 0;try{for(var u,c=n[Symbol.iterator]();!(i=(u=c.next()).done)&&(e.push(u.value),!t||e.length!==t);i=!0);}catch(n){o=!0,r=n}finally{try{!i&&c.return&&c.return()}finally{if(o)throw r}}return e}return function(t,e){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return n(t,e);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}();!function(n,t,e){function i(n){function e(){o("touchstart",m,w),o("touchmove",d,w),o("touchend",p,w),E.mouseEvent&&o("mousedown",s,w)}function i(){y=!1,D=!1,A=!1,b=!1,a=!1}function s(n){a=this,y=n.clientX,D=n.clientY,o("mousemove",l,v),o("mouseup",h,v)}function l(n){n.preventDefault(),y&&D&&(A=n.clientX,b=n.clientY)}function h(n){r("mousemove",l,v),r("mouseup",h,v),p(n)}function m(n){a=this,y=n.touches[0].clientX,D=n.touches[0].clientY}function d(n){A=n.touches[0].clientX,b=n.touches[0].clientY}function p(n){if(y&&D&&A&&b){var t=y-A,e=D-b,o=[t,e].map(Math.abs),r=_slicedToArray(o,2),c=r[0],s=r[1],v=E.minDistance;if(c>v){var f=y<A?"swipeRight":"swipeLeft";u(f,a,{distance:t,start:y,end:A})}if(s>v){var l=D>b?"swipeUp":"swipeDown";u(l,a,{distance:e,start:D,end:b})}(c>v||s>v)&&u("swipe",a)}i()}var E=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},w=c(t.querySelectorAll(n)),y=void 0,D=void 0,A=void 0,b=void 0;E.mouseEvent=void 0===E.mouseEvent?f.mouseEvent:E.mouseEvent,E.minDistance=void 0===E.minDistance?f.minDistance:E.minDistance,i(),e(),this.on=function(n,t){return o(n,t,w),this}}function o(n,t,e){s(e).forEach(function(e){return e.addEventListener(n,t)})}function r(n,t,e){s(e).forEach(function(e){return e.removeEventListener(n,t)})}function u(n,e){var i=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{},o=t.createEvent("Event");o.initEvent(n,!0,!0),o.swipe=i,s(e).forEach(function(n){return n.dispatchEvent(o)})}function c(n){for(var t=[],e=0;e<n.length;e++)t.push(n[e]);return t}function s(n){return Array.isArray(n)?n:[n]}var a=!1,v=[n],f={mouseEvent:!0,minDistance:30};n[e]=i}(window,document,"SwipeIt");
+
+var mySwipeIt = new SwipeIt('body');
+mySwipeIt.on('swipeLeft',function(e){
+	//check if lightbox is present
+	if($('.lightbox').length >  0 ) {
+		$("#next").click();
+	}
+}).on('swipeRight',function(e){
+	//check if lightbox is present
+	if($('.lightbox').length >  0 ) {
+		$("#prev").click();
+	}
+});
+
+</script>
+
+</head>
+
+
+  <body class="theme-base-08">
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Asurin <br /> Software Developer <br /></p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">About Me</a>
+        
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/niuniu/">Niu Niu</a>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2023. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Asurin</a>
+            <small>Software Developer</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">Pre-commit</h1>
+  <span class="post-date">27 Mar 2023</span>
+  <p><a href="https://pre-commit.com/">pre-commit</a> is a tool to check formatting, obvious syntax error, etc before code it committed to git repo. This tool helps us from paying attention to those small errors. <!--break--></p>
+
+<p>The tool itself is written in python. To install the tool, do</p>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">pip install pre-commit</code></li>
+  <li>Go to the root of your repo, run <code class="language-plaintext highlighter-rouge">pre-commit install</code></li>
+</ol>
+
+<p>Then you should create a file <code class="language-plaintext highlighter-rouge">.pre-commit-config.yml</code> in the root of the repo. This file defines the hooks to be run for this repo.</p>
+
+<p>The first time you add pre-commit, you may want to run <code class="language-plaintext highlighter-rouge">pre-commit run -a</code> to run the hooks for all files in your repo. Later it will be automatically run on each commit.</p>
+
+<h1 id="hooks">hooks</h1>
+
+<h2 id="pre-commit-hooks">pre-commit-hooks</h2>
+
+<p><a href="https://github.com/pre-commit/pre-commit-hooks">pre-commit-hooks</a> are offical hooks. The config I am using looks like this:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="nn">---</span>
+<span class="na">repos</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">repo</span><span class="pi">:</span> <span class="s">https://github.com/pre-commit/pre-commit-hooks</span>
+    <span class="na">rev</span><span class="pi">:</span> <span class="s">v4.1.0</span> <span class="c1"># last version to support py36</span>
+    <span class="na">hooks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">check-json</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">check-toml</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">check-yaml</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">end-of-file-fixer</span>
+        <span class="na">exclude</span><span class="pi">:</span> <span class="s">.(svg|ipynb)$</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">fix-encoding-pragma</span>
+        <span class="na">args</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">--remove</span><span class="pi">]</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">no-commit-to-branch</span>
+        <span class="na">args</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">--branch</span><span class="pi">,</span> <span class="nv">develop</span><span class="pi">,</span> <span class="nv">--branch</span><span class="pi">,</span> <span class="nv">master</span><span class="pi">,</span> <span class="nv">--pattern</span><span class="pi">,</span> <span class="nv">release/.*</span><span class="pi">]</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">pretty-format-json</span>
+        <span class="na">args</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">--autofix</span><span class="pi">]</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">trailing-whitespace</span>
+        <span class="na">args</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">--markdown-linebreak-ext=md</span><span class="pi">]</span></code></pre></figure>
+
+<p>The one I like most in this hook is the <code class="language-plaintext highlighter-rouge">no-merge-to-branch</code>, save me a many times to reset my develop or master branch. Note, the check-yaml file will have trouble processing <code class="language-plaintext highlighter-rouge">.gitlab-ci.yml</code>, it’s better to exclude it. You can ignore it by adding <code class="language-plaintext highlighter-rouge">exclude: ^\.gitlab-ci.yml</code>.</p>
+
+<h2 id="black-and-isort">black and isort</h2>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml">  <span class="pi">-</span> <span class="na">repo</span><span class="pi">:</span> <span class="s">https://github.com/psf/black</span>
+    <span class="na">rev</span><span class="pi">:</span> <span class="s">22.3.0</span>       <span class="c1"># this should be the same with plaster dependency</span>
+    <span class="na">hooks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">black</span>
+  <span class="pi">-</span> <span class="na">repo</span><span class="pi">:</span> <span class="s">https://github.com/pycqa/isort</span>
+    <span class="na">rev</span><span class="pi">:</span> <span class="s">5.10.1</span>
+    <span class="na">hooks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">isort</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">isort (python)</span>
+        <span class="na">args</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">--profile</span><span class="pi">,</span> <span class="nv">black</span><span class="pi">]</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">isort</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">isort (cython)</span>
+        <span class="na">types</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">cython</span><span class="pi">]</span>
+        <span class="na">args</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">--profile</span><span class="pi">,</span> <span class="nv">black</span><span class="pi">]</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">isort</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">isort (pyi)</span>
+        <span class="na">types</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">pyi</span><span class="pi">]</span>
+        <span class="na">args</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">--profile</span><span class="pi">,</span> <span class="nv">black</span><span class="pi">]</span></code></pre></figure>
+
+<p>Those 2 hooks are python specific. <a href="https://github.com/psf/black">Black</a> is a widely used python formatter. It makes the code base much easier to read. 
+<a href="https://pycqa.github.io/isort/">isort</a> sort python imports. Make the imports much organized and everything easier to find.</p>
+
+<h2 id="markdown-toc">markdown-toc</h2>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml">  <span class="pi">-</span> <span class="na">repo</span><span class="pi">:</span> <span class="s">https://github.com/qiaouchicago/markdown-toc</span>
+    <span class="na">rev</span><span class="pi">:</span> <span class="s">0.1.0</span>
+    <span class="na">hooks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">markdown-toc</span></code></pre></figure>
+
+<p>I have forked <a href="https://github.com/alexander-lee/markdown-github-bear-toc">markdown-github-bear-toc</a> and created this hook. It will automatically generate table of contents for markdown files. (I probably should use this for my posts one day)</p>
+
+<h2 id="yaml-format-and-toml-sort">yaml format and toml sort</h2>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml">  <span class="pi">-</span> <span class="na">repo</span><span class="pi">:</span> <span class="s">https://github.com/jumanjihouse/pre-commit-hook-yamlfmt</span>
+    <span class="na">rev</span><span class="pi">:</span> <span class="s">0.2.1</span>
+    <span class="na">hooks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">yamlfmt</span>
+        <span class="na">args</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">--mapping</span><span class="pi">,</span> <span class="s1">'</span><span class="s">2'</span><span class="pi">,</span> <span class="nv">--sequence</span><span class="pi">,</span> <span class="s1">'</span><span class="s">4'</span><span class="pi">,</span> <span class="nv">--offset</span><span class="pi">,</span> <span class="s1">'</span><span class="s">2'</span><span class="pi">,</span> <span class="nv">--width</span><span class="pi">,</span> <span class="s1">'</span><span class="s">80'</span><span class="pi">]</span>
+  <span class="pi">-</span> <span class="na">repo</span><span class="pi">:</span> <span class="s">https://github.com/pappasam/toml-sort</span>
+    <span class="na">rev</span><span class="pi">:</span> <span class="s">v0.19.0</span> <span class="c1"># last version to support py36</span>
+    <span class="na">hooks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">toml-sort</span>
+        <span class="na">args</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">--in-place</span><span class="pi">]</span></code></pre></figure>
+
+<p>As their name indicates, those two hook will format and sort yaml and toml file.</p>
+
+<h2 id="detect-secrets">detect-secrets</h2>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml">  <span class="pi">-</span> <span class="na">repo</span><span class="pi">:</span> <span class="s">git@github.com:Yelp/detect-secrets</span>
+    <span class="na">rev</span><span class="pi">:</span> <span class="s">v1.2.0</span>
+    <span class="na">hooks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">detect-secrets</span>
+        <span class="na">args</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">--baseline</span><span class="pi">,</span> <span class="nv">.secrets.baseline</span><span class="pi">]</span></code></pre></figure>
+
+<p><a href="https://github.com/Yelp/detect-secrets">detect-secrets</a> helps to make sure you do not accidentally commit your passwords, secret tokens to your repo, causing a secure breach.</p>
+
+<p>To create a baseline run:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">detect-secrets scan <span class="o">&gt;</span> .secrets.baseline</code></pre></figure>
+
+<p>To update a baseline file, run:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">detect-secrets scan <span class="nt">--update</span> .secrets.baseline</code></pre></figure>
+
+<p>To audit your baseline file (check whehter any secrete is staged), run:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">detect-secrets audit .secrets.baseline</code></pre></figure>
+
+<h3 id="exclude-secretes">–exclude-secretes</h3>
+
+<p>A useful flag from detect-secretes is <code class="language-plaintext highlighter-rouge">--exclude-secretes</code>.</p>
+
+<p>Sometimes, you want to be able to ignore certain secret values in your scan. You can specify a regex rule as such:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>detect-secrets scan <span class="nt">--exclude-secrets</span> <span class="s1">'(fakesecret|\${.*})'</span></code></pre></figure>
+
+<p>Or you can specify multiple regex rules as such:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>detect-secrets scan <span class="nt">--exclude-secrets</span> <span class="s1">'fakesecret'</span> <span class="nt">--exclude-secrets</span> <span class="s1">'\${.*})'</span></code></pre></figure>
+
+<p>There are many more hooks yet to discover, hope you enjoy your journy!</p>
+
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2023/04/17/analyze-deep-sequence-NGS-data/">
+            How to use ReCo to get gRNA read counts from fastq data
+            <small>17 Apr 2023</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2023/04/15/use-nmr-data-to-solve-structures/">
+            How to use NMR to solve 3D molecule structures
+            <small>15 Apr 2023</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2023/04/09/nmrglue/">
+            nmrglue
+            <small>09 Apr 2023</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>
